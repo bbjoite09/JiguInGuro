@@ -11,7 +11,7 @@ const Home = () => {
         }}>
         <Typography margin={'2em 0 0 2em'}># 매일제로</Typography>
       </div>
-      <div style={{}}>
+      <div style={{ padding: '0 2em' }}>
         <Typography size={'54px'} margin={'0px'}>
           제로인구로
         </Typography>
@@ -43,19 +43,14 @@ const Home = () => {
 };
 
 const move = keyframes`{
-  from{
-    transform:translateX(100%);
-    -moz-transform:translateX(100%);
-    -webkit-transform:translateX(100%);
-    -o-transform:translateX(100%);
-    -ms-transform:translateX(100%);
+  from {
+    margin-left: 100%;
+    width: 300%;
   }
-  to{
-    transform:translateX(-100%);
-    -moz-transform:translateX(-100%);
-    -webkit-transform:translateX(-100%);
-    -o-transform:translateX(-100%);
-    -ms-transform:translateX(-100%);
+
+  to {
+    margin-left: -150%;
+    width: 100%;
   }
 }`;
 
@@ -63,16 +58,15 @@ const AnimationText = styled.p`
   margin: 0;
   font-family: Cafe24Ssurround;
   color: white;
-  position: absolute;
-  bottom: 0;
-  font-size: 17px;
+  font-size: 15px;
   animation: ${move} 10s infinite;
+  padding-left: 10px;
 `;
 
 const FlexContainer = styled.div`
   max-width: 500px;
-  min-height: 100vh;
-  height: 100%;
+  height: 100vh;
+  max-height: -webkit-fill-available;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -81,6 +75,7 @@ const FlexContainer = styled.div`
   justify-content: space-between;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: white;
 `;
 
 export default Home;
