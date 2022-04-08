@@ -34,7 +34,7 @@ const Home = () => {
           overflow: 'hidden',
           whiteSpace: 'nowrap',
         }}>
-        <AnimationText color={'white'} animation>
+        <AnimationText>
           #매일제로 #매일제로 #매일제로 #매일제로 #매일제로
         </AnimationText>
       </div>
@@ -71,13 +71,16 @@ const AnimationText = styled.p`
 
 const FlexContainer = styled.div`
   max-width: 500px;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
   justify-content: space-between;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 `;
 
 export default Home;
