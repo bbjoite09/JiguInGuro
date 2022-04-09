@@ -35,7 +35,8 @@ const Home = () => {
           whiteSpace: 'nowrap',
         }}>
         <AnimationText>
-          #매일제로 #매일제로 #매일제로 #매일제로 #매일제로
+          #매일제로 #매일제로 #매일제로 #매일제로 #매일제로 #매일제로 #매일제로
+          #매일제로
         </AnimationText>
       </div>
     </FlexContainer>
