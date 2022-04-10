@@ -1,72 +1,66 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Typography from '../elements/Typography';
+import char1 from '../static/images/home/char_1.png';
+import mainLogo from '../static/images/home/main_logo.png';
 const Home = () => {
   return (
     <FlexContainer>
-      <div
-        style={{
-          textAlign: 'left',
-          alignSelf: 'flex-start',
-        }}>
-        <Typography margin={'2em 0 0 2em'}># 매일제로</Typography>
-      </div>
+      <RowContainer>
+        <Typography margin={'2em 0 0 10%'}>제로인구로</Typography>
+      </RowContainer>
       <div style={{ padding: '0 2em' }}>
-        <Typography size={'54px'} margin={'0px'}>
-          제로인구로
-        </Typography>
-        <Typography
-          type={'AppleSDGothicNeoB00'}
-          size={'15px'}
-          styles={{ 'font-color': 'yellow' }}>
-          제로웨이스트 라이프를 위한
-          <br />
-          디지털 다꾸 챌린지
-        </Typography>
+        <img src={mainLogo} style={{ width: '90%' }} />
       </div>
-      <div
-        style={{
-          justifySelf: 'flex-end',
-          backgroundColor: '#078D68',
-          width: '100%',
-          height: '2em',
-          lineHeight: '2em',
-          overflow: 'hidden',
-          whiteSpace: 'nowrap',
-        }}>
-        <AnimationText>
-          #매일제로 #매일제로 #매일제로 #매일제로 #매일제로
-        </AnimationText>
+      <div style={{ width: '100%' }}>
+        <img
+          src={char1}
+          style={{ width: '130%', margin: '-20% 0 -20px -15px' }}
+        />
+        <div
+          style={{
+            backgroundColor: '#078D68',
+            width: '100%',
+            height: '4em',
+          }}
+        />
+        <div
+          style={{
+            backgroundColor: 'white',
+            width: '100%',
+            height: '2.5em',
+            lineHeight: '2.5em',
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
+          }}>
+          <AnimationText>
+            #제로인구로 #제로in구로 #제로인구로 #제로in구로 #제로인구로
+          </AnimationText>
+        </div>
       </div>
     </FlexContainer>
   );
 };
-
 const move = keyframes`{
   from {
     margin-left: 100%;
-    width: 300%;
   }
-
   to {
     margin-left: -150%;
-    width: 100%;
   }
 }`;
 
 const AnimationText = styled.p`
   margin: 0;
   font-family: Cafe24Ssurround;
-  color: white;
-  font-size: 15px;
-  animation: ${move} 10s infinite;
-  padding-left: 10px;
+  color: #078d68;
+  font-size: 1.4rem;
+  animation: ${move} 5s linear infinite;
 `;
 
 const FlexContainer = styled.div`
   max-width: 500px;
-  height: 100vh;
-  max-height: -webkit-fill-available;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -76,6 +70,14 @@ const FlexContainer = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: white;
+  overflow: hidden;
 `;
 
+const RowContainer = styled.div`
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
 export default Home;
