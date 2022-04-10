@@ -9,6 +9,7 @@ import divider2 from '../static/images/problemInfo/white_divider.svg';
 import one from '../static/images/problemInfo/one.svg';
 import two from '../static/images/problemInfo/two.svg';
 import three from '../static/images/problemInfo/three.svg';
+import { service } from '../services';
 
 const ProblemInfo = () => {
   const settings = {
@@ -20,6 +21,9 @@ const ProblemInfo = () => {
     arrows: false,
     centerPadding: '0px',
   };
+
+  const data = service.comment.getComment();
+  console.log(data);
 
   return (
     <Container>
@@ -39,7 +43,7 @@ const ProblemInfo = () => {
           <br />
           시작되고 있어요
         </Typography>
-        <img src={divider1} style={{ width: '69%', margin: ' 5% 0 15% 10%' }} />
+        <img src={divider1} style={{ width: '55%', margin: ' 5% 0 15% 10%' }} />
       </div>
       <Slider {...settings}>
         <>
@@ -114,7 +118,7 @@ const ProblemInfo = () => {
         style={{
           width: '130%',
           height: '70vh',
-          margin: '30% 0 0 -15%',
+          margin: '20% 0 0 -15%',
           borderRadius: '50%',
           background: 'linear-gradient( to bottom, white, #EADB50 55%)',
           display: 'flex',
@@ -137,27 +141,27 @@ const ProblemInfo = () => {
           바로 지금, {"'"}제로인구{"'"} 로<br />
           다시 태어나야 할 시간
         </Typography>
-        <footer
-          style={{
-            backgroundColor: ' #078d68',
-            width: '100%',
-            height: '2.5em',
-            lineHeight: '2.5em',
-            overflow: 'hidden',
-            whiteSpace: 'nowrap',
-            zIndex: 3,
-          }}>
-          <AnimationText>
-            #제로인구로 #제로in구로 #제로인구로 #제로in구로 #제로인구로
-          </AnimationText>
-        </footer>
+      </div>
+      <div
+        style={{
+          backgroundColor: ' #078d68',
+          width: '100%',
+          height: '2.5em',
+          lineHeight: '2.5em',
+          overflow: 'hidden',
+          whiteSpace: 'nowrap',
+          zIndex: 3,
+          marginTop: '-14.3em',
+        }}>
+        <AnimationText>
+          #제로인구로 #제로in구로 #제로인구로 #제로in구로 #제로인구로
+        </AnimationText>
       </div>
       <div
         style={{
           width: '100%',
           height: '15%',
           backgroundColor: 'white',
-          marginTop: '-11.8em',
         }}
       />
     </Container>
