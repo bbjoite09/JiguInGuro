@@ -12,12 +12,11 @@ const Home = () => {
         <Typography margin={'2em 0 0 2em'}># 매일제로</Typography>
       </div>
       <div style={{ padding: '0 2em' }}>
-        <Typography size={'54px'} margin={'0px'}>
+        <Typography size={'5.4rem'} margin={'0px'}>
           제로인구로
         </Typography>
         <Typography
           type={'AppleSDGothicNeoB00'}
-          size={'15px'}
           styles={{ 'font-color': 'yellow' }}>
           제로웨이스트 라이프를 위한
           <br />
@@ -29,8 +28,8 @@ const Home = () => {
           justifySelf: 'flex-end',
           backgroundColor: '#078D68',
           width: '100%',
-          height: '2em',
-          lineHeight: '2em',
+          height: '4.5em',
+          lineHeight: '4.5em',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
         }}>
@@ -59,9 +58,8 @@ const AnimationText = styled.p`
   margin: 0;
   font-family: Cafe24Ssurround;
   color: white;
-  font-size: 15px;
+  font-size: 1.4rem;
   animation: ${move} 10s infinite;
-  padding-left: 10px;
 `;
 
 const FlexContainer = styled.div`

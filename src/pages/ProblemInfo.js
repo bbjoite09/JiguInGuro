@@ -24,8 +24,8 @@ const ProblemInfo = () => {
         <Typography
           color="white"
           textAlign={'left'}
-          size={'31px'}
-          margin={'1em 0 0 1em'}>
+          size={'3.1rem'}
+          margin={'2em 0 0 10%'}>
           지금 지구에는
           <br />
           <span style={{ color: 'yellow' }}>쓰레기 대란</span>이

@@ -19,7 +19,7 @@ const Typography = props => {
 
 Typography.defaultProps = {
   children: null,
-  size: '15px',
+  size: '1.5rem',
   type: 'Cafe24Ssurround',
   color: '#078D68',
   margin: false,
