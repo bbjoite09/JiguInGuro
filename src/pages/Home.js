@@ -1,44 +1,44 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import Typography from '../elements/Typography';
+import Topbar from '../elements/Topbar';
 import char1 from '../static/images/home/char_1.png';
 import mainLogo from '../static/images/home/main_logo.png';
 const Home = () => {
   return (
-    <FlexContainer>
-      <RowContainer>
-        <Typography margin={'2em 0 0 10%'}>제로인구로</Typography>
-      </RowContainer>
-      <div style={{ padding: '0 2em' }}>
-        <img src={mainLogo} style={{ width: '90%' }} />
-      </div>
-      <div style={{ width: '100%' }}>
-        <img
-          src={char1}
-          style={{ width: '130%', margin: '-20% 0 -20px -15px' }}
-        />
-        <div
-          style={{
-            backgroundColor: '#078D68',
-            width: '100%',
-            height: '4em',
-          }}
-        />
-        <div
-          style={{
-            backgroundColor: 'white',
-            width: '100%',
-            height: '2.5em',
-            lineHeight: '2.5em',
-            overflow: 'hidden',
-            whiteSpace: 'nowrap',
-          }}>
-          <AnimationText>
-            #제로인구로 #제로in구로 #제로인구로 #제로in구로 #제로인구로
-          </AnimationText>
+    <>
+      <Topbar />
+      <FlexContainer id="main">
+        <div style={{ padding: '10% 10%' }}>
+          <img src={mainLogo} style={{ width: '90%' }} />
         </div>
-      </div>
-    </FlexContainer>
+        <div style={{ width: '100%' }}>
+          <img
+            src={char1}
+            style={{ width: '130%', margin: '-20% 0 -20px -15px' }}
+          />
+          <div
+            style={{
+              backgroundColor: '#078D68',
+              width: '100%',
+              height: '4em',
+            }}
+          />
+          <div
+            style={{
+              backgroundColor: 'white',
+              width: '100%',
+              height: '2.5em',
+              lineHeight: '2.5em',
+              overflow: 'hidden',
+              whiteSpace: 'nowrap',
+            }}>
+            <AnimationText>
+              #제로인구로 #제로in구로 #제로인구로 #제로in구로 #제로인구로
+            </AnimationText>
+          </div>
+        </div>
+      </FlexContainer>
+    </>
   );
 };
 const move = keyframes`{
@@ -73,11 +73,4 @@ const FlexContainer = styled.div`
   overflow: hidden;
 `;
 
-const RowContainer = styled.div`
-  width: 100%;
-  text-align: left;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
 export default Home;

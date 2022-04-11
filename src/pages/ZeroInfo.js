@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import Typography from '../elements/Typography';
 import logo from '../static/images/zeroInfo/logo.svg';
 import divider from '../static/images/zeroInfo/green_divider.svg';
-import char2 from '../static/images/zeroInfo/char_2.jpg';
+import char2 from '../static/images/zeroInfo/char_2.png';
 
 const ZeroInfo = () => {
   return (
-    <Container>
+    <Container id="proInfo">
       <img src={logo} />
       <Typography size="3.4rem" margin="5% 0 5% 0">
         제로인구란?
