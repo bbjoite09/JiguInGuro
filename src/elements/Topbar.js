@@ -9,7 +9,9 @@ const Topbar = () => {
   return (
     <Container>
       <RowContainer>
-        <Typography margin="4% 10%">제로인구로</Typography>
+        <Typography margin="4% 10%" size="1.8rem">
+          제로인구로
+        </Typography>
         {window.innerWidth <= 500 ? (
           <Button
             onClick={() => setSelect(!isSelect)}
