@@ -1,13 +1,12 @@
-import './App.css';
 import React from 'react';
 import styled from 'styled-components';
 
-import Home from './pages/Home';
-import ProblemInfo from './pages/ProblemInfo';
-import ZeroInfo from './pages/ZeroInfo';
-import ZeroWasteInfo from './pages/ZeroWasteInfo';
+import Home from './Home';
+import ProblemInfo from './ProblemInfo';
+import ZeroInfo from './ZeroInfo';
+import ZeroWasteInfo from './ZeroWasteInfo';
 
-const App = () => {
+const Main = () => {
   return (
     <div
       className="App"
@@ -34,5 +33,4 @@ const Container = styled.div`
   background-attachment: fixed;
   background-color: white;
 `;
-
-export default App;
+export default Main;

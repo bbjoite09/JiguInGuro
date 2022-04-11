@@ -2,7 +2,7 @@ import React from 'react';
 
 const Typography = props => {
   // eslint-disable-next-line react/prop-types
-  const { type, size, children, color, margin, textAlign } = props;
+  const { type, size, children, color, margin, textAlign, fontWeight } = props;
   return (
     <p
       style={{
@@ -11,6 +11,7 @@ const Typography = props => {
         fontSize: size,
         color: color,
         margin,
+        fontWeight,
       }}>
       {children}
     </p>
