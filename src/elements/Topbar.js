@@ -13,7 +13,7 @@ const Topbar = () => {
         {window.innerWidth <= 500 ? (
           <Button
             onClick={() => setSelect(!isSelect)}
-            style={{ marginRight: '8%', marginTop: '-25px' }}>
+            style={{ marginRight: '8%' }}>
             <img src={ham} style={{ width: '100%' }} />
           </Button>
         ) : null}
@@ -36,7 +36,11 @@ const Topbar = () => {
               </Typography>
             </li>
             <Li>
-              <A href="#main">
+              <A
+                href="#main"
+                onClick={() => {
+                  setSelect(false);
+                }}>
                 <Typography
                   type="AppleSDGothicNeoB00"
                   textAlign="right"
@@ -47,7 +51,11 @@ const Topbar = () => {
               </A>
             </Li>
             <Li>
-              <A href="#proInfo">
+              <A
+                href="#proInfo"
+                onClick={() => {
+                  setSelect(false);
+                }}>
                 <Typography
                   type="AppleSDGothicNeoB00"
                   textAlign="right"
@@ -126,9 +134,9 @@ const Button = styled.button`
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-  height: 9%;
-  width: 9%;
   vertical-align: middle;
+  width: 25px;
+  height: 25px;
 `;
 const Menu = styled.div`
   position: absolute;
