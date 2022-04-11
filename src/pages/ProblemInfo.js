@@ -16,7 +16,7 @@ const ProblemInfo = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 1.2,
     slidesToScroll: 1,
     arrows: false,
     centerPadding: '0px',
@@ -46,7 +46,7 @@ const ProblemInfo = () => {
         <img src={divider1} style={{ width: '55%', margin: ' 5% 0 15% 10%' }} />
       </div>
       <Slider {...settings}>
-        <>
+        <div style={{ width: '90%', padding: 0, margin: 0 }}>
           <Card>
             <img src={one} style={{ width: '10%', marginTop: '9%' }} />
             <Typography color="#4D99CB" size="2.5rem">
@@ -62,7 +62,7 @@ const ProblemInfo = () => {
               앞으로 3년 후
             </Typography>
           </Card>
-        </>
+        </div>
         <>
           <Card>
             <img src={two} style={{ width: '10%', marginTop: '9%' }} />
@@ -181,7 +181,7 @@ const Container = styled.div`
 const Card = styled.div`
   background-color: white;
   border-radius: 20px;
-  width: 80%;
+  width: 85%;
   height: 55vh;
   margin: 0 auto;
   display: flex;

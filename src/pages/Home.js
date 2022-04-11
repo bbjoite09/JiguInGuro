@@ -8,13 +8,13 @@ const Home = () => {
     <>
       <Topbar />
       <FlexContainer id="main">
-        <div style={{ padding: '10% 10%' }}>
-          <img src={mainLogo} style={{ width: '90%' }} />
+        <div style={{ padding: '15% 10%' }}>
+          <img src={mainLogo} style={{ width: '100%' }} />
         </div>
         <div style={{ width: '100%' }}>
           <img
             src={char1}
-            style={{ width: '130%', margin: '-20% 0 -20px -15px' }}
+            style={{ width: '130%', margin: '-30% 0 -20px -15px' }}
           />
           <div
             style={{

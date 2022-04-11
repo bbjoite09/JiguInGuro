@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ham from '../static/images/top_ham.png';
 import styled from 'styled-components';
 import Typography from './Typography';
+import { Link } from 'react-router-dom';
 
 const Topbar = () => {
   const [isSelect, setSelect] = useState(false);
@@ -9,7 +10,9 @@ const Topbar = () => {
   return (
     <Container>
       <RowContainer>
-        <Typography margin="4% 10%">제로인구로</Typography>
+        <Typography margin="4% 10%" size="1.8rem">
+          제로인구로
+        </Typography>
         {window.innerWidth <= 500 ? (
           <Button
             onClick={() => setSelect(!isSelect)}
@@ -66,13 +69,15 @@ const Topbar = () => {
               </A>
             </Li>
             <Li>
-              <Typography
-                type="AppleSDGothicNeoB00"
-                textAlign="right"
-                margin="5% 10%"
-                size="1.5rem">
-                다이어리 양식 다운로드
-              </Typography>
+              <Link to="/diary" style={{ textDecoration: 'none' }}>
+                <Typography
+                  type="AppleSDGothicNeoB00"
+                  textAlign="right"
+                  margin="5% 10%"
+                  size="1.5rem">
+                  다이어리 양식 다운로드
+                </Typography>
+              </Link>
             </Li>
             <Li>
               <Typography
