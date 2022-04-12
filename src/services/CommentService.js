@@ -2,8 +2,8 @@ import axios from 'axios';
 import { axiosSrc } from '../static/url/axiosSrc';
 
 class CommentService {
-  getComment() {
-    const data = axios
+  async getComment() {
+    const data = await axios
       .get(axiosSrc.getComment)
       .then(res => {
         return res.data;
@@ -14,8 +14,8 @@ class CommentService {
     return data;
   }
 
-  postComment(cmntid, cmnttext, cmntdate) {
-    const data = axios
+  async postComment(cmntid, cmnttext, cmntdate) {
+    const data = await axios
       .post(axiosSrc.postComment, {
         cmntid,
         cmnttext,
@@ -30,8 +30,8 @@ class CommentService {
     return data;
   }
 
-  updateComment(cmntid, cmnttext, cmntdate) {
-    const data = axios
+  async updateComment(cmntid, cmnttext, cmntdate) {
+    const data = await axios
       .post(axiosSrc.updateComment, {
         cmntid,
         cmnttext,
@@ -46,8 +46,8 @@ class CommentService {
     return data;
   }
 
-  deleteComment(cmntid, cmnttext, cmntdate) {
-    const data = axios
+  async deleteComment(cmntid, cmnttext, cmntdate) {
+    const data = await axios
       .post(axiosSrc.deleteComment, {
         cmntid,
         cmnttext,
