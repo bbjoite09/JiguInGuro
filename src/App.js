@@ -14,7 +14,7 @@ const App = () => {
         backgroundColor: 'gray',
       }}>
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" exact element={<Main />} />
         <Route path="/diary" element={<Diary />} />
       </Routes>
     </div>

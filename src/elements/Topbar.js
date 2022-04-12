@@ -13,13 +13,11 @@ const Topbar = () => {
         <Typography margin="4% 10%" size="1.8rem" zIndex="100">
           제로인구로
         </Typography>
-        {window.innerWidth <= 500 ? (
-          <Button
-            onClick={() => setSelect(!isSelect)}
-            style={{ marginRight: '8%', zIndex: '100' }}>
-            <img src={ham} style={{ width: '100%' }} />
-          </Button>
-        ) : null}
+        <Button
+          onClick={() => setSelect(!isSelect)}
+          style={{ marginRight: '10%', zIndex: '100' }}>
+          <img src={ham} style={{ width: '100%' }} />
+        </Button>
       </RowContainer>
       {isSelect ? (
         <Menu>
@@ -39,11 +37,7 @@ const Topbar = () => {
               </Typography>
             </li>
             <Li>
-              <A
-                href="#main"
-                onClick={() => {
-                  setSelect(false);
-                }}>
+              <Link to="/" style={{ textDecoration: 'none' }}>
                 <Typography
                   type="AppleSDGothicNeoB00"
                   textAlign="right"
@@ -51,7 +45,7 @@ const Topbar = () => {
                   size="1.5rem">
                   메인
                 </Typography>
-              </A>
+              </Link>
             </Li>
             <Li>
               <A
@@ -80,31 +74,37 @@ const Topbar = () => {
               </Link>
             </Li>
             <Li>
-              <Typography
-                type="AppleSDGothicNeoB00"
-                textAlign="right"
-                margin="5% 10%"
-                size="1.5rem">
-                스티커팩 다운로드
-              </Typography>
+              <Link to="/" style={{ textDecoration: 'none' }}>
+                <Typography
+                  type="AppleSDGothicNeoB00"
+                  textAlign="right"
+                  margin="5% 10%"
+                  size="1.5rem">
+                  스티커팩 다운로드
+                </Typography>
+              </Link>
             </Li>
             <Li>
-              <Typography
-                type="AppleSDGothicNeoB00"
-                textAlign="right"
-                margin="5% 10%"
-                size="1.5rem">
-                이벤트 안내
-              </Typography>
+              <Link to="/" style={{ textDecoration: 'none' }}>
+                <Typography
+                  type="AppleSDGothicNeoB00"
+                  textAlign="right"
+                  margin="5% 10%"
+                  size="1.5rem">
+                  이벤트 안내
+                </Typography>
+              </Link>
             </Li>
             <Li>
-              <Typography
-                type="AppleSDGothicNeoB00"
-                textAlign="right"
-                margin="5% 10%"
-                size="1.5rem">
-                제로인 등록증
-              </Typography>
+              <Link to="/" style={{ textDecoration: 'none' }}>
+                <Typography
+                  type="AppleSDGothicNeoB00"
+                  textAlign="right"
+                  margin="5% 10%"
+                  size="1.5rem">
+                  제로인 등록증
+                </Typography>
+              </Link>
             </Li>
           </Ul>
         </Menu>
