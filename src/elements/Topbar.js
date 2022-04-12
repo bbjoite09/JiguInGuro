@@ -10,13 +10,13 @@ const Topbar = () => {
   return (
     <Container>
       <RowContainer>
-        <Typography margin="4% 10%" size="1.8rem">
+        <Typography margin="4% 10%" size="1.8rem" zIndex="100">
           제로인구로
         </Typography>
         {window.innerWidth <= 500 ? (
           <Button
             onClick={() => setSelect(!isSelect)}
-            style={{ marginRight: '8%' }}>
+            style={{ marginRight: '8%', zIndex: '100' }}>
             <img src={ham} style={{ width: '100%' }} />
           </Button>
         ) : null}
