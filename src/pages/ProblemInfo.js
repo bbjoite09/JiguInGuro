@@ -19,10 +19,11 @@ const ProblemInfo = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 1.2,
+    slidesToShow: 1.1,
     slidesToScroll: 1,
     arrows: false,
-    centerPadding: '0px',
+    // autoplay: true,
+    centerMode: true,
   };
   const [data, setData] = useState();
   useEffect(() => {
@@ -51,9 +52,9 @@ const ProblemInfo = () => {
         <img src={divider1} style={{ width: '55%', margin: ' 5% 0 15% 10%' }} />
       </div>
 
-      <Slider {...settings} style={{ zIndex: '0' }}>
+      <MySlider {...settings} style={{ zIndex: '0' }}>
         <>
-          <div style={{ padding: '0 1em 0 5em' }}>
+          <div style={{ padding: '0 2.5em 0 3em' }}>
             <Card>
               <img src={one} style={{ width: '10%', marginTop: '9%' }} />
               <Typography color="#4D99CB" size="2.5rem" zIndex="3">
@@ -76,7 +77,7 @@ const ProblemInfo = () => {
                 type="AppleSDGothicNeoB00"
                 color="white"
                 size="1.7rem"
-                margin="11em 0 0 0"
+                margin="13em 0 0 0"
                 zIndex="3">
                 앞으로 3년 후
               </Typography>
@@ -84,7 +85,7 @@ const ProblemInfo = () => {
           </div>
         </>
         <>
-          <div style={{ padding: '0 1em 0 5em' }}>
+          <div style={{ padding: '0 2.5em 0 3em' }}>
             <Card>
               <img src={two} style={{ width: '10%', marginTop: '9%' }} />
               <Typography color="#4D99CB" size="2.5rem" zIndex="3">
@@ -113,7 +114,7 @@ const ProblemInfo = () => {
                 type="AppleSDGothicNeoB00"
                 color="white"
                 size="1.7rem"
-                margin="12em 0 0 0"
+                margin="14em 0 0 0"
                 zIndex="3">
                 서울시 25개 자치구 중 5위
               </Typography>
@@ -121,7 +122,7 @@ const ProblemInfo = () => {
           </div>
         </>
         <>
-          <div style={{ padding: '0 1em 0 5em' }}>
+          <div style={{ padding: '0 2.5em 0 3em' }}>
             <Card>
               <img src={three} style={{ width: '10%', marginTop: '9%' }} />
               <Typography color="#4D99CB" size="2.5rem" zIndex="3">
@@ -143,14 +144,14 @@ const ProblemInfo = () => {
                   width: '50%',
                   zIndex: 2,
                   position: 'absolute',
-                  top: '42%',
+                  top: '40%',
                 }}
               />
               <Typography
                 type="AppleSDGothicNeoB00"
                 color="#4D99CB"
                 size="1.7rem"
-                margin="11em 0 0 0"
+                margin="13em 0 0 0"
                 zIndex="3">
                 1인가구 일회용 쓰레기 배출량
                 <br />
@@ -159,7 +160,7 @@ const ProblemInfo = () => {
             </Card>
           </div>
         </>
-      </Slider>
+      </MySlider>
       <div
         style={{
           width: '130%',
@@ -224,6 +225,21 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
+const MySlider = styled(Slider)`
+  .slick-dots li button:before {
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    color: white;
+  }
+  .slick-dots li.slick-active button:before {
+    color: #eadb50;
+  }
+`;
+
 const Card = styled.div`
   background-color: white;
   border-radius: 20px;
@@ -236,6 +252,7 @@ const Card = styled.div`
   z-index: 1;
   position: relative;
 `;
+
 const move = keyframes`{
   from {
     margin-left: 100%;

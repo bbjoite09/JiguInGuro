@@ -8,14 +8,14 @@ const Topbar = () => {
   const [isSelect, setSelect] = useState(false);
 
   return (
-    <Container>
+    <Container style={{ height: isSelect ? '100%' : 'auto' }}>
       <RowContainer>
-        <Typography margin="4% 10%" size="1.8rem" zIndex="100">
+        <Typography margin="3.5% 10%" size="1.8rem">
           제로인구로
         </Typography>
         <Button
           onClick={() => setSelect(!isSelect)}
-          style={{ marginRight: '10%', zIndex: '100' }}>
+          style={{ marginRight: '10%' }}>
           <img src={ham} style={{ width: '100%' }} />
         </Button>
       </RowContainer>
@@ -123,8 +123,8 @@ const Container = styled.div`
   align-items: center;
   position: fixed;
   width: 100%;
-  height: 100%;
   top: 0;
+  z-index: 4;
 `;
 const RowContainer = styled.div`
   width: 100%;
@@ -133,6 +133,8 @@ const RowContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
 `;
 const Button = styled.button`
   background-color: #00ff0000;
@@ -146,7 +148,7 @@ const Button = styled.button`
 const Menu = styled.div`
   position: absolute;
   height: 100vh;
-  width: 25em;
+  width: 21em;
   right: 0;
   border: 1.5px solid #078d68;
   margin: 10% 0 0 0%;
