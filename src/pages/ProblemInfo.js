@@ -19,7 +19,7 @@ const ProblemInfo = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 1.1,
+    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     // autoplay: true,
@@ -54,7 +54,7 @@ const ProblemInfo = () => {
 
       <MySlider {...settings} style={{ zIndex: '0' }}>
         <>
-          <div style={{ padding: '0 2.5em 0 3em' }}>
+          <div style={{ padding: '0 3.5em 0 1em' }}>
             <Card>
               <img src={one} style={{ width: '10%', marginTop: '9%' }} />
               <Typography color="#4D99CB" size="2.5rem" zIndex="3">
@@ -77,7 +77,7 @@ const ProblemInfo = () => {
                 type="AppleSDGothicNeoB00"
                 color="white"
                 size="1.7rem"
-                margin="13em 0 0 0"
+                margin="12em 0 0 0"
                 zIndex="3">
                 앞으로 3년 후
               </Typography>
@@ -85,7 +85,7 @@ const ProblemInfo = () => {
           </div>
         </>
         <>
-          <div style={{ padding: '0 2.5em 0 3em' }}>
+          <div style={{ padding: '0 3.5em 0 1em' }}>
             <Card>
               <img src={two} style={{ width: '10%', marginTop: '9%' }} />
               <Typography color="#4D99CB" size="2.5rem" zIndex="3">
@@ -114,7 +114,7 @@ const ProblemInfo = () => {
                 type="AppleSDGothicNeoB00"
                 color="white"
                 size="1.7rem"
-                margin="14em 0 0 0"
+                margin="13em 0 0 0"
                 zIndex="3">
                 서울시 25개 자치구 중 5위
               </Typography>
@@ -122,7 +122,7 @@ const ProblemInfo = () => {
           </div>
         </>
         <>
-          <div style={{ padding: '0 2.5em 0 3em' }}>
+          <div style={{ padding: '0 3.5em 0 1em' }}>
             <Card>
               <img src={three} style={{ width: '10%', marginTop: '9%' }} />
               <Typography color="#4D99CB" size="2.5rem" zIndex="3">
@@ -151,7 +151,7 @@ const ProblemInfo = () => {
                 type="AppleSDGothicNeoB00"
                 color="#4D99CB"
                 size="1.7rem"
-                margin="13em 0 0 0"
+                margin="12em 0 0 0"
                 zIndex="3">
                 1인가구 일회용 쓰레기 배출량
                 <br />
@@ -244,7 +244,7 @@ const Card = styled.div`
   background-color: white;
   border-radius: 20px;
   width: 110%;
-  height: 60vh;
+  height: 55vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
