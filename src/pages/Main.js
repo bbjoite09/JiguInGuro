@@ -18,8 +18,8 @@ const Main = () => {
       <Container>
         <Home />
         <ProblemInfo />
-        <ZeroInfo />
         <ZeroWasteInfo />
+        <ZeroInfo />
       </Container>
     </div>
   );

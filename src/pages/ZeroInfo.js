@@ -23,10 +23,19 @@ const ZeroInfo = () => {
         style={{
           backgroundColor: '#078D68',
           width: '100%',
-          height: '20%',
-          marginTop: '-5%',
-        }}
-      />
+          height: '100vh',
+          marginTop: '-2em',
+          paddingTop: '5em',
+        }}>
+        <Typography color="white" type="AppleSDGothicB00">
+          제로인들을 위한 선물
+        </Typography>
+        <Typography color="white" size="3.4rem">
+          매일제로
+          <br />
+          다이어리 set
+        </Typography>
+      </div>
     </Container>
   );
 };
@@ -39,6 +48,7 @@ const Container = styled.div`
   background-attachment: fixed;
   background-color: white;
   overflow: hidden;
+  margin-top: 5em;
 `;
 
 export default ZeroInfo;
