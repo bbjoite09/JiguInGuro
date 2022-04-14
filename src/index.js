@@ -5,9 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './static/fonts/fonts.css';
 import { BrowserRouter } from 'react-router-dom';
+import Scroll from './elements/Scroll';
 
 ReactDOM.render(
   <BrowserRouter>
+    <Scroll />
     <App />
   </BrowserRouter>,
   document.getElementById('root'),
