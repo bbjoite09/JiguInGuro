@@ -10,8 +10,7 @@
      IE6-IE8 => eot
   */
   src: url('./Cafe24Ssurround.ttf') format('truetype'),
-    url('./Cafe24Ssurround.woff') format('woff'),
-    url('./Cafe24Ssurround.eot?iefix') format('embedded-opentype');
+    url('./Cafe24Ssurround.woff') format('woff');
 
   /* 사용할 폰트의 기본 스타일 */
   font-weight: 400;
@@ -23,8 +22,7 @@
   font-display: fallback;
 
   src: url('./AppleSDGothicNeoB00.ttf') format('truetype'),
-    url('./AppleSDGothicNeoB00.woff') format('woff'),
-    url('./AppleSDGothicNeoB00.eot?iefix') format('embedded-opentype');
+    url('./AppleSDGothicNeoB00.woff') format('woff');
 
   /* 사용할 폰트의 기본 스타일 */
   font-weight: 400;

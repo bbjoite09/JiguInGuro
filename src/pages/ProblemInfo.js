@@ -211,11 +211,11 @@ const ProblemInfo = () => {
       <div
         style={{
           width: '100%',
-          height: '50%',
           marginTop: '-14.3em',
           backgroundColor: '#EADB50',
+          paddingBottom: '5em',
         }}>
-        <img src={note} style={{ width: '85%', marginTop: '25%' }} />
+        <img src={note} style={{ width: '85%', marginTop: '10%' }} />
       </div>
     </Container>
   );
@@ -223,7 +223,7 @@ const ProblemInfo = () => {
 
 const Container = styled.div`
   max-width: 500px;
-  height: ${document.documentElement.clientWidth < 400 ? 235 : 260}vh;
+  height: 100%;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -232,21 +232,21 @@ const Container = styled.div`
 `;
 
 const MySlider = styled(Slider)`
+  .slick-dots li {
+    margin: 0 auto;
+  }
+
   .slick-dots li button:before {
     line-height: 40px;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
+    left: 10px;
     color: white;
     content: '•';
-    font-size: 1rem;
-    letter-spacing: -5em;
+    margin: 0 1px;
   }
   .slick-dots li.slick-active button:before {
     color: #eadb50;
-    letter-spacing: -5em;
   }
 `;
 
