@@ -27,8 +27,13 @@ const Topbar = () => {
               style={{
                 listStyle: 'none',
                 borderBottom: '1.5px solid #078d68',
+                backgroundColor: 'white',
               }}>
-              <RowContainer>
+              <RowContainer
+                style={{
+                  backgroundColor: 'white',
+                  backdropFilter: 'blur(0px)',
+                }}>
                 <Button
                   onClick={() => setSelect(!isSelect)}
                   style={{ marginRight: '10%' }}>
@@ -41,7 +46,7 @@ const Topbar = () => {
                   type="AppleSDGothicNeoB00"
                   textAlign="right"
                   margin="5% 10%"
-                  size="2rem"
+                  size="1.8rem"
                   fontWeight="10">
                   바로가기
                 </Typography>
@@ -53,7 +58,7 @@ const Topbar = () => {
                   type="AppleSDGothicNeoB00"
                   textAlign="right"
                   margin="5% 10%"
-                  size="1.5rem">
+                  size="1.8rem">
                   제로인구로
                 </Typography>
               </Link>
@@ -64,7 +69,7 @@ const Topbar = () => {
                   type="AppleSDGothicNeoB00"
                   textAlign="right"
                   margin="5% 10%"
-                  size="1.5rem">
+                  size="1.8rem">
                   제로일기 다이어리
                 </Typography>
               </Link>
@@ -75,7 +80,7 @@ const Topbar = () => {
                   type="AppleSDGothicNeoB00"
                   textAlign="right"
                   margin="5% 10%"
-                  size="1.5rem">
+                  size="1.8rem">
                   구로구 환경정보{' '}
                 </Typography>
               </Link>
@@ -137,12 +142,14 @@ const Ul = styled.ul`
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 0px;
+  background-color: white;
 `;
 
 const Li = styled.li`
   width: 100%;
   list-style: none;
   border-bottom: 1px solid #078d68;
+  background-color: white;
 `;
 
 export default Topbar;
