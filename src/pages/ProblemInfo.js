@@ -54,7 +54,11 @@ const ProblemInfo = () => {
 
       <MySlider {...settings} style={{ zIndex: '0', marginLeft: '-5%' }}>
         <>
-          <div style={{ marginLeft: '-2%', paddingLeft: '5%' }}>
+          <div
+            style={{
+              marginLeft: '-2%',
+              paddingLeft: '5%',
+            }}>
             <Card>
               <img src={one} style={{ width: '10%', margin: '9% 0 -1% 0' }} />
               <Typography color="#4D99CB" size="2.1rem" zIndex="3">
@@ -73,19 +77,24 @@ const ProblemInfo = () => {
                   bottom: 0,
                 }}
               />
-              <Typography
-                type="AppleSDGothicNeoB00"
-                color="white"
-                size="1.6rem"
-                margin="11em 0 0 0"
-                zIndex="3">
-                앞으로 3년 후
-              </Typography>
+              <div style={{ position: 'absolute', zIndex: 10, bottom: 20 }}>
+                <Typography
+                  type="AppleSDGothicNeoB00"
+                  color="white"
+                  size="1.6rem">
+                  앞으로 3년 후
+                </Typography>
+              </div>
             </Card>
           </div>
         </>
         <>
-          <div style={{ marginLeft: '-2%', paddingLeft: '5%' }}>
+          <div
+            style={{
+              marginLeft: '-2%',
+              paddingLeft: '5%',
+              position: 'relative',
+            }}>
             <Card>
               <img src={two} style={{ width: '10%', margin: '9% 0 -1% 0' }} />
               <Typography color="#4D99CB" size="2.1rem" zIndex="3">
@@ -110,19 +119,24 @@ const ProblemInfo = () => {
                   bottom: 10,
                 }}
               />
-              <Typography
-                type="AppleSDGothicNeoB00"
-                color="white"
-                size="1.6rem"
-                margin="12em 0 0 0"
-                zIndex="3">
-                서울시 25개 자치구 중 5위
-              </Typography>
+              <div style={{ position: 'absolute', zIndex: 10, bottom: 20 }}>
+                <Typography
+                  type="AppleSDGothicNeoB00"
+                  color="white"
+                  size="1.6rem">
+                  서울시 25개 자치구 중 5위
+                </Typography>
+              </div>
             </Card>
           </div>
         </>
         <>
-          <div style={{ marginLeft: '-2%', paddingLeft: '5%' }}>
+          <div
+            style={{
+              marginLeft: '-2%',
+              paddingLeft: '5%',
+              position: 'relative',
+            }}>
             <Card>
               <img src={three} style={{ width: '10%', margin: '9% 0 -1% 0' }} />
               <Typography color="#4D99CB" size="2.1rem" zIndex="3">
@@ -141,22 +155,24 @@ const ProblemInfo = () => {
               <img
                 src={trash3}
                 style={{
-                  width: '50%',
+                  width: window.innerWidth < '500' ? '60%' : '50%',
                   zIndex: 2,
                   position: 'absolute',
-                  top: '40%',
+                  top: '37%',
                 }}
               />
-              <Typography
-                type="AppleSDGothicNeoB00"
-                color="#4D99CB"
-                size="1.6rem"
-                margin="11em 0 0 0"
-                zIndex="3">
-                1인가구 일회용 쓰레기 배출량
-                <br />
-                다인가구의 2.3배
-              </Typography>
+              <div style={{ position: 'absolute', zIndex: 10, bottom: 20 }}>
+                <Typography
+                  type="AppleSDGothicNeoB00"
+                  color="#4D99CB"
+                  size="1.6rem"
+                  margin="11em 0 0 0"
+                  zIndex="3">
+                  1인가구 일회용 쓰레기 배출량
+                  <br />
+                  다인가구의 2.3배
+                </Typography>
+              </div>
             </Card>
           </div>
         </>

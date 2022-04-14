@@ -11,7 +11,7 @@ const Topbar = () => {
   return (
     <Container style={{ height: isSelect ? '100%' : 'auto' }}>
       <RowContainer>
-        <Typography margin="3.5% 10%" size="1.8rem">
+        <Typography margin="4% 10%" size="1.8rem">
           제로인구로
         </Typography>
         <Button
@@ -107,6 +107,7 @@ const RowContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background: inherit;
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
 `;
@@ -122,13 +123,12 @@ const Button = styled.button`
 const Menu = styled.div`
   position: absolute;
   height: 100vh;
-  width: 21em;
+  width: 30em;
   right: 0;
   top: 0;
   border: 1.5px solid #078d68;
-  margin: 0 0 0 0%;
   background-color: white;
-  z-index: 3;
+  z-index: 5;
 `;
 
 const Ul = styled.ul`
