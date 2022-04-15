@@ -9,8 +9,8 @@ const MoveText = props => {
       style={{
         backgroundColor,
         width: '100%',
-        height: '2.5em',
-        lineHeight: '2.5em',
+        height: '3em',
+        lineHeight: '3em',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
         zIndex: 2,
