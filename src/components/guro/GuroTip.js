@@ -71,57 +71,69 @@ const GuroTip = () => {
         {!isClick[0] ? null : (
           <>
             <img src={divider} style={{ width: '80%' }} />
-            <Typography
-              size="1.4rem"
-              lineHeight="24px"
-              color="white"
-              type="AppleSDGothicB00"
-              textAlign="left"
-              margin="1.5em 0 1em 10%">
-              교환장소: 구로 관내 동주민센터
-            </Typography>
-            <Typography
-              size="1.4rem"
-              lineHeight="24px"
-              color="white"
-              type="AppleSDGothicB00"
-              textAlign="left"
-              margin="1em 10%">
-              교환방법: 종이팩 1.5kg을 종량재 봉투(10ℓ) 1매와 교환 가능
-            </Typography>
-            <Typography
-              size="1.2rem"
-              lineHeight="24px"
-              color="white"
-              type="AppleSDGothicB00"
-              textAlign="left"
-              margin="1em 10%">
-              <span style={{ fontSize: '1.4rem' }}>주의사항:</span>
-              <br />
-              1) 종이팩의 내용물을 비우고 물로 깨끗하게 헹군 후,
-              <br />
-              <span style={{ paddingLeft: '1em' }}>
-                펼쳐서 건조한 상태로 교환해주세요.
-              </span>
-              <br />
-              2) 교환할 수 있는 종이팩으로는 우유팩, 주스팩, 기타 음료팩이
-              있어요.
-              <br />
-              <span style={{ paddingLeft: '1em' }}>
-                멸균 우유 처럼 종이팩 안쪽이 은박지로 코팅이 되어있는 종이팩은
-              </span>
-              <br />
-              <span style={{ paddingLeft: '1em' }}>교환 할 수 없어요. </span>
-            </Typography>
-            <Typography
-              size="1.4rem"
-              lineHeight="24px"
-              color="white"
-              type="AppleSDGothicB00"
-              textAlign="left"
-              margin="1em 10%">
-              문의전화: 구로구 청소행정과 02-860-2376
-            </Typography>
+            <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
+              <Typography
+                size="1.4rem"
+                lineHeight="24px"
+                color="white"
+                type="AppleSDGothicB00"
+                textAlign="left"
+                margin="1.5em 0 1em 0">
+                교환장소: 구로 관내 동주민센터
+              </Typography>
+              <Typography
+                size="1.4rem"
+                lineHeight="24px"
+                color="white"
+                type="AppleSDGothicB00"
+                textAlign="left"
+                margin="1em 0">
+                교환방법: 종이팩 1.5kg을 종량재 봉투(10ℓ) 1매와 교환 가능
+              </Typography>
+              <Typography
+                size="1.4rem"
+                lineHeight="24px"
+                color="white"
+                type="AppleSDGothicB00"
+                textAlign="left"
+                margin="0">
+                주의사항:
+              </Typography>
+              <Typography
+                size="1.2rem"
+                lineHeight="24px"
+                color="white"
+                type="AppleSDGothicB00"
+                textAlign="left"
+                margin="0"
+                paddingLeft="1em"
+                textIndent="-1em">
+                1) 종이팩의 내용물을 비우고 물로 깨끗하게 헹군 후, 펼쳐서 건조한
+                상태로 교환해주세요.
+              </Typography>
+              <Typography
+                size="1.2rem"
+                lineHeight="24px"
+                color="white"
+                type="AppleSDGothicB00"
+                textAlign="left"
+                margin="0"
+                paddingLeft="1em"
+                textIndent="-1em">
+                2) 교환할 수 있는 종이팩으로는 우유팩, 주스팩, 기타 음료팩이
+                있어요. 멸균 우유 처럼 종이팩 안쪽이 은박지로 코팅이 되어있는
+                종이팩은 교환 할 수 없어요.
+              </Typography>
+              <Typography
+                size="1.4rem"
+                lineHeight="24px"
+                color="white"
+                type="AppleSDGothicB00"
+                textAlign="left"
+                margin="1em 0">
+                문의전화: 구로구 청소행정과 02-860-2376
+              </Typography>
+            </div>
             <img src={divider} style={{ width: '80%' }} />
           </>
         )}
@@ -186,54 +198,80 @@ const GuroTip = () => {
         {!isClick[1] ? null : (
           <>
             <img src={divider} style={{ width: '80%' }} />
-            <Typography
-              size="1.4rem"
-              lineHeight="24px"
-              color="white"
-              type="AppleSDGothicB00"
-              textAlign="left"
-              margin="1em 10%">
-              수거장소: 동주민센터 아이스팩 전용수거함
-            </Typography>
-            <Typography
-              size="1.4rem"
-              lineHeight="24px"
-              color="white"
-              type="AppleSDGothicB00"
-              textAlign="left"
-              margin="1em 10%">
-              배출방법: 규격에 맞는 아이스팩을 세척 및 건조한 후 배출
-            </Typography>
-            <Typography
-              size="1.2rem"
-              lineHeight="24px"
-              color="white"
-              type="AppleSDGothicB00"
-              textAlign="left"
-              margin="1em 10%">
-              <span style={{ fontSize: '1.4rem' }}>주의사항:</span>
-              <br />
-              1) 오염이나 훼손되지 않은 젤 타임 아이스팩이 재활용 대상이에요.
-              <br />
-              <span style={{ paddingLeft: '1em' }}>
-                펼쳐서 건조한 상태로 교환해주세요.
-              </span>
-              <br />
-              2) 정해진 규격의 아이스팩만 전용수거함에 넣어야 해요. 있어요.
-              <br />
-              <span style={{ paddingLeft: '1em' }}>(15cmx20cm,16cmx23cm)</span>
-              <br />
-              3) 배출시간은 평일 09:00 ~ 18:00 이고, 공휴일에는 운영하지 않아요.
-            </Typography>
-            <Typography
-              size="1.4rem"
-              lineHeight="24px"
-              color="white"
-              type="AppleSDGothicB00"
-              textAlign="left"
-              margin="1em 10%">
-              문의전화: 구로구 청소행정과 02-860-2376
-            </Typography>
+            <>
+              <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
+                <Typography
+                  size="1.4rem"
+                  lineHeight="24px"
+                  color="white"
+                  type="AppleSDGothicB00"
+                  textAlign="left"
+                  margin="1.5em 0 1em 0">
+                  수거장소: 동주민센터 아이스팩 전용수거함
+                </Typography>
+                <Typography
+                  size="1.4rem"
+                  lineHeight="24px"
+                  color="white"
+                  type="AppleSDGothicB00"
+                  textAlign="left"
+                  margin="1em 0">
+                  배출방법: 규격에 맞는 아이스팩을 세척 및 건조한 후 배출
+                </Typography>
+                <Typography
+                  size="1.4rem"
+                  lineHeight="24px"
+                  color="white"
+                  type="AppleSDGothicB00"
+                  textAlign="left"
+                  margin="0">
+                  주의사항:
+                </Typography>
+                <Typography
+                  size="1.2rem"
+                  lineHeight="24px"
+                  color="white"
+                  type="AppleSDGothicB00"
+                  textAlign="left"
+                  margin="0"
+                  paddingLeft="1em"
+                  textIndent="-1em">
+                  1) 오염이나 훼손되지 않은 젤 타임 아이스팩이 재활용
+                  대상이에요. 펼쳐서 건조한 상태로 교환해주세요.
+                </Typography>
+                <Typography
+                  size="1.2rem"
+                  lineHeight="24px"
+                  color="white"
+                  type="AppleSDGothicB00"
+                  textAlign="left"
+                  margin="0"
+                  paddingLeft="1em"
+                  textIndent="-1em">
+                  2) 정해진 규격의 아이스팩만 전용수거함에 넣어야 해요. 있어요.
+                  (15cmx20cm,16cmx23cm)
+                  <Typography
+                    size="1.2rem"
+                    lineHeight="24px"
+                    color="white"
+                    type="AppleSDGothicB00"
+                    textAlign="left"
+                    margin="0">
+                    3) 배출시간은 평일 09:00 ~ 18:00 이고, 공휴일에는 운영하지
+                    않아요.
+                  </Typography>
+                </Typography>
+                <Typography
+                  size="1.4rem"
+                  lineHeight="24px"
+                  color="white"
+                  type="AppleSDGothicB00"
+                  textAlign="left"
+                  margin="1em 0">
+                  문의전화: 구로구 청소행정과 02-860-2376
+                </Typography>
+              </div>
+            </>
             <img src={divider} style={{ width: '80%' }} />
           </>
         )}
@@ -300,60 +338,67 @@ const GuroTip = () => {
         {!isClick[2] ? null : (
           <>
             <img src={divider} style={{ width: '80%' }} />
-            <Typography
-              size="1.4rem"
-              lineHeight="24px"
-              color="white"
-              type="AppleSDGothicB00"
-              textAlign="left"
-              margin="1em 10%">
-              배출방법: 정해진 요일에 투명 페트병 전용 수거함에 분리배출
-              <br />
-              <span style={{ paddingLeft: '4em' }}>
+            <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
+              <Typography
+                size="1.4rem"
+                lineHeight="2.4rem"
+                color="white"
+                type="AppleSDGothicB00"
+                textAlign="left"
+                margin="1.5em 0 1em 0"
+                paddingLeft="4em"
+                textIndent="-4em">
+                배출방법: 정해진 요일에 투명 페트병 전용 수거함에 분리배출
+                <br />
                 (전용 수거함이 없을 경우 투명페트병만 따로 모아서)
-              </span>
-            </Typography>
+              </Typography>
+              <Typography
+                size="1.4rem"
+                lineHeight="2.4rem"
+                color="white"
+                type="AppleSDGothicB00"
+                textAlign="left"
+                margin="0">
+                주의사항
+              </Typography>
+              <Typography
+                size="1.2rem"
+                lineHeight="2.4rem"
+                color="white"
+                type="AppleSDGothicB00"
+                textAlign="left"
+                margin="0"
+                paddingLeft="1em"
+                textIndent="-1em">
+                1) 투명 페트병의 내용물을 비우고 깨끗하게 헹군 다음, 라벨을
+                제거해요. 그 다음 이물질이 들어가지 않게 페트병을 잘 압착한 후
+                뚜껑을 닫아서 배출해요. *뚜껑은 세척 과정에서 분리할 수 있어
+                같이 배출해도 무방해요.
+              </Typography>
+              <Typography
+                size="1.2rem"
+                lineHeight="2.4rem"
+                color="white"
+                type="AppleSDGothicB00"
+                textAlign="left"
+                margin="0"
+                paddingLeft="1em"
+                textIndent="-1em">
+                2) 투명페트병은 무색의 투명한 먹는 샘물, 음료 페트병만
+                분리배출해요. 일회용컵, 계란판 등은 투명페트병과 따로 분리해서
+                일반 플라스틱류로 배출해야 돼요.
+              </Typography>
 
-            <Typography
-              size="1.2rem"
-              lineHeight="24px"
-              color="white"
-              type="AppleSDGothicB00"
-              textAlign="left"
-              margin="1em 10%">
-              <span style={{ fontSize: '1.4rem' }}>주의사항:</span>
-              <br />
-              1) 투명 페트병의 내용물을 비우고 깨끗하게 헹군 다음, 라벨을
-              제거해요.
-              <br />
-              <span style={{ paddingLeft: '1em' }}>
-                그 다음 이물질이 들어가지 않게 페트병을 잘 압착한 후 뚜껑을
-                닫아서
-              </span>
-              <br />
-              <span style={{ paddingLeft: '1em' }}>
-                배출해요. *뚜껑은 세척 과정에서 분리할 수 있어 같이 배출해도
-                무방해요.
-              </span>
-              <br />
-              2) 투명페트병은 무색의 투명한 먹는 샘물, 음료 페트병만
-              분리배출해요.
-              <br />
-              <span style={{ paddingLeft: '1em' }}>
-                일회용컵, 계란판 등은 투명페트병과 따로 분리해서
-              </span>
-              <br />
-              일반 플라스틱류로 배출해야 돼요.
-            </Typography>
-            <Typography
-              size="1.4rem"
-              lineHeight="24px"
-              color="white"
-              type="AppleSDGothicB00"
-              textAlign="left"
-              margin="1em 10%">
-              문의전화: 구로구 청소행정과 02-860-2376
-            </Typography>
+              <Typography
+                size="1.4rem"
+                lineHeight="24px"
+                color="white"
+                type="AppleSDGothicB00"
+                textAlign="left"
+                margin="1em 0">
+                문의전화: 구로구 청소행정과 02-860-2376
+              </Typography>
+            </div>
             <img src={divider} style={{ width: '80%' }} />
           </>
         )}
