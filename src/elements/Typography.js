@@ -12,6 +12,9 @@ const Typography = props => {
     fontWeight,
     zIndex,
     lineHeight,
+    wordBreak,
+    textIndent,
+    paddingLeft,
   } = props;
   return (
     <p
@@ -24,6 +27,9 @@ const Typography = props => {
         fontWeight,
         zIndex,
         lineHeight,
+        wordBreak,
+        textIndent,
+        paddingLeft,
       }}>
       {children}
     </p>
@@ -36,6 +42,8 @@ Typography.defaultProps = {
   type: 'Cafe24Ssurround',
   color: '#078D68',
   margin: false,
+  wordBreak: 'keep-all',
+  textIndent: null,
 };
 
 export default Typography;
