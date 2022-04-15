@@ -6,13 +6,10 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import divider1 from '../../static/images/problemInfo/yellow_divider.svg';
 import divider2 from '../../static/images/problemInfo/white_divider.svg';
-import one from '../../static/images/problemInfo/one.svg';
-import two from '../../static/images/problemInfo/two.svg';
-import three from '../../static/images/problemInfo/three.svg';
+import card1 from '../../static/images/problemInfo/card_1.png';
+import card2 from '../../static/images/problemInfo/card_2.png';
+import card3 from '../../static/images/problemInfo/card_3.png';
 import { service } from '../../services';
-import trash1 from '../../static/images/problemInfo/trash_1.png';
-import trash2 from '../../static/images/problemInfo/trash_2.png';
-import trash3 from '../../static/images/problemInfo/trash_3.png';
 import note from '../../static/images/problemInfo/note.png';
 
 const ProblemInfo = () => {
@@ -56,135 +53,18 @@ const ProblemInfo = () => {
 
       <MySlider {...settings} style={{ zIndex: '0', marginLeft: '-5%' }}>
         <>
-          <div
-            style={{
-              paddingLeft: '5%',
-            }}>
-            <Card>
-              <img src={one} style={{ width: '10%', margin: '9% 0 -1% 0' }} />
-              <Typography
-                color="#4D99CB"
-                size="2.6rem"
-                zIndex="3"
-                lineHeight="36px">
-                2025년 <span style={{ color: '#EADB50' }}>수도권</span>
-                <br />
-                쓰레기 매립지 폐쇄{' '}
-                <span style={{ color: '#EADB50' }}>예정</span>
-              </Typography>
-              <img
-                src={trash1}
-                style={{
-                  width: '100%',
-                  zIndex: 2,
-                  borderRadius: '20px',
-                  position: 'absolute',
-                  bottom: 0,
-                }}
-              />
-              <div style={{ position: 'absolute', zIndex: 10, bottom: 20 }}>
-                <Typography
-                  type="AppleSDGothicNeoB00"
-                  color="white"
-                  size="2rem">
-                  앞으로 3년 후
-                </Typography>
-              </div>
-            </Card>
+          <div style={{ paddingLeft: '5%' }}>
+            <img src={card1} style={{ width: '100%' }} />
+          </div>
+        </>{' '}
+        <>
+          <div style={{ paddingLeft: '5%' }}>
+            <img src={card2} style={{ width: '100%' }} />
           </div>
         </>
         <>
-          <div
-            style={{
-              paddingLeft: '5%',
-              position: 'relative',
-            }}>
-            <Card>
-              <img src={two} style={{ width: '10%', margin: '9% 0 -1% 0' }} />
-              <Typography
-                color="#4D99CB"
-                size="2.6rem"
-                zIndex="3"
-                lineHeight="36px">
-                구로구 쓰레기 배출량<span style={{ color: '#EADB50' }}>은</span>
-                <br />
-                서울<span style={{ color: '#EADB50' }}>에서도</span> Top 5
-              </Typography>
-              <Typography
-                type="AppleSDGothicNeoB00"
-                color="#4D99CB"
-                size="1rem"
-                margin="-1.8rem"
-                zIndex="3">
-                출처: 수도권매립지관리공사 홈페이지, 2021 기준
-              </Typography>
-              <img
-                src={trash2}
-                style={{
-                  width: '75%',
-                  zIndex: 2,
-                  position: 'absolute',
-                  bottom: 10,
-                }}
-              />
-              <div style={{ position: 'absolute', zIndex: 10, bottom: 20 }}>
-                <Typography
-                  type="AppleSDGothicNeoB00"
-                  color="white"
-                  size="2rem">
-                  서울시 25개 자치구 중 5위
-                </Typography>
-              </div>
-            </Card>
-          </div>
-        </>
-        <>
-          <div
-            style={{
-              paddingLeft: '5%',
-              position: 'relative',
-            }}>
-            <Card>
-              <img src={three} style={{ width: '10%', margin: '9% 0 -1% 0' }} />
-              <Typography
-                color="#4D99CB"
-                size="2.6rem"
-                zIndex="3"
-                lineHeight="36px">
-                <span style={{ color: '#EADB50' }}>나혼자 산다?</span>
-                <br />
-                쓰레기와 함께 산다!
-              </Typography>
-              <Typography
-                type="AppleSDGothicNeoB00"
-                color="#4D99CB"
-                size="1rem"
-                margin="-1.8rem"
-                zIndex="3">
-                출처: 서울디지털재단 발행 보고서, 2020 발행
-              </Typography>
-              <img
-                src={trash3}
-                style={{
-                  width: window.innerWidth < '500' ? '55%' : '47%',
-                  zIndex: 2,
-                  position: 'absolute',
-                  top: '41%',
-                }}
-              />
-              <div style={{ position: 'absolute', zIndex: 10, bottom: 20 }}>
-                <Typography
-                  type="AppleSDGothicNeoB00"
-                  color="#4D99CB"
-                  size="2rem"
-                  margin="11em 0 0 0"
-                  zIndex="3">
-                  1인가구 일회용 쓰레기 배출량
-                  <br />
-                  다인가구의 2.3배
-                </Typography>
-              </div>
-            </Card>
+          <div style={{ paddingLeft: '5%' }}>
+            <img src={card3} style={{ width: '100%' }} />
           </div>
         </>
       </MySlider>
@@ -266,16 +146,16 @@ const MySlider = styled(Slider)`
   }
 `;
 
-const Card = styled.div`
-  background-color: white;
-  border-radius: 20px;
-  width: 100%;
-  height: 55vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-  position: relative;
-`;
+// const Card = styled.div`
+//   background-color: white;
+//   border-radius: 20px;
+//   width: 100%;
+//   height: 55vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   z-index: 1;
+//   position: relative;
+// `;
 
 export default ProblemInfo;
