@@ -1,13 +1,14 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import Typography from '../elements/Typography';
-import logo from '../static/images/zeroInfo/logo.svg';
-import divider from '../static/images/zeroInfo/green_divider.svg';
-import char2 from '../static/images/zeroInfo/char_2.png';
-import divider2 from '../static/images/zeroWasteInfo/green_divider.svg';
-import callOut from '../static/images/zeroWasteInfo/callOut.png';
-import RoundButton from '../elements/RoundButton';
-import arrow from '../static/images/diary/arrow.png';
+import Typography from '../../elements/Typography';
+import logo from '../../static/images/zeroInfo/logo.svg';
+import divider from '../../static/images/zeroInfo/green_divider.svg';
+import char2 from '../../static/images/zeroInfo/char_2.png';
+import divider2 from '../../static/images/zeroWasteInfo/green_divider.svg';
+import callOut from '../../static/images/zeroWasteInfo/callOut.png';
+import RoundButton from '../../elements/RoundButton';
+import arrow from '../../static/images/zeroInfo/arrow.png';
+import party from '../../static/images/zeroInfo/party_2.png';
 
 const ZeroInfo = () => {
   return (
@@ -17,7 +18,7 @@ const ZeroInfo = () => {
           backgroundColor: '#D29BBA',
           width: '100%',
           height: '100%',
-          paddingTop: '7em',
+          paddingTop: '9em',
           paddingBottom: '5em',
           marginBottom: '5em',
         }}>
@@ -30,7 +31,7 @@ const ZeroInfo = () => {
           바로 <span style={{ color: '#078d68' }}>우리</span>!
         </Typography>
         <img src={divider2} style={{ width: '65%' }} />
-        <img src={callOut} style={{ width: '85%', margin: '10% 0 10% 0' }} />
+        <img src={callOut} style={{ width: '85%', margin: '8% 0 10% 0' }} />
         <Typography
           type="AppleSDGothicB00"
           slze="1.6rem"
@@ -47,21 +48,29 @@ const ZeroInfo = () => {
           ‘제로인구’로의 이동을 제안합니다.
         </Typography>
       </div>
-      <img src={logo} />
-      <Typography size="3.4rem" margin="5% 0 5% 0">
-        제로인구란?
-      </Typography>
-      <img src={divider} />
-      <Typography
-        size="1.6rem"
-        type="AppleSDGothicNeoB00"
-        margin="5% 0 5% 0"
-        lineHeight="24px">
-        불필요한 쓰레기 배출을 줄이고, 처음부터 <br />
-        쓰레기를 만들지 않는 제로웨이스트(zero + waste) <br />
-        라이프 스타일을 실천하는 사람을 의미해요.
-      </Typography>
-      <img src={char2} style={{ width: '100%', marginTop: '5%' }} />
+      <div style={{ position: 'relative' }}>
+        <img
+          src={party}
+          style={{ position: 'absolute', width: '85%', marginLeft: '-29%' }}
+        />
+        <img src={logo} style={{ marginTop: '5em' }} />
+        <Typography size="3.4rem" margin="5% 0 6% 0">
+          제로인구란?
+        </Typography>
+        <img src={divider} />
+        <Typography
+          size="1.6rem"
+          type="AppleSDGothicNeoB00"
+          margin="6% 0 5% 0"
+          lineHeight="24px">
+          불필요한 쓰레기 배출을 줄이고, 처음부터 쓰레기를
+          <br />
+          만들지 않는 제로웨이스트(zero +waste)
+          <br />
+          라이프 스타일을 실천하고자 노력하는 사람을 의미해요.
+        </Typography>
+      </div>
+      <img src={char2} style={{ width: '100%', marginTop: '14%' }} />
       <div
         style={{
           backgroundColor: '#078D68',
@@ -74,12 +83,13 @@ const ZeroInfo = () => {
           color="white"
           type="AppleSDGothicB00"
           size="1.6rem"
-          lineHeight="24px">
+          lineHeight="24px"
+          margin="3em 0 0 0">
           이제 막 제로인으로 거듭난 당신을 위해,
           <br />
           제로인구로 팀이 준비한 선물!{' '}
         </Typography>
-        <Typography color="white" size="4.2rem" lineHeight="54px">
+        <Typography color="white" size="4.2rem" lineHeight="54px" margin="4% 0">
           매일제로
           <br />
           다이어리 set
