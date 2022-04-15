@@ -1,30 +1,49 @@
 @font-face {
-  /* 사용할 폰트의 이름 */
   font-family: 'Cafe24Ssurround';
   font-display: fallback;
 
-  /* 
-  src: 사용할 폰트의 위치 및 형식 
-     Safari, Android, iOS => ttf
-     Modern Browsers => woff
-     IE6-IE8 => eot
-  */
   src: url('./Cafe24Ssurround.ttf') format('truetype'),
     url('./Cafe24Ssurround.woff') format('woff');
 
-  /* 사용할 폰트의 기본 스타일 */
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'AppleSDGothicNeoB00';
+  font-family: 'GothicB';
   font-display: fallback;
 
-  src: url('./AppleSDGothicNeoB00.ttf') format('truetype'),
-    url('./AppleSDGothicNeoB00.woff') format('woff');
+  src: url('./GothicB.ttf') format('truetype'),
+    url('./GothicB.woff') format('woff');
+}
 
-  /* 사용할 폰트의 기본 스타일 */
-  font-weight: 400;
-  font-style: normal;
+@font-face {
+  font-family: 'gothicL';
+  font-display: fallback;
+
+  src: url('./GothicL.ttf') format('truetype'),
+    url('./GothicL.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'gothicM';
+  font-display: fallback;
+
+  src: url('./GothicM.ttf') format('truetype'),
+    url('./GothicM.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'gothicH';
+  font-display: fallback;
+
+  src: url('./GothicH.ttf') format('truetype'),
+    url('./GothicH.woff') format('woff');
+}
+@font-face {
+  font-family: 'gothicEB';
+  font-display: fallback;
+
+  src: url('./GothicEB.ttf') format('truetype'),
+    url('./GothicEB.woff') format('woff');
 }

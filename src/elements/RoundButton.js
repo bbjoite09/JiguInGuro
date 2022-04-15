@@ -9,14 +9,20 @@ const RoundButton = props => {
       style={{
         backgroundColor,
         width: '40%',
-        height: '40px',
+        height: '4.8rem',
         borderRadius: '10px',
         border: 'none',
         cursor: 'pointer',
         verticalAlign: 'middle',
         margin: '3em 0 1em 0',
+        boxShadow: '0 3px 3px #707070',
       }}>
-      <Typography color={textColor} margin="0">
+      <Typography
+        color={textColor}
+        margin="0"
+        type="GothicEB"
+        size="1.6rem"
+        letterSpacing="-0.05rem">
         {children}
       </Typography>
     </button>

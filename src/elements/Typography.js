@@ -16,6 +16,8 @@ const Typography = props => {
     textIndent,
     paddingLeft,
   } = props;
+
+  console.log(type.slice(0, 6));
   return (
     <p
       style={{
@@ -30,6 +32,7 @@ const Typography = props => {
         wordBreak,
         textIndent,
         paddingLeft,
+        letterSpacing: type.slice(0, 6) == 'Gothic' ? '-0.05rem' : '-0.25rem',
       }}>
       {children}
     </p>
@@ -44,6 +47,7 @@ Typography.defaultProps = {
   margin: false,
   wordBreak: 'keep-all',
   textIndent: null,
+  letterSpacing: '-0.25rem',
 };
 
 export default Typography;

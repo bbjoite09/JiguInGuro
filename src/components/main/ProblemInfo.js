@@ -90,16 +90,19 @@ const ProblemInfo = () => {
         </Typography>
         <img src={divider2} style={{ width: '30%', margin: '0 auto' }} />
         <Typography
-          type="AppleSDGothicNeoB00"
+          type="GothicM"
           color="#4D99CB"
           size="1.6rem"
           margin="5% 0 0 0"
           lineHeight="24px">
           우리 삶이 발전한만큼 늘어난 쓰레기들...
           <br />
-          이제 쓰레기를 ‘잘 버리는 것’에서 나아가,
+          이제 쓰레기를
+          <span style={{ fontFamily: 'GothicEB' }}>‘잘 버리는 것’</span>에서
+          나아가,
           <br />
-          ‘만들지 않는 것’을 시도해 봐야 할 시간입니다.
+          <span style={{ fontFamily: 'GothicEB' }}>‘만들지 않는 것’</span>을
+          시도해 봐야 할 시간입니다.
         </Typography>
 
         <div

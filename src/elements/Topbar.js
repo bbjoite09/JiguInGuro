@@ -39,15 +39,16 @@ const Topbar = () => {
                   style={{ marginRight: '10%' }}>
                   <img
                     src={exit}
-                    style={{ width: '150%', marginLeft: '25%' }}
+                    style={{ width: '200%', marginLeft: '100%' }}
                   />
                 </Button>
                 <Typography
-                  type="AppleSDGothicNeoB00"
+                  type="GothicH"
                   textAlign="right"
                   margin="5% 10%"
-                  size="1.8rem"
-                  fontWeight="10">
+                  size="2rem"
+                  fontWeight="10"
+                  letterSpacing="-0.05rem">
                   바로가기
                 </Typography>
               </RowContainer>
@@ -55,10 +56,11 @@ const Topbar = () => {
             <Li>
               <Link to="/" style={{ textDecoration: 'none' }}>
                 <Typography
-                  type="AppleSDGothicNeoB00"
+                  type="GothicB"
                   textAlign="right"
                   margin="5% 10%"
-                  size="1.8rem">
+                  size="2rem"
+                  letterSpacing="-0.05rem">
                   제로인구로
                 </Typography>
               </Link>
@@ -66,10 +68,11 @@ const Topbar = () => {
             <Li>
               <Link to="/diary" style={{ textDecoration: 'none' }}>
                 <Typography
-                  type="AppleSDGothicNeoB00"
+                  type="GothicB"
                   textAlign="right"
                   margin="5% 10%"
-                  size="1.8rem">
+                  size="2rem"
+                  letterSpacing="-0.05rem">
                   제로일기 다이어리
                 </Typography>
               </Link>
@@ -77,10 +80,11 @@ const Topbar = () => {
             <Li>
               <Link to="/guro" style={{ textDecoration: 'none' }}>
                 <Typography
-                  type="AppleSDGothicNeoB00"
+                  type="GothicB"
                   textAlign="right"
                   margin="5% 10%"
-                  size="1.8rem">
+                  size="2rem"
+                  letterSpacing="-0.05rem">
                   구로구 환경정보{' '}
                 </Typography>
               </Link>
