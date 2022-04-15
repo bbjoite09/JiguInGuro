@@ -11,7 +11,7 @@ const Topbar = () => {
   return (
     <Container style={{ height: isSelect ? '100%' : 'auto' }}>
       <RowContainer>
-        <Typography margin="4% 10%" size="1.8rem">
+        <Typography margin="4% 0 4% 10%" size="1.8rem">
           제로인구로
         </Typography>
         <Button
@@ -75,7 +75,7 @@ const Topbar = () => {
               </Link>
             </Li>
             <Li>
-              <Link to="/" style={{ textDecoration: 'none' }}>
+              <Link to="/guro" style={{ textDecoration: 'none' }}>
                 <Typography
                   type="AppleSDGothicNeoB00"
                   textAlign="right"
