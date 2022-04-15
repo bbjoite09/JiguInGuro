@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import RoundButton from '../elements/RoundButton';
 import Topbar from '../elements/Topbar';
 import Typography from '../elements/Typography';
 import picture from '../static/images/diary/pic.png';
+import arrow from '../static/images/diary/arrow.png';
 
 const diaryDetail = (discription1, discription2) => {
   return (
@@ -32,6 +33,14 @@ const Diary = () => {
         <br />: 제로웨이스트 다이어리 set
       </Typography>
       <RoundButton>다이어리 다운로드</RoundButton>
+      <div
+        style={{
+          width: '100%',
+          height: '5em',
+          position: 'relative',
+        }}>
+        <Animation src={arrow} style={{ width: '10%' }} />
+      </div>
       {diaryDetail(
         '먼슬리',
         '초보 제로웨이스터들을 위한 제로웨이스트 길잡이 다이어리',
@@ -62,6 +71,22 @@ const Container = styled.div`
   background-color: white;
   overflow: hidden;
   padding: 2em 0;
+`;
+
+const move = keyframes`{
+  from {
+    top: 30%;
+  }
+  to {
+    top: 0%;
+  }
+}
+`;
+
+const Animation = styled.img`
+  animation: ${move} 1s linear infinite;
+  position: absolute;
+  left: 45%;
 `;
 
 export default Diary;

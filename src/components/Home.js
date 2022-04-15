@@ -3,24 +3,31 @@ import styled, { keyframes } from 'styled-components';
 import Topbar from '../elements/Topbar';
 import char1 from '../static/images/home/char_1.png';
 import mainLogo from '../static/images/home/main_logo.png';
+import party from '../static/images/home/party_1.png';
+
 const Home = () => {
   return (
     <>
       <Topbar />
-      <FlexContainer id="main">
+      <FlexContainer>
+        <img
+          src={party}
+          style={{ width: '96%', position: 'absolute', zIndex: 1 }}
+        />
         <div style={{ padding: '15% 10%' }}>
           <img src={mainLogo} style={{ width: '100%' }} />
         </div>
         <div style={{ width: '100%' }}>
           <img
             src={char1}
-            style={{ width: '130%', margin: '-30% 0 -20px -15px' }}
+            style={{ width: '150%', margin: '-33% 0 -20px -55px' }}
           />
           <div
             style={{
               backgroundColor: '#078D68',
               width: '100%',
-              height: '4em',
+              height: '5em',
+              zIndex: 6,
             }}
           />
           <div
@@ -31,6 +38,7 @@ const Home = () => {
               lineHeight: '2.5em',
               overflow: 'hidden',
               whiteSpace: 'nowrap',
+              zIndex: 2,
             }}>
             <AnimationText>
               #제로인구로 #제로in구로 #제로인구로 #제로in구로 #제로인구로
@@ -71,6 +79,7 @@ const FlexContainer = styled.div`
   background-attachment: fixed;
   background-color: white;
   overflow: hidden;
+  position: relative;
 `;
 
 export default Home;

@@ -14,6 +14,7 @@ import trash1 from '../static/images/problemInfo/trash_1.png';
 import trash2 from '../static/images/problemInfo/trash_2.png';
 import trash3 from '../static/images/problemInfo/trash_3.png';
 import note from '../static/images/problemInfo/note.png';
+
 const ProblemInfo = () => {
   const settings = {
     dots: true,
@@ -41,27 +42,31 @@ const ProblemInfo = () => {
         <Typography
           color="white"
           textAlign={'left'}
-          size={'3.1rem'}
-          margin={'2em 0 0 10%'}>
+          size={'3.6rem'}
+          margin={'2.5em 0 0 10%'}
+          lineHeight="48px">
           지금 지구에는
           <br />
           <span style={{ color: '#EADB50' }}>쓰레기 대란</span>이
           <br />
           시작되고 있어요
         </Typography>
-        <img src={divider1} style={{ width: '55%', margin: ' 5% 0 15% 10%' }} />
+        <img src={divider1} style={{ width: '58%', margin: ' 5% 0 15% 10%' }} />
       </div>
 
       <MySlider {...settings} style={{ zIndex: '0', marginLeft: '-5%' }}>
         <>
           <div
             style={{
-              marginLeft: '-2%',
               paddingLeft: '5%',
             }}>
             <Card>
               <img src={one} style={{ width: '10%', margin: '9% 0 -1% 0' }} />
-              <Typography color="#4D99CB" size="2.1rem" zIndex="3">
+              <Typography
+                color="#4D99CB"
+                size="2.6rem"
+                zIndex="3"
+                lineHeight="36px">
                 2025년 <span style={{ color: '#EADB50' }}>수도권</span>
                 <br />
                 쓰레기 매립지 폐쇄{' '}
@@ -81,7 +86,7 @@ const ProblemInfo = () => {
                 <Typography
                   type="AppleSDGothicNeoB00"
                   color="white"
-                  size="1.6rem">
+                  size="2rem">
                   앞으로 3년 후
                 </Typography>
               </div>
@@ -91,13 +96,16 @@ const ProblemInfo = () => {
         <>
           <div
             style={{
-              marginLeft: '-2%',
               paddingLeft: '5%',
               position: 'relative',
             }}>
             <Card>
               <img src={two} style={{ width: '10%', margin: '9% 0 -1% 0' }} />
-              <Typography color="#4D99CB" size="2.1rem" zIndex="3">
+              <Typography
+                color="#4D99CB"
+                size="2.6rem"
+                zIndex="3"
+                lineHeight="36px">
                 구로구 쓰레기 배출량<span style={{ color: '#EADB50' }}>은</span>
                 <br />
                 서울<span style={{ color: '#EADB50' }}>에서도</span> Top 5
@@ -123,23 +131,27 @@ const ProblemInfo = () => {
                 <Typography
                   type="AppleSDGothicNeoB00"
                   color="white"
-                  size="1.6rem">
+                  size="2rem">
                   서울시 25개 자치구 중 5위
                 </Typography>
               </div>
             </Card>
+            ㄴ
           </div>
         </>
         <>
           <div
             style={{
-              marginLeft: '-2%',
               paddingLeft: '5%',
               position: 'relative',
             }}>
             <Card>
               <img src={three} style={{ width: '10%', margin: '9% 0 -1% 0' }} />
-              <Typography color="#4D99CB" size="2.1rem" zIndex="3">
+              <Typography
+                color="#4D99CB"
+                size="2.6rem"
+                zIndex="3"
+                lineHeight="36px">
                 <span style={{ color: '#EADB50' }}>나혼자 산다?</span>
                 <br />
                 쓰레기와 함께 산다!
@@ -155,17 +167,17 @@ const ProblemInfo = () => {
               <img
                 src={trash3}
                 style={{
-                  width: window.innerWidth < '500' ? '60%' : '50%',
+                  width: window.innerWidth < '500' ? '55%' : '47%',
                   zIndex: 2,
                   position: 'absolute',
-                  top: '37%',
+                  top: '41%',
                 }}
               />
               <div style={{ position: 'absolute', zIndex: 10, bottom: 20 }}>
                 <Typography
                   type="AppleSDGothicNeoB00"
                   color="#4D99CB"
-                  size="1.6rem"
+                  size="2rem"
                   margin="11em 0 0 0"
                   zIndex="3">
                   1인가구 일회용 쓰레기 배출량
@@ -179,18 +191,21 @@ const ProblemInfo = () => {
       </MySlider>
       <div
         style={{
-          width: '160%',
-          height: '70vh',
-          margin: '20% 0 0 -30%',
+          width: '180%',
+          height: '105%',
+          margin: '20% 0 0 -40%',
           borderRadius: '50%',
           background: 'linear-gradient( to bottom, white, #EADB50 60%)',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
           zIndex: -1,
           clip: 'rect(0, 100%, 90%, 100%)',
         }}>
-        <Typography color="#4D99CB" size="3.5rem" margin="10% 0 5% 0 ">
+        <Typography
+          color="#4D99CB"
+          size="3.8rem"
+          margin="20% 0 5% 0"
+          lineHeight="50px">
           잘 버리는 것,
           <br />그 다음 단계로
         </Typography>
@@ -198,24 +213,26 @@ const ProblemInfo = () => {
         <Typography
           type="AppleSDGothicNeoB00"
           color="#4D99CB"
-          size="1.5rem"
-          margin="5% 0 9.5% 0">
+          size="1.6rem"
+          margin="5% 0 0 0"
+          lineHeight="24px">
           우리 삶이 발전한만큼 늘어난 쓰레기들...
           <br />
           이제 쓰레기를 ‘잘 버리는 것’에서 나아가,
           <br />
           ‘만들지 않는 것’을 시도해 봐야 할 시간입니다.
         </Typography>
-      </div>
 
-      <div
-        style={{
-          width: '100%',
-          marginTop: '-14.3em',
-          backgroundColor: '#EADB50',
-          paddingBottom: '5em',
-        }}>
-        <img src={note} style={{ width: '85%', marginTop: '10%' }} />
+        <div
+          style={{
+            width: '100%',
+            height: '100%',
+            backgroundColor: '#EADB50',
+            marginTop: '5%',
+            paddingBottom: '5em',
+          }}>
+          <img src={note} style={{ width: '48%' }} />
+        </div>
       </div>
     </Container>
   );
@@ -243,7 +260,7 @@ const MySlider = styled(Slider)`
     left: 10px;
     color: white;
     content: '•';
-    margin: 0 1px;
+    margin: 0 auto;
   }
   .slick-dots li.slick-active button:before {
     color: #eadb50;
@@ -254,7 +271,7 @@ const Card = styled.div`
   background-color: white;
   border-radius: 20px;
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;

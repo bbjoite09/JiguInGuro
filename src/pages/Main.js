@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Home from './Home';
-import ProblemInfo from './ProblemInfo';
-import ZeroInfo from './ZeroInfo';
-import ZeroWasteInfo from './ZeroWasteInfo';
+import Home from '../components/Home';
+import ProblemInfo from '../components/ProblemInfo';
+import ZeroInfo from '../components/ZeroInfo';
+import ZeroWasteInfo from '../components/ZeroWasteInfo';
 
 const Main = () => {
   return (
