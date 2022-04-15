@@ -136,7 +136,6 @@ const ProblemInfo = () => {
                 </Typography>
               </div>
             </Card>
-            ㄴ
           </div>
         </>
         <>
@@ -271,7 +270,7 @@ const Card = styled.div`
   background-color: white;
   border-radius: 20px;
   width: 100%;
-  height: 50vh;
+  height: 55vh;
   display: flex;
   flex-direction: column;
   align-items: center;

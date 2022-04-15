@@ -250,7 +250,6 @@ const Guro = () => {
           <br />
           고품질 폐페트병의 해외 수입양을 최소화 시킬 수 있어요
           <br />
-          제공 해드리고 있답니다.
         </Typography>
         <Button
           onClick={() => {
@@ -314,9 +313,6 @@ const Guro = () => {
                 일회용컵, 계란판 등은 투명페트병과 따로 분리해서
               </span>
               <br />
-              <span style={{ paddingLeft: '1em' }}>
-                일회용컵, 계란판 등은 투명페트병과 따로 분리해서
-              </span>
               일반 플라스틱류로 배출해야 돼요.
             </Typography>
             <Typography
