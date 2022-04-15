@@ -1,9 +1,10 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import Topbar from '../elements/Topbar';
-import char1 from '../static/images/home/char_1.png';
-import mainLogo from '../static/images/home/main_logo.png';
-import party from '../static/images/home/party_1.png';
+import styled from 'styled-components';
+import MoveText from '../../elements/MoveText';
+import Topbar from '../../elements/Topbar';
+import char1 from '../../static/images/home/char_1.png';
+import mainLogo from '../../static/images/home/main_logo.png';
+import party from '../../static/images/home/party_1.png';
 
 const Home = () => {
   return (
@@ -30,41 +31,12 @@ const Home = () => {
               zIndex: 6,
             }}
           />
-          <div
-            style={{
-              backgroundColor: 'white',
-              width: '100%',
-              height: '2.5em',
-              lineHeight: '2.5em',
-              overflow: 'hidden',
-              whiteSpace: 'nowrap',
-              zIndex: 2,
-            }}>
-            <AnimationText>
-              #제로인구로 #제로in구로 #제로인구로 #제로in구로 #제로인구로
-            </AnimationText>
-          </div>
         </div>
       </FlexContainer>
+      <MoveText />
     </>
   );
 };
-const move = keyframes`{
-  from {
-    margin-left: 100%;
-  }
-  to {
-    margin-left: -150%;
-  }
-}`;
-
-const AnimationText = styled.p`
-  margin: 0;
-  font-family: Cafe24Ssurround;
-  color: #078d68;
-  font-size: 1.4rem;
-  animation: ${move} 5s linear infinite;
-`;
 
 const FlexContainer = styled.div`
   max-width: 500px;

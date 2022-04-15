@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Typography from '../elements/Typography';
-import divider1 from '../static/images/zeroWasteInfo/pink_divider.svg';
-import bg from '../static/images/zeroWasteInfo/zero_back.png';
+import Typography from '../../elements/Typography';
+import divider1 from '../../static/images/zeroWasteInfo/pink_divider.svg';
+import bg from '../../static/images/zeroWasteInfo/zero_back.png';
 
 const ZeroInfo = () => {
   return (
@@ -12,7 +12,7 @@ const ZeroInfo = () => {
         <Typography
           size="3.4rem"
           textAlign="left"
-          margin="5% 0 5% 0"
+          margin="7% 0 5% 0"
           color="white"
           lineHeight="45px">
           제로웨이스트,
@@ -23,7 +23,10 @@ const ZeroInfo = () => {
         </Typography>
         <img src={divider1} style={{ width: '60%' }} />
       </div>
-      <img src={bg} style={{ width: '100%' }} />
+      <img
+        src={bg}
+        style={{ width: '100%', marginTop: '5%', marginBottom: '-1%' }}
+      />
     </Container>
   );
 };

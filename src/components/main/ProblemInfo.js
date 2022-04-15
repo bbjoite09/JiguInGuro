@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Typography from '../elements/Typography';
+import Typography from '../../elements/Typography';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import divider1 from '../static/images/problemInfo/yellow_divider.svg';
-import divider2 from '../static/images/problemInfo/white_divider.svg';
-import one from '../static/images/problemInfo/one.svg';
-import two from '../static/images/problemInfo/two.svg';
-import three from '../static/images/problemInfo/three.svg';
-import { service } from '../services';
-import trash1 from '../static/images/problemInfo/trash_1.png';
-import trash2 from '../static/images/problemInfo/trash_2.png';
-import trash3 from '../static/images/problemInfo/trash_3.png';
-import note from '../static/images/problemInfo/note.png';
+import divider1 from '../../static/images/problemInfo/yellow_divider.svg';
+import divider2 from '../../static/images/problemInfo/white_divider.svg';
+import one from '../../static/images/problemInfo/one.svg';
+import two from '../../static/images/problemInfo/two.svg';
+import three from '../../static/images/problemInfo/three.svg';
+import { service } from '../../services';
+import trash1 from '../../static/images/problemInfo/trash_1.png';
+import trash2 from '../../static/images/problemInfo/trash_2.png';
+import trash3 from '../../static/images/problemInfo/trash_3.png';
+import note from '../../static/images/problemInfo/note.png';
 
 const ProblemInfo = () => {
   const settings = {
@@ -42,7 +42,7 @@ const ProblemInfo = () => {
         <Typography
           color="white"
           textAlign={'left'}
-          size={'3.6rem'}
+          size={'3.4rem'}
           margin={'2.5em 0 0 10%'}
           lineHeight="48px">
           지금 지구에는
@@ -208,7 +208,7 @@ const ProblemInfo = () => {
           잘 버리는 것,
           <br />그 다음 단계로
         </Typography>
-        <img src={divider2} style={{ width: '45%', margin: '0 auto' }} />
+        <img src={divider2} style={{ width: '30%', margin: '0 auto' }} />
         <Typography
           type="AppleSDGothicNeoB00"
           color="#4D99CB"
