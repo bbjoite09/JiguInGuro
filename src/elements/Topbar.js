@@ -75,7 +75,7 @@ const Topbar = () => {
               </Link>
             </Li>
             <Li>
-              <Link to="/" style={{ textDecoration: 'none' }}>
+              <Link to="/guro" style={{ textDecoration: 'none' }}>
                 <Typography
                   type="AppleSDGothicNeoB00"
                   textAlign="right"
