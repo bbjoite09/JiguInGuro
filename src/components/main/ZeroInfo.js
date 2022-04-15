@@ -31,9 +31,9 @@ const ZeroInfo = () => {
           바로 <span style={{ color: '#078d68' }}>우리</span>!
         </Typography>
         <img src={divider2} style={{ width: '65%' }} />
-        <img src={callOut} style={{ width: '85%', margin: '8% 0 10% 0' }} />
+        <img src={callOut} style={{ width: '85%', margin: '8% 0 5% 0' }} />
         <Typography
-          type="AppleSDGothicB00"
+          type="GothicL"
           slze="1.6rem"
           color="white"
           lineHeight="24px">
@@ -42,10 +42,16 @@ const ZeroInfo = () => {
           행동할 용기가 있는 우리 모두에게
           <br />
         </Typography>
-        <Typography type="AppleSDGothicB00" color="white">
-          ‘쓰레기 생산자’에서
+        <Typography
+          type="GothicL"
+          color="white"
+          lineHeight="24px"
+          size="1.6rem"
+          margin="2em 0">
+          <span style={{ fontFamily: 'GothicEB' }}>‘쓰레기 생산자’</span>에서
           <br />
-          ‘제로인구’로의 이동을 제안합니다.
+          <span style={{ fontFamily: 'GothicEB' }}>‘제로인구’</span>로의 이동을
+          제안합니다.
         </Typography>
       </div>
       <div style={{ position: 'relative' }}>
@@ -59,15 +65,19 @@ const ZeroInfo = () => {
         </Typography>
         <img src={divider} />
         <Typography
-          size="1.6rem"
-          type="AppleSDGothicNeoB00"
+          size="1.5rem"
+          type="GothicL"
           margin="6% 0 5% 0"
           lineHeight="24px">
           불필요한 쓰레기 배출을 줄이고, 처음부터 쓰레기를
           <br />
-          만들지 않는 제로웨이스트(zero +waste)
-          <br />
-          라이프 스타일을 실천하고자 노력하는 사람을 의미해요.
+          만들지 않는{' '}
+          <span style={{ fontFamily: 'GothicB' }}>
+            제로웨이스트(zero +waste)
+            <br />
+            라이프 스타일을 실천하고자 노력하는 사람
+          </span>
+          을 의미해요.
         </Typography>
       </div>
       <img src={char2} style={{ width: '100%', marginTop: '14%' }} />
@@ -81,7 +91,7 @@ const ZeroInfo = () => {
         }}>
         <Typography
           color="white"
-          type="AppleSDGothicB00"
+          type="GothicM"
           size="1.6rem"
           lineHeight="24px"
           margin="3em 0 0 0">
@@ -96,21 +106,17 @@ const ZeroInfo = () => {
         </Typography>
 
         <RoundButton backgroundColor="white" textColor="#078D68">
-          다이어리 구경하기
+          다이어리 다운로드
         </RoundButton>
         <div
           style={{
             width: '100%',
-            height: '5em',
+            height: '4em',
             position: 'relative',
           }}>
-          <Animation src={arrow} style={{ width: '10%' }} />
+          <Animation src={arrow} style={{ width: '15%' }} />
         </div>
-        <Typography
-          size="1.6rem"
-          color="white"
-          type="AppleSDGothicNeoB00"
-          margin="0">
+        <Typography size="1.6rem" color="white" type="GothicM" margin="0">
           무료 굿노트 다이어리 양식 다운로드 받기
         </Typography>
       </div>
@@ -129,7 +135,7 @@ const Container = styled.div`
 
 const move = keyframes`{
   from {
-    top: 30%;
+    top: 25%;
   }
   to {
     top: 0%;
@@ -140,7 +146,7 @@ const move = keyframes`{
 const Animation = styled.img`
   animation: ${move} 1s linear infinite;
   position: absolute;
-  left: 45%;
+  left: 42.5%;
 `;
 
 export default ZeroInfo;

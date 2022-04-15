@@ -35,7 +35,7 @@ const GuroTip = () => {
           size="1.4rem"
           lineHeight="22px"
           color="white"
-          type="AppleSDGothicB00"
+          type="GothicL"
           textAlign="left"
           margin="5% 10%">
           종이팩은 일반 지류와 같이 배출하면 안 된다는 사실, 알고 계셨나요?
@@ -57,10 +57,10 @@ const GuroTip = () => {
             style={{ marginLeft: '-3%' }}
           />
           <Typography
-            size="1.4rem"
+            size="1.3rem"
             lineHeight="22px"
             color="white"
-            type="AppleSDGothicB00"
+            type="GothicM"
             margin="0 0 0 10px">
             자세히 알아보기
           </Typography>
@@ -73,25 +73,27 @@ const GuroTip = () => {
                 size="1.4rem"
                 lineHeight="24px"
                 color="white"
-                type="AppleSDGothicB00"
+                type="GothicL"
                 textAlign="left"
                 margin="1.5em 0 1em 0">
-                교환장소: 구로 관내 동주민센터
+                <span style={{ fontFamily: 'GothicEB' }}>교환장소:</span> 구로
+                관내 동주민센터
               </Typography>
               <Typography
                 size="1.4rem"
                 lineHeight="24px"
                 color="white"
-                type="AppleSDGothicB00"
+                type="GothicL"
                 textAlign="left"
                 margin="1em 0">
-                교환방법: 종이팩 1.5kg을 종량재 봉투(10ℓ) 1매와 교환 가능
+                <span style={{ fontFamily: 'GothicEB' }}>교환방법:</span> 종이팩
+                1.5kg을 종량재 봉투(10ℓ) 1매와 교환 가능
               </Typography>
               <Typography
                 size="1.4rem"
                 lineHeight="24px"
                 color="white"
-                type="AppleSDGothicB00"
+                type="GothicEB"
                 textAlign="left"
                 margin="0">
                 주의사항:
@@ -100,7 +102,7 @@ const GuroTip = () => {
                 size="1.2rem"
                 lineHeight="24px"
                 color="white"
-                type="AppleSDGothicB00"
+                type="GothicL"
                 textAlign="left"
                 margin="0"
                 paddingLeft="1em"
@@ -112,7 +114,7 @@ const GuroTip = () => {
                 size="1.2rem"
                 lineHeight="24px"
                 color="white"
-                type="AppleSDGothicB00"
+                type="GothicL"
                 textAlign="left"
                 margin="0"
                 paddingLeft="1em"
@@ -125,10 +127,11 @@ const GuroTip = () => {
                 size="1.4rem"
                 lineHeight="24px"
                 color="white"
-                type="AppleSDGothicB00"
+                type="GothicL"
                 textAlign="left"
                 margin="1em 0">
-                문의전화: 구로구 청소행정과 02-860-2376
+                <span style={{ fontFamily: 'GothicEB' }}>문의전화:</span> 구로구
+                청소행정과 02-860-2376
               </Typography>
             </div>
             <img src={divider} style={{ width: '80%' }} />
@@ -159,7 +162,7 @@ const GuroTip = () => {
           size="1.4rem"
           lineHeight="22px"
           color="white"
-          type="AppleSDGothicB00"
+          type="GothicL"
           textAlign="left"
           margin="5% 10%">
           대부분 미세 플라스틱으로 제작된 젤 아이스팩은 자연분해가 어려워
@@ -180,10 +183,10 @@ const GuroTip = () => {
             style={{ marginLeft: '-3%' }}
           />
           <Typography
-            size="1.4rem"
+            size="1.3rem"
             lineHeight="22px"
             color="white"
-            type="AppleSDGothicB00"
+            type="GothicM"
             margin="0 0 0 10px">
             자세히 알아보기
           </Typography>
@@ -197,25 +200,27 @@ const GuroTip = () => {
                   size="1.4rem"
                   lineHeight="24px"
                   color="white"
-                  type="AppleSDGothicB00"
+                  type="GothicL"
                   textAlign="left"
                   margin="1.5em 0 1em 0">
-                  수거장소: 동주민센터 아이스팩 전용수거함
+                  <span style={{ fontFamily: 'GothicEB' }}>수거장소:</span>{' '}
+                  동주민센터 아이스팩 전용수거함
                 </Typography>
                 <Typography
                   size="1.4rem"
                   lineHeight="24px"
                   color="white"
-                  type="AppleSDGothicB00"
+                  type="GothicL"
                   textAlign="left"
                   margin="1em 0">
-                  배출방법: 규격에 맞는 아이스팩을 세척 및 건조한 후 배출
+                  <span style={{ fontFamily: 'GothicEB' }}>배출방법:</span>
+                  규격에 맞는 아이스팩을 세척 및 건조한 후 배출
                 </Typography>
                 <Typography
                   size="1.4rem"
                   lineHeight="24px"
                   color="white"
-                  type="AppleSDGothicB00"
+                  type="GothicEB"
                   textAlign="left"
                   margin="0">
                   주의사항:
@@ -224,7 +229,7 @@ const GuroTip = () => {
                   size="1.2rem"
                   lineHeight="24px"
                   color="white"
-                  type="AppleSDGothicB00"
+                  type="GothicL"
                   textAlign="left"
                   margin="0"
                   paddingLeft="1em"
@@ -236,7 +241,7 @@ const GuroTip = () => {
                   size="1.2rem"
                   lineHeight="24px"
                   color="white"
-                  type="AppleSDGothicB00"
+                  type="GothicL"
                   textAlign="left"
                   margin="0"
                   paddingLeft="1em"
@@ -247,7 +252,7 @@ const GuroTip = () => {
                     size="1.2rem"
                     lineHeight="24px"
                     color="white"
-                    type="AppleSDGothicB00"
+                    type="GothicL"
                     textAlign="left"
                     margin="0"
                     paddingLeft="1em"
@@ -260,10 +265,11 @@ const GuroTip = () => {
                   size="1.4rem"
                   lineHeight="24px"
                   color="white"
-                  type="AppleSDGothicB00"
+                  type="GothicL"
                   textAlign="left"
                   margin="1em 0">
-                  문의전화: 구로구 청소행정과 02-860-2376
+                  <span style={{ fontFamily: 'GothicEB' }}>문의전화:</span>
+                  구로구 청소행정과 02-860-2376
                 </Typography>
               </div>
             </>
@@ -294,7 +300,7 @@ const GuroTip = () => {
           size="1.4rem"
           lineHeight="22px"
           color="white"
-          type="AppleSDGothicB00"
+          type="GothicL"
           textAlign="left"
           margin="5% 10%">
           투명 페트병은 재활용 제품을 생산하는 고품질 재생 원료에요. 약 80%가
@@ -316,10 +322,10 @@ const GuroTip = () => {
             style={{ marginLeft: '-3%' }}
           />
           <Typography
-            size="1.4rem"
+            size="1.3rem"
             lineHeight="22px"
             color="white"
-            type="AppleSDGothicB00"
+            type="GothicM"
             margin="0 0 0 10px">
             자세히 알아보기
           </Typography>
@@ -332,19 +338,20 @@ const GuroTip = () => {
                 size="1.4rem"
                 lineHeight="2.4rem"
                 color="white"
-                type="AppleSDGothicB00"
+                type="GothicL"
                 textAlign="left"
                 margin="1.5em 0 1em 0"
                 paddingLeft="4em"
                 textIndent="-4em">
-                배출방법: 정해진 요일에 투명 페트병 전용 수거함에 분리배출(전용
-                수거함이 없을 경우 투명페트병만 따로 모아서)
+                <span style={{ fontFamily: 'GothicEB' }}>배출방법:</span> 정해진
+                요일에 투명 페트병 전용 수거함에 분리배출(전용 수거함이 없을
+                경우 투명페트병만 따로 모아서)
               </Typography>
               <Typography
                 size="1.4rem"
                 lineHeight="2.4rem"
                 color="white"
-                type="AppleSDGothicB00"
+                type="GothicEB"
                 textAlign="left"
                 margin="0">
                 주의사항
@@ -353,7 +360,7 @@ const GuroTip = () => {
                 size="1.2rem"
                 lineHeight="2.4rem"
                 color="white"
-                type="AppleSDGothicB00"
+                type="GothicL"
                 textAlign="left"
                 margin="0"
                 paddingLeft="1em"
@@ -367,7 +374,7 @@ const GuroTip = () => {
                 size="1.2rem"
                 lineHeight="2.4rem"
                 color="white"
-                type="AppleSDGothicB00"
+                type="GothicL"
                 textAlign="left"
                 margin="0"
                 paddingLeft="1em"
@@ -381,10 +388,11 @@ const GuroTip = () => {
                 size="1.4rem"
                 lineHeight="24px"
                 color="white"
-                type="AppleSDGothicB00"
+                type="GothicL"
                 textAlign="left"
                 margin="1em 0">
-                문의전화: 구로구 청소행정과 02-860-2376
+                <span style={{ fontFamily: 'GothicEB' }}>문의전화:</span> 구로구
+                청소행정과 02-860-2376
               </Typography>
             </div>
             <img src={divider} style={{ width: '80%' }} />
