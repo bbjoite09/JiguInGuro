@@ -4,4 +4,5 @@ export const axiosSrc = {
   postComment: src + 'addCmnt',
   updateComment: src + 'updateCmnt',
   deleteComment: src + 'deleteCmnt',
+  getFile: src + 'maeilZero',
 };
