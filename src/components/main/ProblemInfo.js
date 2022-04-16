@@ -90,11 +90,10 @@ const ProblemInfo = () => {
         </Typography>
         <img src={divider2} style={{ width: '30%', margin: '0 auto' }} />
         <Typography
+          myType="content"
           type="GothicM"
           color="#4D99CB"
-          size="1.6rem"
-          margin="5% 0 0 0"
-          lineHeight="24px">
+          margin="5% 0 0 0">
           우리 삶이 발전한만큼 늘어난 쓰레기들...
           <br />
           이제 쓰레기를
