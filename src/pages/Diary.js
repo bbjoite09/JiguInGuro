@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import DiaryInfo from '../components/diary/DiaryInfo';
 import DiarySummary from '../components/diary/DiarySummary';
+import QnA from '../components/diary/QnA';
 import Topbar from '../elements/Topbar';
 
 const Diary = () => {
@@ -10,6 +11,7 @@ const Diary = () => {
       <Topbar />
       <DiarySummary />
       <DiaryInfo />
+      <QnA />
     </Container>
   );
 };
