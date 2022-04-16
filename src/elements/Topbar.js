@@ -45,9 +45,8 @@ const Topbar = () => {
                 <Typography
                   type="GothicH"
                   textAlign="right"
-                  margin="5% 10%"
+                  margin="4% 10%"
                   size="2rem"
-                  fontWeight="10"
                   letterSpacing="-0.05rem">
                   바로가기
                 </Typography>
@@ -58,10 +57,10 @@ const Topbar = () => {
                 <Typography
                   type="GothicB"
                   textAlign="right"
-                  margin="5% 10%"
+                  margin="4% 10%"
                   size="2rem"
                   letterSpacing="-0.05rem">
-                  제로인구로
+                  제로인구로 소개
                 </Typography>
               </Link>
             </Li>
@@ -70,10 +69,10 @@ const Topbar = () => {
                 <Typography
                   type="GothicB"
                   textAlign="right"
-                  margin="5% 10%"
+                  margin="4% 10%"
                   size="2rem"
                   letterSpacing="-0.05rem">
-                  제로일기 다이어리
+                  제로일기 다운받기
                 </Typography>
               </Link>
             </Li>
@@ -82,10 +81,10 @@ const Topbar = () => {
                 <Typography
                   type="GothicB"
                   textAlign="right"
-                  margin="5% 10%"
+                  margin="4% 10%"
                   size="2rem"
                   letterSpacing="-0.05rem">
-                  구로구 환경정보{' '}
+                  구로구 환경 꿀팁
                 </Typography>
               </Link>
             </Li>
@@ -132,7 +131,7 @@ const Button = styled.button`
 const Menu = styled.div`
   position: absolute;
   height: 100vh;
-  width: 30em;
+  width: 28em;
   right: 0;
   top: 0;
   border: 1.5px solid #078d68;

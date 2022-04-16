@@ -10,11 +10,10 @@ const ZeroInfo = () => {
       <div
         style={{ display: 'flex', flexDirection: 'column', marginLeft: '10%' }}>
         <Typography
-          size="3.4rem"
+          myType="title"
           textAlign="left"
           margin="7% 0 5% 0"
-          color="white"
-          lineHeight="45px">
+          color="white">
           제로웨이스트,
           <br />
           <span style={{ color: '#D89EBE' }}>아직도</span> 멀게만
@@ -23,10 +22,7 @@ const ZeroInfo = () => {
         </Typography>
         <img src={divider1} style={{ width: '60%' }} />
       </div>
-      <img
-        src={bg}
-        style={{ width: '100%', marginTop: '5%', marginBottom: '-1%' }}
-      />
+      <img src={bg} style={{ width: '100%', marginBottom: '-1%' }} />
     </Container>
   );
 };
