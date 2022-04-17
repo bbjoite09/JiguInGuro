@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import lottie from 'lottie-web';
-import party from '../static/images/home/party.json';
+import party from '../static/images/home/party2.json';
 
 const GetLottie = () => {
   //lottie

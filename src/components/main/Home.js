@@ -5,7 +5,7 @@ import MoveText from '../../elements/MoveText';
 import Topbar from '../../elements/Topbar';
 import char1 from '../../static/images/home/char_1.png';
 import mainLogo from '../../static/images/home/main_logo.png';
-import party from '../../static/images/home/party_1.png';
+// import party from '../../static/images/home/party_1.png';
 
 const Home = () => {
   return (
@@ -13,10 +13,10 @@ const Home = () => {
       <Topbar />
       <FlexContainer>
         <GetLottie />
-        <img
+        {/* <img
           src={party}
           style={{ width: '96%', position: 'absolute', zIndex: 1 }}
-        />
+        /> */}
         <div style={{ padding: '15% 10%', zIndex: 3 }}>
           <img src={mainLogo} style={{ width: '100%' }} />
         </div>

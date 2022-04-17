@@ -12,6 +12,7 @@ import tracker from '../../static/images/diaryInfo/tracker.png';
 import month from '../../static/images/diaryInfo/month.png';
 import year from '../../static/images/diaryInfo/year.png';
 import highlight from '../../static/images/diaryInfo/highlight.png';
+import sticker from '../../static/images/diaryInfo/sticker_1.png';
 
 const getTitle = (num, title, color) => {
   return (
@@ -78,7 +79,7 @@ const DiaryInfo = () => {
           style={{ width: '80%', marginTop: '10%', marginBottom: '16%' }}
         />
       </GreenContainer>
-      <div style={{ paddingBottom: '5em' }}>
+      <>
         {getTitle('Chapter.1', '설계', '#078d68')}
         <Typography myType="detail">
           제로라이프를 시작하기 전 알아둬야 할 것들
@@ -229,7 +230,27 @@ const DiaryInfo = () => {
           <br />
           기억에 남았던 순간들을 적어보세요.
         </Typography>
-      </div>
+      </>
+      <PinkContainer>
+        {getTitle(null, '스티커팩', 'white')}
+        <img src={sticker} style={{ width: '79%', marginTop: '10%' }} />
+        <Typography
+          type="GothicM"
+          size="1.7rem"
+          lineHeight="2.7rem"
+          color="white"
+          margin="5% 0 5% 0">
+          이모지 Set
+          <br />
+          기본도형 set
+          <br />
+          선 set
+          <br />
+          먼슬리 프레임 set
+          <br />
+          위클리 프레임 set
+        </Typography>
+      </PinkContainer>
     </>
   );
 };
@@ -238,6 +259,12 @@ const GreenContainer = styled.div`
   background-color: #078d68;
   width: 100%;
   padding-top: 5em;
+`;
+const PinkContainer = styled.div`
+  background-color: #d29bba;
+  width: 100%;
+  padding-top: 5em;
+  padding-bottom: 5em;
 `;
 
 export default DiaryInfo;
