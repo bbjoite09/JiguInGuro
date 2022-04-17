@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import GetLottie from '../../elements/Lottie';
 import MoveText from '../../elements/MoveText';
 import Topbar from '../../elements/Topbar';
 import char1 from '../../static/images/home/char_1.png';
@@ -8,17 +9,18 @@ import party from '../../static/images/home/party_1.png';
 
 const Home = () => {
   return (
-    <>
+    <div style={{ position: 'relative' }}>
       <Topbar />
       <FlexContainer>
+        <GetLottie />
         <img
           src={party}
           style={{ width: '96%', position: 'absolute', zIndex: 1 }}
         />
-        <div style={{ padding: '15% 10%' }}>
+        <div style={{ padding: '15% 10%', zIndex: 3 }}>
           <img src={mainLogo} style={{ width: '100%' }} />
         </div>
-        <div style={{ width: '100%' }}>
+        <div style={{ width: '100%', zIndex: 3 }}>
           <img
             src={char1}
             style={{ width: '150%', margin: '-33% 0 -20px -55px' }}
@@ -34,7 +36,7 @@ const Home = () => {
         </div>
       </FlexContainer>
       <MoveText />
-    </>
+    </div>
   );
 };
 
