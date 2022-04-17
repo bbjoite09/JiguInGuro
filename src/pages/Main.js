@@ -5,6 +5,7 @@ import Home from '../components/main/Home';
 import ProblemInfo from '../components/main/ProblemInfo';
 import ZeroInfo from '../components/main/ZeroInfo';
 import ZeroWasteInfo from '../components/main/ZeroWasteInfo';
+import Event from '../components/main/Event';
 
 const Main = () => {
   return (
@@ -20,6 +21,7 @@ const Main = () => {
         <ProblemInfo />
         <ZeroWasteInfo />
         <ZeroInfo />
+        <Event />
       </Container>
     </div>
   );
