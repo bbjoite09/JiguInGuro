@@ -24,7 +24,7 @@ const DiarySummary = () => {
     <>
       <img src={logo} style={{ width: '10%', marginTop: '5em' }} />
       <Typography myType="title" margin="0.5em 0 0.5em 0">
-        매일제로
+        제로일기
         <br />
         다이어리 set
       </Typography>
@@ -87,7 +87,11 @@ const DiarySummary = () => {
             bottom: '-60%',
           }}
         />
-        <Typography myType="title" textAlign="right" margin="4em 10% 0 0">
+        <Typography
+          myType="title"
+          textAlign="right"
+          margin="4em 10% 0 0"
+          mySpacing="-0.18rem">
           하지만
           <br />
           이건 어때요?
@@ -114,7 +118,11 @@ const DiarySummary = () => {
             left: '13em',
           }}
         />
-        <Typography myType="title" textAlign="left" margin="8em 1% 0 10%">
+        <Typography
+          myType="title"
+          textAlign="left"
+          margin="8em 1% 0 10%"
+          mySpacing="-0.18rem">
           이게
           <br />
           제로웨이스트냐구요?
@@ -143,14 +151,22 @@ const DiarySummary = () => {
           paddingBottom: '6em',
           marginTop: '10em',
         }}>
-        <Typography type="GothicM" size="2rem" lineHeight="3rem" color="white">
+        <Typography
+          type="GothicM"
+          size="1.7rem"
+          lineHeight="2.8rem"
+          color="white">
           우리의 생각보다도
           <br />
           사소한 선택으로 만들어지는
           <br />
           쓰레기들은 무궁무진하고,
         </Typography>
-        <Typography type="GothicM" size="2rem" lineHeight="3rem" color="white">
+        <Typography
+          type="GothicM"
+          size="1.7rem"
+          lineHeight="2.8rem"
+          color="white">
           우리가 도전할 수 있는 제로라이프도
           <br />
           그만큼 무궁무진하답니다.
@@ -161,8 +177,8 @@ const DiarySummary = () => {
         <Typography
           type="GothicM"
           textAlign="left"
-          size="1.8rem"
-          lineHeight="2.8rem"
+          size="1.7rem"
+          lineHeight="2.7rem"
           margin="3em 0 6em 10%">
           우리 당장은 이런 쉬운 것들부터
           <br />

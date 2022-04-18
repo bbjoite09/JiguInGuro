@@ -16,7 +16,7 @@ const RoundButton = props => {
           cursor: 'pointer',
           verticalAlign: 'middle',
           margin: '3em 0 1em 0',
-          boxShadow: '0 3px 3px #707070',
+          boxShadow: '0 3px 6px rgba(0,0,0, 0.16)',
         }}>
         <Typography
           color={textColor}

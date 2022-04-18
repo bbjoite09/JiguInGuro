@@ -4,26 +4,22 @@ import divider from '../../static/images/qna/divider.svg';
 import mockup5 from '../../static/images/qna/mockup_5.png';
 
 const QnA = () => {
-  const getNumber = num => {
+  const getNumber = (num, margin) => {
     return (
       <div
         style={{
-          width: '15%',
-          height: '3rem',
-          border: '2.7px solid #0B8765',
+          width: '6.25em',
+          height: '3.4em',
+          border: '0.27em solid #0B8765',
           borderRadius: '100%',
           color: '#0B8765',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           margin: '0 auto',
-          marginTop: '5em',
+          marginTop: margin ? margin : '5em',
         }}>
-        <Typography
-          myType="content"
-          size="2.2rem"
-          lineHeight="3.4rem"
-          margin="0">
+        <Typography size="2.2rem" margin="0">
           Q{num}
         </Typography>
       </div>
@@ -31,7 +27,7 @@ const QnA = () => {
   };
   return (
     <div style={{ paddingBottom: '20em' }}>
-      {getNumber(1)}
+      {getNumber(1, '10em')}
       <Typography size="3.2rem" margin="0.5em 0 1em 0">
         어떻게 사용하나요?
       </Typography>
