@@ -11,13 +11,22 @@ const Topbar = () => {
   return (
     <Container style={{ height: isSelect ? '100%' : 'auto' }}>
       <RowContainer>
-        <Typography margin="4% 0 4% 10%" size="1.8rem">
-          제로인구로
-        </Typography>
+        <Link to="/" style={{ textDecoration: 'none', width: '100%' }}>
+          <p
+            style={{
+              margin: '4% 0 4% 10%',
+              fontSize: '1.8rem',
+              fontFamily: 'Cafe24Ssurround',
+              color: '#078D68',
+              latterSpacing: '-1.6rem',
+            }}>
+            제로인구로
+          </p>
+        </Link>
         <Button
           onClick={() => setSelect(!isSelect)}
           style={{ marginRight: '10%' }}>
-          <img src={ham} style={{ width: '100%' }} />
+          <img src={ham} style={{ width: '140%' }} />
         </Button>
       </RowContainer>
       {isSelect ? (

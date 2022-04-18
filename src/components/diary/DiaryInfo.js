@@ -14,12 +14,12 @@ import year from '../../static/images/diaryInfo/year.png';
 import highlight from '../../static/images/diaryInfo/highlight.png';
 import sticker from '../../static/images/diaryInfo/sticker_1.png';
 
-const getTitle = (num, title, color) => {
+const getTitle = (num, title, color, margin) => {
   return (
     <div
       style={{
-        width: '44%',
-        height: '7.5em',
+        width: '17.8em',
+        height: '8.3em',
         border: '2.7px solid black',
         borderColor: color,
         borderRadius: '100%',
@@ -27,7 +27,7 @@ const getTitle = (num, title, color) => {
         flexDirection: 'column',
         justifyContent: 'center',
         margin: '0 auto',
-        marginTop: '10em',
+        marginTop: margin ? margin : '10em',
       }}>
       {num ? (
         <>
@@ -39,7 +39,11 @@ const getTitle = (num, title, color) => {
           </Typography>
         </>
       ) : (
-        <Typography size="3rem" margin="0" lineHeight="4.6rem" color={color}>
+        <Typography
+          size="3rem"
+          margin="2% 0 0 0"
+          lineHeight="4.6rem"
+          color={color}>
           {title}
         </Typography>
       )}
@@ -53,10 +57,11 @@ const DiaryInfo = () => {
       <img src={logo} style={{ width: '100%', marginBottom: '-1%' }} />
       <GreenContainer>
         <Typography
-          myType="content"
           type="GothicM"
+          size="1.7rem"
           color="white"
-          margin="0 0 8em 0">
+          lineHeight="2.6rem"
+          margin="0 0 6.5em 0">
           {'<제로일기>'}는 지구를 위한 장거리 마라톤을 달리는
           <br />
           여러분을 도와줄 든든한 도구입니다.
@@ -157,7 +162,7 @@ const DiaryInfo = () => {
           <br />
           실천 계획을 세우는 것도 좋은 방법이에요.
         </Typography>
-        {getTitle('Chapter.3', '실천', '#078d68')}
+        {getTitle('Chapter.3', '실천', '#078d68', '17em')}
         <Typography myType="detail">
           계획을 실행하며 시행착오를 기록하기
         </Typography>
@@ -198,7 +203,7 @@ const DiaryInfo = () => {
           <br />
           별점을 매기고 이유를 적어보는 페이지입니다.
         </Typography>
-        {getTitle('Chapter.4', '피드백', '#078d68')}
+        {getTitle('Chapter.4', '피드백', '#078d68', '17em')}
         <Typography myType="detail">
           올 한 해 당신의 제로라이프는 어땠나요?
         </Typography>
@@ -221,7 +226,7 @@ const DiaryInfo = () => {
         <Typography myType="content" type="GothicEB">
           올해의 하이라이트
         </Typography>
-        <Typography myType="detail" margin="0 0 5em 0">
+        <Typography myType="detail" margin="0 0 7em 0">
           내가 실천한 작은 행동이 뿌듯했던 순간,
           <br />
           나와의 약속이 잘 지켜지지 않아 속상했던 순간,
@@ -232,7 +237,7 @@ const DiaryInfo = () => {
         </Typography>
       </>
       <PinkContainer>
-        {getTitle(null, '스티커팩', 'white')}
+        {getTitle(null, '스티커팩', 'white', '6em')}
         <img src={sticker} style={{ width: '79%', marginTop: '10%' }} />
         <Typography
           type="GothicM"
@@ -263,7 +268,7 @@ const GreenContainer = styled.div`
 const PinkContainer = styled.div`
   background-color: #d29bba;
   width: 100%;
-  padding-top: 5em;
+  padding-top: 1em;
   padding-bottom: 5em;
 `;
 

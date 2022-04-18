@@ -14,6 +14,7 @@ const Typography = props => {
     lineHeight,
     textIndent,
     paddingLeft,
+    mySpacing,
   } = props;
 
   if (myType == 'title') {
@@ -28,7 +29,7 @@ const Typography = props => {
           zIndex,
           lineHeight: '4.5rem',
           wordBreak: 'keep-all',
-          letterSpacing: '-0.2rem',
+          letterSpacing: mySpacing ? mySpacing : '-0.2rem',
         }}>
         {children}
       </p>
@@ -40,11 +41,12 @@ const Typography = props => {
           fontFamily: type,
           fontSize: '1.6rem',
           color: color,
+          textAlign,
           margin,
           zIndex,
           lineHeight: '2.4rem',
           wordBreak: 'keep-all',
-          letterSpacing: '-0.05rem',
+          letterSpacing: type.slice(0, 6) == 'Gothic' ? '-0.05rem' : '-0.2rem',
         }}>
         {children}
       </p>

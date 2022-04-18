@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
   <g id="그룹_448" data-name="그룹 448" transform="translate(-41 -857)">
     <circle id="타원_15" data-name="타원 15" cx="8" cy="8" r="8" transform="translate(41 857)" fill="#fff"/>
-    <g id="그룹_447" data-name="그룹 447" transform="translate(45.571 863.219)">
-      <path id="패스_1238" data-name="패스 1238" d="M1439.743,862.885l3.267,4.543" transform="translate(-1439.743 -862.885)" fill="none" stroke="#d29bba" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
-      <path id="패스_1239" data-name="패스 1239" d="M1443.01,862.885l-3.267,4.543" transform="translate(-1436.476 -862.885)" fill="none" stroke="#d29bba" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+    <g id="그룹_447" data-name="그룹 447" transform="translate(45.733 864.219)">
+      <path id="패스_1238" data-name="패스 1238" d="M1439.743,862.885l3.267,3.279" transform="translate(-1439.743 -862.885)" fill="none" stroke="#d29bba" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+      <path id="패스_1239" data-name="패스 1239" d="M1443.01,862.885l-3.267,3.279" transform="translate(-1436.476 -862.885)" fill="none" stroke="#d29bba" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
     </g>
   </g>
 </svg>

@@ -4,7 +4,6 @@ import Typography from '../../elements/Typography';
 import tag1 from '../../static/images/event/tag_1.png';
 import tag2 from '../../static/images/event/tag_2.png';
 import tag3 from '../../static/images/event/tag_3.png';
-import logo from '../../static/images/event/eroom_logo.png';
 import item from '../../static/images/event/event_item.png';
 
 const Event = () => {
@@ -59,17 +58,6 @@ const Event = () => {
         src={item}
         style={{ width: '80%', marginTop: '13%', marginBottom: '20%' }}
       />
-      <footer
-        style={{
-          backgroundColor: '#078D68',
-          height: '5.6em',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-        <img src={logo} style={{ height: '55%' }} />
-      </footer>
     </Container>
   );
 };

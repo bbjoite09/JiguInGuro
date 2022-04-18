@@ -2,9 +2,14 @@ import axios from 'axios';
 import { axiosSrc } from '../static/url/axiosSrc';
 
 class CommentService {
-  async getComment() {
+  async getComment(pagenumb, pagesize) {
     const data = await axios
-      .get(axiosSrc.getComment)
+      .get(axiosSrc.getComment, {
+        params: {
+          pagenumb,
+          pagesize,
+        },
+      })
       .then(res => {
         return res.data;
       })
@@ -14,12 +19,11 @@ class CommentService {
     return data;
   }
 
-  async postComment(cmntid, cmnttext, cmntdate) {
+  async postComment(cmnttext, cmntpw) {
     const data = await axios
       .post(axiosSrc.postComment, {
-        cmntid,
         cmnttext,
-        cmntdate,
+        cmntpw,
       })
       .then(res => {
         return res.data;
