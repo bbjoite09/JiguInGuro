@@ -30,7 +30,7 @@ const Comment = () => {
   return (
     <>
       <img src={logo} style={{ width: '10%', marginTop: '7em' }} />
-      <Typography myType="title" margin="0.5em 0 0.5em 0">
+      <Typography myType="title" margin="0.5em 0 1em 0">
         다짐해요
         <br />
         #제로웨이스트
@@ -152,7 +152,7 @@ const RowContainer = styled.div`
 
 const PwTitle = styled.div`
   background-color: #078d68;
-  width: 18%;
+  width: 6.6em;
   height: 3.25em;
   line-height: 3.25em;
   z-index: 3;
@@ -162,9 +162,12 @@ const Textarea = styled.textarea`
   border: 2px solid #e6e6e6;
   outline-color: #e6e6e6;
   width: 69%;
-  height: 4em;
+  height: 5em;
   padding: 5% 5%;
   font-family: GothicM;
+  margin-top: -0.6%;
+  margin-left: 0.5%
+  z-index: 10;
 `;
 
 const Button = styled.button`
@@ -174,6 +177,7 @@ const Button = styled.button`
   width: 80%;
   height: 4em;
   margin-bottom: 3em;
+  margin-top: -0.7%;
 `;
 
 const DetailButton = styled.button`
