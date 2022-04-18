@@ -19,12 +19,11 @@ class CommentService {
     return data;
   }
 
-  async postComment(cmntid, cmnttext, cmntdate) {
+  async postComment(cmnttext, cmntpw) {
     const data = await axios
       .post(axiosSrc.postComment, {
-        cmntid,
         cmnttext,
-        cmntdate,
+        cmntpw,
       })
       .then(res => {
         return res.data;

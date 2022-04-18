@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Typography from '../../elements/Typography';
 import logo from '../../static/images/diarySummary/logo.png';
 import eroomLogo from '../../static/images/event/eroom_logo.png';
@@ -10,28 +10,21 @@ import { service } from '../../services';
 
 const Comment = () => {
   const [isSelect, setSelect] = useState(false);
-  const [comments, setComment] = useState();
+  const [comments, setComment] = useState([]);
+
+  const pw = useRef();
+  const cmntText = useRef();
+
+  useEffect(() => {
+    // 처음 시작시 호출
+    getComment(1);
+  }, []);
 
   const getComment = pageNum => {
-    service.comment.getComment(pageNum, 10).then(res => {
-      setComment(res);
-      // 로그 확인...
-      console.log(comments[0].cmnttext);
+    service.comment.getComment(pageNum, 5).then(res => {
+      setComment([...res]);
+      console.log(res);
     });
-
-    // comments.map(data => {
-    //   return (
-    //     <>
-    //       <Typography myType="content" type="GothicB">
-    //         {data['cmntid']}
-    //       </Typography>
-    //       <Typography type="GothicL" size="1.4rem" lineHeight="2.4rem">
-    //         {data['cmnttext']}
-    //       </Typography>
-    //       <img src={divider} style={{ width: '80%' }} />
-    //     </>
-    //   );
-    // });
   };
 
   return (
@@ -70,10 +63,30 @@ const Comment = () => {
             outlineColor: '#E6E6E6',
             border: '2px solid #E6E6E6',
           }}
+          ref={pw}
         />
       </RowContainer>
-      <Textarea placeholder="제로일기로 제로웨이스트 라이프 도전~!! " />
-      <Button>
+      <Textarea
+        placeholder="제로일기로 제로웨이스트 라이프 도전~!!"
+        ref={cmntText}
+        onFocus={() => setSelect(false)}
+      />
+      <Button
+        onClick={() => {
+          if (cmntText.current.value && pw.current.value) {
+            service.comment.postComment(
+              cmntText.current.value,
+              pw.current.value,
+            );
+            alert('등록되었습니다.');
+            cmntText.current.value = '';
+            pw.current.value = '';
+          } else if (cmntText.current.value == '') {
+            alert('내용을 입력해주세요.');
+          } else {
+            alert('비밀번호를 입력해주세요.');
+          }
+        }}>
         <Typography type="GothicB" size="1.8rem" color="white" margin="0">
           등록
         </Typography>
@@ -81,6 +94,7 @@ const Comment = () => {
       <DetailButton
         onClick={() => {
           setSelect(!isSelect);
+          getComment(1);
         }}>
         <img src={isSelect ? up : down} />
         <Typography type="GothicB" size="1.4rem" margin="0 0 0 10%">
@@ -88,10 +102,31 @@ const Comment = () => {
         </Typography>
       </DetailButton>
       <img src={divider} style={{ width: '80%' }} />
-      {isSelect ? getComment(1) : null}
-
+      {isSelect
+        ? comments.map(data => (
+            <>
+              <Typography
+                myType="content"
+                type="GothicB"
+                textAlign="left"
+                margin="3% 0 3% 10%">
+                {data['cmntid']}
+              </Typography>
+              <Typography
+                type="GothicL"
+                size="1.4rem"
+                lineHeight="2.4rem"
+                textAlign="left"
+                margin="0 0 3% 10%">
+                {data['cmnttext']}
+              </Typography>
+              <img src={divider} style={{ width: '80%' }} />
+            </>
+          ))
+        : null}
+      {/* {isSelect ? getComment(1) : null} */}
       <Footer>
-        <img src={eroomLogo} style={{ height: '55%' }} />
+        <img src={eroomLogo} style={{ height: '50%' }} />
       </Footer>
     </>
   );
