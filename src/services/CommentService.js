@@ -2,9 +2,14 @@ import axios from 'axios';
 import { axiosSrc } from '../static/url/axiosSrc';
 
 class CommentService {
-  async getComment() {
+  async getComment(pagenumb, pagesize) {
     const data = await axios
-      .get(axiosSrc.getComment)
+      .get(axiosSrc.getComment, {
+        params: {
+          pagenumb,
+          pagesize,
+        },
+      })
       .then(res => {
         return res.data;
       })
