@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import GetLottie from '../../elements/Lottie';
 import MoveText from '../../elements/MoveText';
 import Topbar from '../../elements/Topbar';
-import char1 from '../../static/images/home/char_1.png';
-import mainLogo from '../../static/images/home/main_logo.png';
+import char1 from '../../static/images/home/char_1.webp';
+import mainLogo from '../../static/images/home/main_logo.webp';
 // import party from '../../static/images/home/party_1.png';
 
 const Home = () => {

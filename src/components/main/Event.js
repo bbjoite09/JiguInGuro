@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Typography from '../../elements/Typography';
-import tag1 from '../../static/images/event/tag_1.png';
-import tag2 from '../../static/images/event/tag_2.png';
-import tag3 from '../../static/images/event/tag_3.png';
+import tag1 from '../../static/images/event/tag_1.webp';
+import tag2 from '../../static/images/event/tag_2.webp';
+import tag3 from '../../static/images/event/tag_3.webp';
 import item from '../../static/images/event/event_item.png';
 
 const Event = () => {

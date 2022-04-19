@@ -6,9 +6,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import divider1 from '../../static/images/problemInfo/yellow_divider.svg';
 import divider2 from '../../static/images/problemInfo/white_divider.svg';
-import card1 from '../../static/images/problemInfo/card_1.png';
-import card2 from '../../static/images/problemInfo/card_2.png';
-import card3 from '../../static/images/problemInfo/card_3.png';
+import card1 from '../../static/images/problemInfo/card_1.webp';
+import card2 from '../../static/images/problemInfo/card_2.webp';
+import card3 from '../../static/images/problemInfo/card_3.webp';
 import note from '../../static/images/problemInfo/note.png';
 
 const ProblemInfo = () => {
@@ -48,17 +48,17 @@ const ProblemInfo = () => {
       <MySlider {...settings} style={{ zIndex: '0', marginLeft: '-5%' }}>
         <>
           <div style={{ paddingLeft: '5%' }}>
-            <img src={card1} style={{ width: '100%' }} />
+            <img src={card1} style={{ width: '100%', height: '100%' }} />
           </div>
         </>{' '}
         <>
           <div style={{ paddingLeft: '5%' }}>
-            <img src={card2} style={{ width: '100%' }} />
+            <img src={card2} style={{ width: '100%', height: '100%' }} />
           </div>
         </>
         <>
           <div style={{ paddingLeft: '5%' }}>
-            <img src={card3} style={{ width: '100%' }} />
+            <img src={card3} style={{ width: '100%', height: '100%' }} />
           </div>
         </>
       </MySlider>
