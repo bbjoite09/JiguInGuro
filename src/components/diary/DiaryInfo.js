@@ -6,13 +6,13 @@ import mockup1 from '../../static/images/diaryInfo/mockup_1.png';
 import check from '../../static/images/diaryInfo/check.png';
 import r5 from '../../static/images/diaryInfo/5r.png';
 import plan from '../../static/images/diaryInfo/plan.png';
-import logo from '../../static/images/diaryInfo/logo.png';
-import mockup4 from '../../static/images/diaryInfo/mockup_4.png';
+import logo from '../../static/images/diaryInfo/logo.webp';
+import mockup4 from '../../static/images/diaryInfo/mockup_4.webp';
 import tracker from '../../static/images/diaryInfo/tracker.png';
 import month from '../../static/images/diaryInfo/month.png';
 import year from '../../static/images/diaryInfo/year.png';
 import highlight from '../../static/images/diaryInfo/highlight.png';
-import sticker from '../../static/images/diaryInfo/sticker_1.png';
+import sticker from '../../static/images/diaryInfo/sticker_1.webp';
 
 const getTitle = (num, title, color, margin) => {
   return (

@@ -81,7 +81,7 @@ const Topbar = () => {
                   margin="4% 10%"
                   size="2rem"
                   letterSpacing="-0.05rem">
-                  제로일기 다운받기
+                  제로일기 다운로드
                 </Typography>
               </Link>
             </Li>
@@ -93,7 +93,7 @@ const Topbar = () => {
                   margin="4% 10%"
                   size="2rem"
                   letterSpacing="-0.05rem">
-                  구로구 환경 꿀팁
+                  구로구 환경 정보통
                 </Typography>
               </Link>
             </Li>

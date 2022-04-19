@@ -10,7 +10,7 @@ import RoundButton from '../../elements/RoundButton';
 import arrow from '../../static/images/zeroInfo/arrow.png';
 import party from '../../static/images/zeroInfo/party_2.png';
 import { Link } from 'react-router-dom';
-import diary from '../../static/images/home/mockup_2.png';
+import diary from '../../static/images/home/mockup_2.webp';
 
 const ZeroInfo = () => {
   return (
