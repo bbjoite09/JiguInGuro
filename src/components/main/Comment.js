@@ -11,6 +11,7 @@ import { service } from '../../services';
 const Comment = () => {
   const [isSelect, setSelect] = useState(false);
   const [comments, setComment] = useState([]);
+  const [offset, setOffset] = useState([1, 2, 3, 4, 5]);
 
   const pw = useRef();
   const cmntText = useRef();
@@ -23,10 +24,58 @@ const Comment = () => {
   const getComment = pageNum => {
     service.comment.getComment(pageNum, 5).then(res => {
       setComment([...res]);
-      console.log(res);
     });
   };
 
+  const getPaging = () => {
+    return (
+      <>
+        <RowContainer style={{ margin: '5em auto', justifyContent: 'center' }}>
+          <PageButton
+            onClick={() => {
+              if (offset[0] != 1) {
+                const tempList = offset.map(data => data - 5);
+                setOffset([...tempList]);
+              }
+            }}>
+            <Typography
+              myType="content"
+              type="GothicB"
+              textAlign="left"
+              margin="3% 0 3% 10%">
+              {'<'}
+            </Typography>
+          </PageButton>
+          {offset.map(data => (
+            <>
+              <PageButton>
+                <Typography
+                  myType="content"
+                  type="GothicB"
+                  textAlign="left"
+                  margin="3% 0 3% 10%">
+                  {data}
+                </Typography>
+              </PageButton>
+            </>
+          ))}
+          <PageButton
+            onClick={() => {
+              const tempList = offset.map(data => data + 5);
+              setOffset([...tempList]);
+            }}>
+            <Typography
+              myType="content"
+              type="GothicB"
+              textAlign="left"
+              margin="3% 0 3% 10%">
+              {'>'}
+            </Typography>
+          </PageButton>
+        </RowContainer>
+      </>
+    );
+  };
   return (
     <>
       <img src={logo} style={{ width: '10%', marginTop: '7em' }} />
@@ -124,7 +173,7 @@ const Comment = () => {
             </>
           ))
         : null}
-      {/* {isSelect ? getComment(1) : null} */}
+      {isSelect ? getPaging() : null}
       <Footer>
         <img src={eroomLogo} style={{ height: '50%' }} />
       </Footer>
@@ -193,4 +242,10 @@ const DetailButton = styled.button`
   margin-left: 10%;
 `;
 
+const PageButton = styled.button`
+  background-color: #00ff0000;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+`;
 export default Comment;
