@@ -50,12 +50,12 @@ class CommentService {
     return data;
   }
 
-  async deleteComment(cmntid, cmnttext, cmntdate) {
+  async deleteComment(cmntid, cmntpw) {
     const data = await axios
       .post(axiosSrc.deleteComment, {
+        operation: 'd',
         cmntid,
-        cmnttext,
-        cmntdate,
+        cmntpw,
       })
       .then(res => {
         return res.data;

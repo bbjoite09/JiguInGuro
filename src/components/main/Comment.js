@@ -13,13 +13,16 @@ const Comment = () => {
   const [comments, setComment] = useState([]);
   const [offset, setOffset] = useState([1, 2, 3, 4, 5]);
   const [nowPage, setPage] = useState(1);
+  const [id, setId] = useState();
+  const [isModal, setModal] = useState(false);
   const pw = useRef();
+  const delPw = useRef();
   const cmntText = useRef();
 
   useEffect(() => {
     // 처음 시작시 호출
     getComment(nowPage);
-  }, [nowPage]);
+  }, [nowPage, isSelect]);
 
   const getComment = pageNum => {
     service.comment.getComment(pageNum, 5).then(res => {
@@ -80,8 +83,94 @@ const Comment = () => {
       </>
     );
   };
+
+  const getModal = () => {
+    return (
+      <div
+        style={{
+          width: '70vw',
+          height: '30%',
+          backgroundColor: 'white',
+          border: '1px solid #078d68',
+          borderRadius: '50px',
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          zIndex: 10,
+          paddingTop: '3em',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}>
+        <Typography size="3rem">
+          정말로
+          <br />
+          삭제하시겠습니까?
+        </Typography>
+        <Typography myType="detail">
+          삭제하시려면 비밀번호를 입력해주세요
+          <br />
+          삭제하신 글은 되돌릴 수 없습니다.
+        </Typography>
+
+        <RowContainer style={{ width: '80%' }}>
+          <PwTitle>
+            <Typography type="GothicB" size="1.3rem" color="white" margin="0">
+              비밀번호
+            </Typography>
+          </PwTitle>
+          <input
+            type="password"
+            style={{
+              width: '68%',
+              height: '2em',
+              outlineColor: '#E6E6E6',
+              border: '2px solid #E6E6E6',
+            }}
+            ref={delPw}
+          />
+        </RowContainer>
+        <RowContainer style={{ margin: '10% 0', justifyContent: 'center' }}>
+          <Button
+            style={{ marginTop: '5%', borderRadius: '10px', width: '25vw' }}
+            onClick={() => {
+              service.comment
+                .deleteComment(id, delPw.current.value)
+                .then(res => {
+                  if (res == "not matched data... check 'cmntid and cmntpw'") {
+                    alert('비밀번호가 잘못되었습니다.');
+                  } else {
+                    setModal(false);
+                    setSelect(false);
+                  }
+                });
+            }}>
+            <Typography type="GothicB" size="1.8rem" color="white" margin="0">
+              삭제하기
+            </Typography>
+          </Button>
+          <Button
+            style={{
+              marginTop: '5%',
+              borderRadius: '10px',
+              width: '25vw',
+              marginLeft: '2%',
+            }}
+            onClick={() => {
+              setModal(false);
+            }}>
+            <Typography type="GothicB" size="1.8rem" color="white" margin="0">
+              닫기
+            </Typography>
+          </Button>
+        </RowContainer>
+      </div>
+    );
+  };
+
   return (
-    <>
+    <div style={{ position: 'relative' }}>
       <img src={logo} style={{ width: '10%', marginTop: '7em' }} />
       <Typography myType="title" margin="0.5em 0 1em 0">
         다짐해요
@@ -134,6 +223,7 @@ const Comment = () => {
             alert('등록되었습니다.');
             cmntText.current.value = '';
             pw.current.value = '';
+            setSelect(!isSelect);
           } else if (cmntText.current.value == '') {
             alert('내용을 입력해주세요.');
           } else {
@@ -157,13 +247,25 @@ const Comment = () => {
       {isSelect
         ? comments.map(data => (
             <>
-              <Typography
-                myType="content"
-                type="GothicB"
-                textAlign="left"
-                margin="3% 0 3% 10%">
-                {data['cmntid']}
-              </Typography>
+              <RowContainer style={{ margin: '0' }}>
+                <Typography
+                  myType="content"
+                  type="GothicB"
+                  textAlign="left"
+                  margin="3% 0 3% 10%">
+                  {data['cmntid']}
+                </Typography>
+                <PageButton
+                  style={{ margin: '0 0 0 70%' }}
+                  onClick={() => {
+                    setId(data['cmntid']);
+                    setModal(true);
+                  }}>
+                  <Typography type="GothicB" textAlign="left">
+                    삭제
+                  </Typography>
+                </PageButton>
+              </RowContainer>
               <Typography
                 type="GothicL"
                 size="1.4rem"
@@ -177,10 +279,11 @@ const Comment = () => {
           ))
         : null}
       {isSelect ? getPaging() : null}
+      {isModal ? getModal() : null}
       <Footer>
         <img src={eroomLogo} style={{ height: '50%' }} />
       </Footer>
-    </>
+    </div>
   );
 };
 
