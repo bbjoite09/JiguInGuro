@@ -3,6 +3,6 @@ export const axiosSrc = {
   getComment: src + 'listCmnt',
   postComment: src + 'addCmnt',
   updateComment: src + 'updateCmnt',
-  deleteComment: src + 'deleteCmnt',
+  deleteComment: src + 'compareCmntPw',
   getFile: src + 'maeilZero',
 };

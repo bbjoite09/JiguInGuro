@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Typography from '../../elements/Typography';
 import Slider from 'react-slick';
@@ -9,7 +9,6 @@ import divider2 from '../../static/images/problemInfo/white_divider.svg';
 import card1 from '../../static/images/problemInfo/card_1.png';
 import card2 from '../../static/images/problemInfo/card_2.png';
 import card3 from '../../static/images/problemInfo/card_3.png';
-import { service } from '../../services';
 import note from '../../static/images/problemInfo/note.png';
 
 const ProblemInfo = () => {
@@ -23,11 +22,6 @@ const ProblemInfo = () => {
     // autoplay: true,
     centerMode: true,
   };
-  const [data, setData] = useState();
-  useEffect(() => {
-    service.comment.getComment().then(res => setData(res));
-  }, []);
-  console.log(data);
 
   return (
     <Container>
