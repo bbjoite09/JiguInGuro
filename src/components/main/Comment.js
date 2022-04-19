@@ -88,87 +88,108 @@ const Comment = () => {
     return (
       <div
         style={{
-          width: '80%',
-          height: '30%',
-          backgroundColor: 'white',
-          border: '1px solid #078d68',
-          borderRadius: '50px',
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          zIndex: 10,
-          paddingTop: '3em',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          background: 'rgba(0, 0, 0, 0.8)',
+          zIndex: 5,
         }}>
-        <Typography size="3rem">
-          정말로
-          <br />
-          삭제하시겠습니까?
-        </Typography>
-        <Typography myType="detail">
-          삭제하시려면 비밀번호를 입력해주세요
-          <br />
-          삭제하신 글은 되돌릴 수 없습니다.
-        </Typography>
+        <div
+          style={{
+            width: window.innerWidth <= '500' ? '80%' : '400px',
+            height: '50%',
+            backgroundColor: 'white',
+            border: '1px solid #078d68',
+            borderRadius: '50px',
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 10,
+            paddingTop: '3em',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}>
+          <>
+            <Typography size="3rem" margin="10% 0 0 0">
+              정말로
+              <br />
+              삭제하시겠습니까?
+            </Typography>
+            <Typography myType="detail" margin="1% 0">
+              삭제하시려면 비밀번호를 입력해주세요
+              <br />
+              삭제하신 글은 되돌릴 수 없습니다.
+            </Typography>
+          </>
 
-        <RowContainer style={{ width: '80%' }}>
-          <PwTitle>
-            <Typography type="GothicB" size="1.3rem" color="white" margin="0">
-              비밀번호
-            </Typography>
-          </PwTitle>
-          <input
-            type="password"
+          <RowContainer style={{ width: '80%', marginTop: '15%' }}>
+            <PwTitle>
+              <Typography type="GothicB" size="1.3rem" color="white" margin="0">
+                비밀번호
+              </Typography>
+            </PwTitle>
+            <input
+              type="password"
+              style={{
+                width: '68%',
+                height: '2em',
+                outlineColor: '#E6E6E6',
+                border: '2px solid #E6E6E6',
+              }}
+              ref={delPw}
+            />
+          </RowContainer>
+          <RowContainer
             style={{
-              width: '68%',
-              height: '2em',
-              outlineColor: '#E6E6E6',
-              border: '2px solid #E6E6E6',
-            }}
-            ref={delPw}
-          />
-        </RowContainer>
-        <RowContainer style={{ margin: '10% 0', justifyContent: 'center' }}>
-          <Button
-            style={{
-              marginTop: '5%',
-              borderRadius: '10px',
-              width: window.innerWidth < '500px' ? '25vw' : '10em',
-            }}
-            onClick={() => {
-              service.comment
-                .deleteComment(id, delPw.current.value)
-                .then(res => {
-                  if (res == "not matched data... check 'cmntid and cmntpw'") {
-                    alert('비밀번호가 잘못되었습니다.');
-                  } else {
-                    setModal(false);
-                    setSelect(false);
-                  }
-                });
+              width: '100%',
+              margin: '5% 0',
+              justifyContent: 'center',
             }}>
-            <Typography type="GothicB" size="1.8rem" color="white" margin="0">
-              삭제하기
-            </Typography>
-          </Button>
-          <Button
-            style={{
-              marginTop: '5%',
-              borderRadius: '10px',
-              width: window.innerWidth < '500px' ? '25vw' : '10em',
-              marginLeft: '2%',
-            }}
-            onClick={() => {
-              setModal(false);
-            }}>
-            <Typography type="GothicB" size="1.8rem" color="white" margin="0">
-              닫기
-            </Typography>
-          </Button>
-        </RowContainer>
+            <Button
+              style={{
+                marginTop: '5%',
+                borderRadius: '10px',
+                width: window.innerWidth < '500' ? '40%' : '10em',
+              }}
+              onClick={() => {
+                service.comment
+                  .deleteComment(id, delPw.current.value)
+                  .then(res => {
+                    if (
+                      res == "not matched data... check 'cmntid and cmntpw'"
+                    ) {
+                      alert('비밀번호가 잘못되었습니다.');
+                    } else {
+                      getComment(1);
+                      setModal(false);
+                    }
+                  });
+              }}>
+              <Typography type="GothicB" size="1.8rem" color="white" margin="0">
+                삭제하기
+              </Typography>
+            </Button>
+            <Button
+              style={{
+                marginTop: '5%',
+                borderRadius: '10px',
+                width: window.innerWidth < '500' ? '40%' : '10em',
+                marginLeft: '2%',
+              }}
+              onClick={() => {
+                setModal(false);
+              }}>
+              <Typography type="GothicB" size="1.8rem" color="white" margin="0">
+                닫기
+              </Typography>
+            </Button>
+          </RowContainer>
+        </div>
       </div>
     );
   };
@@ -215,19 +236,21 @@ const Comment = () => {
       <Textarea
         placeholder="제로일기로 제로웨이스트 라이프 도전~!!"
         ref={cmntText}
-        onFocus={() => setSelect(false)}
+        // onFocus={() => setSelect(false)}
       />
       <Button
         onClick={() => {
           if (cmntText.current.value && pw.current.value) {
-            service.comment.postComment(
-              cmntText.current.value,
-              pw.current.value,
-            );
+            service.comment
+              .postComment(cmntText.current.value, pw.current.value)
+              .then(() => {
+                getComment(1);
+              });
             alert('등록되었습니다.');
             cmntText.current.value = '';
             pw.current.value = '';
-            setSelect(!isSelect);
+
+            // setSelect(!isSelect);
           } else if (cmntText.current.value == '') {
             alert('내용을 입력해주세요.');
           } else {
@@ -244,7 +267,7 @@ const Comment = () => {
         }}>
         <img src={isSelect ? up : down} />
         <Typography type="GothicB" size="1.4rem" margin="0 0 0 10%">
-          댓글 더보기
+          댓글 전체 보기
         </Typography>
       </DetailButton>
       <img src={divider} style={{ width: '80%' }} />

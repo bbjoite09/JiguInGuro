@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import RoundButton from '../../elements/RoundButton';
 import Typography from '../../elements/Typography';
 import { service } from '../../services';
@@ -12,13 +12,13 @@ import recycle2 from '../../static/images/diarySummary/recycle_2.png';
 import recycle3 from '../../static/images/diarySummary/recycle_3.png';
 
 const DiarySummary = () => {
-  const [blobData, setBlob] = useState();
-
-  service.download.getFile().then(res => {
-    setBlob(res.data);
-  });
-  const blob = new Blob([blobData], { type: 'application/pdf' });
-  const path = window.URL.createObjectURL(blob);
+  const [path, setPath] = useState();
+  useEffect(() => {
+    service.download.getFile().then(res => {
+      const blob = new Blob([res.data], { type: 'application/pdf' });
+      setPath(window.URL.createObjectURL(blob));
+    });
+  }, []);
 
   return (
     <>
