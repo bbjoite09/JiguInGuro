@@ -12,18 +12,19 @@ const Comment = () => {
   const [isSelect, setSelect] = useState(false);
   const [comments, setComment] = useState([]);
   const [offset, setOffset] = useState([1, 2, 3, 4, 5]);
-
+  const [nowPage, setPage] = useState(1);
   const pw = useRef();
   const cmntText = useRef();
 
   useEffect(() => {
     // 처음 시작시 호출
-    getComment(1);
-  }, []);
+    getComment(nowPage);
+  }, [nowPage]);
 
   const getComment = pageNum => {
     service.comment.getComment(pageNum, 5).then(res => {
-      setComment([...res]);
+      const tempList = res;
+      setComment([...tempList]);
     });
   };
 
@@ -48,7 +49,10 @@ const Comment = () => {
           </PageButton>
           {offset.map(data => (
             <>
-              <PageButton>
+              <PageButton
+                onClick={() => {
+                  setPage(data);
+                }}>
                 <Typography
                   myType="content"
                   type="GothicB"
@@ -143,7 +147,6 @@ const Comment = () => {
       <DetailButton
         onClick={() => {
           setSelect(!isSelect);
-          getComment(1);
         }}>
         <img src={isSelect ? up : down} />
         <Typography type="GothicB" size="1.4rem" margin="0 0 0 10%">
