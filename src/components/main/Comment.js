@@ -88,7 +88,7 @@ const Comment = () => {
     return (
       <div
         style={{
-          width: '70vw',
+          width: '80%',
           height: '30%',
           backgroundColor: 'white',
           border: '1px solid #078d68',
@@ -133,7 +133,11 @@ const Comment = () => {
         </RowContainer>
         <RowContainer style={{ margin: '10% 0', justifyContent: 'center' }}>
           <Button
-            style={{ marginTop: '5%', borderRadius: '10px', width: '25vw' }}
+            style={{
+              marginTop: '5%',
+              borderRadius: '10px',
+              width: window.innerWidth < '500px' ? '25vw' : '10em',
+            }}
             onClick={() => {
               service.comment
                 .deleteComment(id, delPw.current.value)
@@ -154,7 +158,7 @@ const Comment = () => {
             style={{
               marginTop: '5%',
               borderRadius: '10px',
-              width: '25vw',
+              width: window.innerWidth < '500px' ? '25vw' : '10em',
               marginLeft: '2%',
             }}
             onClick={() => {
