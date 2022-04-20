@@ -45,7 +45,13 @@ const Topbar = () => {
                 }}>
                 <Button
                   onClick={() => setSelect(!isSelect)}
-                  style={{ marginRight: '10%' }}>
+                  style={{
+                    width: '2.5rem',
+                    height: '2.5rem',
+                    paddingRight: '10%',
+                    marginLeft: '5%',
+                    zIndex: 10,
+                  }}>
                   <img
                     src={exit}
                     style={{
