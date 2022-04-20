@@ -38,8 +38,9 @@ const DiarySummary = () => {
       <a
         href="https://firebasestorage.googleapis.com/v0/b/zeroinguro.appspot.com/o/zeroSet.zip?alt=media&token=302ec7eb-b774-4e07-a2e2-81d127667b2e"
         target="_self"
-        download="제로일기.pdf">
-        <RoundButton>다이어리 다운로드</RoundButton>
+        download="제로일기.pdf"
+        id="downloadA">
+        <RoundButton id="downloadB">다이어리 다운로드</RoundButton>
       </a>
 
       <img
