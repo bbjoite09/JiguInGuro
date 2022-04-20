@@ -8,11 +8,13 @@ const QnA = () => {
     return (
       <div
         style={{
-          width: '6.25em',
+          width: '6.2em',
           height: '3.4em',
           border: '0.27em solid #0B8765',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           borderRadius: '100%',
-          lineHeight: '3.4m',
           margin: '0 auto',
           marginTop: margin ? margin : '5em',
         }}>
