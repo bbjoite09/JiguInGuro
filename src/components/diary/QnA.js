@@ -1,6 +1,6 @@
 import React from 'react';
 import Typography from '../../elements/Typography';
-import divider from '../../static/images/qna/divider.svg';
+import divider from '../../static/images/qna/divider.png';
 import mockup5 from '../../static/images/qna/mockup_5.png';
 
 const QnA = () => {
