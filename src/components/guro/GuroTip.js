@@ -131,7 +131,7 @@ const GuroTip = () => {
                 type="GothicL"
                 textAlign="left"
                 margin="1em 0">
-                <span style={{ fontFamily: 'GothicEB' }}>문의전화:</span> 구로구
+                <span style={{ fontFamily: 'GothicEB' }}>문의전화: </span>구로구
                 청소행정과 02-860-2376
               </Typography>
             </div>
@@ -215,7 +215,7 @@ const GuroTip = () => {
                   type="GothicL"
                   textAlign="left"
                   margin="1em 0">
-                  <span style={{ fontFamily: 'GothicEB' }}>배출방법:</span>
+                  <span style={{ fontFamily: 'GothicEB' }}>배출방법:</span>{' '}
                   규격에 맞는 아이스팩을 세척 및 건조한 후 배출
                 </Typography>
                 <Typography
@@ -250,18 +250,18 @@ const GuroTip = () => {
                   textIndent="-1em">
                   2) 정해진 규격의 아이스팩만 전용수거함에 넣어야 해요. 있어요.
                   (15cmx20cm,16cmx23cm)
-                  <Typography
-                    size="1.2rem"
-                    lineHeight="24px"
-                    color="white"
-                    type="GothicL"
-                    textAlign="left"
-                    margin="0"
-                    paddingLeft="1em"
-                    textIndent="-1em">
-                    3) 배출시간은 평일 09:00 ~ 18:00 이고, 공휴일에는 운영하지
-                    않아요.
-                  </Typography>
+                </Typography>
+                <Typography
+                  size="1.2rem"
+                  lineHeight="24px"
+                  color="white"
+                  type="GothicL"
+                  textAlign="left"
+                  margin="0"
+                  paddingLeft="1em"
+                  textIndent="-1em">
+                  3) 배출시간은 평일 09:00 ~ 18:00 이고, 공휴일에는 운영하지
+                  않아요.
                 </Typography>
                 <Typography
                   size="1.4rem"
@@ -308,7 +308,7 @@ const GuroTip = () => {
           투명 페트병은 재활용 제품을 생산하는 고품질 재생 원료에요. 약 80%가
           재활용 되고 있지만 다른 플라스틱과 혼합 배출이 되고 있어 약 10% 정도만
           고품질 원료로 재활용되고 있어요. 투명 페트병만 별도 분리 배출해도
-          고품질 폐페트병의 해외 수입양을 최소화 시킬 수 있어요
+          고품질 폐페트병의 해외 수입량을 최소화 시킬 수 있어요
         </Typography>
         <Button
           onClick={() => {
