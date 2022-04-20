@@ -36,7 +36,7 @@ const DiarySummary = () => {
         제로인구로 팀이 준비한 선물!
       </Typography>
       <a
-        href="https://doc-14-24-docs.googleusercontent.com/docs/securesc/bj6cmlprnq3kkf01jvo7tejgnevekj50/kkhskpg03a4at31402gfnv72r2um6goe/1650464100000/18403365386014595127/18403365386014595127/1i2kxAnAjr1LPB9zTUwCfOQMTJRnAx5zo?e=download&ax=ACxEAsbTs48Bag2z_RfODXHrnPWj5KVUTt9VbQtdMFIqVIXEIjM3KWm2QF7-IeKATMWCjy05sK8nqOrlrodohWhZCOcPkPeTc9LbpZzb_O7F5fMJWm4ceZ8gYMn76edN2jnW02Iafg6DFRJnW89b22_o4HJXcWUG1htLX6EjjYFgFEGC9hdah4kmsoZJ5iQEF1K90R9iqx47ulvJGu5pwyqPCv9DF_ACLufJf0scos_mahJLy_L-OO2FvxnL6wINwNu7GrWTtnePsGH2LPZicKAdVpQ-PrSAWNV3j7EVkLxeMR9lIKYlmzjAu6fF9h-i9E0DDco6ZbGC2jJJorw7dZAzUH0wdEwuzIjs-SAoxckqjmkZMI9p-J1-Xx7CH-5wMobVDxN6egZbjfrJxYmxX0ECntXnQaq1ikG04C7VmisPB8STPRcszZEierWxY_4Mou6qckTTlXTotz4E34yZClWd3EaqfZ530VwFiHrJOH1j1TKALUZqsikbdr_9b7S-vEBAdqGvnXij8AW4GuXxbp-O9QEI_nRLLBdoD9ltRSRho-v64_h8BDERc91mKMqI_aQL2ZUirwj8BG57uLWIob3iuGabCnMdS1Yj25tN4zTD041-upGN-Tm_VJepGtyRTxlJHSVZtpNapojG9YAwlH8aA6ooghd2Rc3WaIWNSCr74p-uBGT3qgr3Ec8zCmr91Ea7GM4U7CGzWrbFdCA68TWYsDqg8yBptjWFrs4hQb4dstZ3HiCf&authuser=1&nonce=culm69uvn6sre&user=18403365386014595127&hash=h0tvd61gplr0ob3q1pmugf2q2ds0isea"
+        href="https://firebasestorage.googleapis.com/v0/b/zeroinguro.appspot.com/o/zeroSet.zip?alt=media&token=302ec7eb-b774-4e07-a2e2-81d127667b2e"
         target="_self"
         download="제로일기.pdf">
         <RoundButton>다이어리 다운로드</RoundButton>

@@ -64,7 +64,7 @@ const Topbar = () => {
                 <Typography
                   type="GothicH"
                   textAlign="right"
-                  margin="4% 10%"
+                  margin="3% 10%"
                   size="2rem"
                   letterSpacing="-0.05rem">
                   바로가기
@@ -165,7 +165,7 @@ const Menu = styled.div`
   top: 0;
   border: 1.5px solid #078d68;
   background-color: white;
-  z-index: 5;
+  z-index: 100;
   animation: ${move} 0.3s linear;
 `;
 
