@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ham from '../static/images/top_ham.png';
 import exit from '../static/images/exit.svg';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Typography from './Typography';
 import { Link } from 'react-router-dom';
 
@@ -137,15 +137,26 @@ const Button = styled.button`
   width: 25px;
   height: 25px;
 `;
+
+const move = keyframes`{
+  to {
+    left: 30%;
+  }
+  from {
+      left:100%;
+    }
+}`;
+
 const Menu = styled.div`
   position: absolute;
   height: 100vh;
-  width: 28em;
+  width: 70%;
   right: 0;
   top: 0;
   border: 1.5px solid #078d68;
   background-color: white;
   z-index: 5;
+  animation: ${move} 0.3s linear;
 `;
 
 const Ul = styled.ul`

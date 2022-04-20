@@ -9,7 +9,7 @@ import divider from '../../static/images/comment/divider.svg';
 import { service } from '../../services';
 
 const Comment = () => {
-  const [isSelect, setSelect] = useState(false);
+  const [isSelect, setSelect] = useState(true);
   const [comments, setComment] = useState([]);
   const [offset, setOffset] = useState([1, 2, 3, 4, 5]);
   const [nowPage, setPage] = useState(1);
@@ -99,7 +99,8 @@ const Comment = () => {
         <div
           style={{
             width: window.innerWidth <= '500' ? '80%' : '400px',
-            height: '50%',
+            minHeight: 350,
+            height: '60vh',
             backgroundColor: 'white',
             border: '1px solid #078d68',
             borderRadius: '50px',
@@ -135,6 +136,7 @@ const Comment = () => {
             </PwTitle>
             <input
               type="password"
+              inputMode="numeric"
               style={{
                 width: '68%',
                 height: '2em',
@@ -224,6 +226,7 @@ const Comment = () => {
         </PwTitle>
         <input
           type="password"
+          inputMode="numeric"
           style={{
             width: '50%',
             height: '2em',
@@ -267,28 +270,34 @@ const Comment = () => {
         }}>
         <img src={isSelect ? up : down} />
         <Typography type="GothicB" size="1.4rem" margin="0 0 0 10%">
-          댓글 전체 보기
+          {isSelect ? '댓글 닫기' : '댓글 전체 보기'}
         </Typography>
       </DetailButton>
       <img src={divider} style={{ width: '80%' }} />
       {isSelect
         ? comments.map(data => (
             <>
-              <RowContainer style={{ margin: '0' }}>
+              <RowContainer
+                style={{
+                  margin: '0',
+                  marginLeft: '10%',
+                  width: '80%',
+                  justifyContent: 'space-between',
+                }}>
                 <Typography
                   myType="content"
                   type="GothicB"
                   textAlign="left"
-                  margin="3% 0 3% 10%">
+                  margin="3% 0 3% 0">
                   {data['cmntid']}
                 </Typography>
                 <PageButton
-                  style={{ margin: '0 0 0 70%' }}
+                  style={{ margin: '0 0 0 0' }}
                   onClick={() => {
                     setId(data['cmntid']);
                     setModal(true);
                   }}>
-                  <Typography type="GothicB" textAlign="left">
+                  <Typography type="GothicB" textAlign="right">
                     삭제
                   </Typography>
                 </PageButton>
