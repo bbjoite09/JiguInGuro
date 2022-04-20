@@ -103,7 +103,7 @@ const Topbar = () => {
                   margin="4% 10%"
                   size="2rem"
                   letterSpacing="-0.05rem">
-                  구로구 환경 정보통
+                  구로인 환경 정보통
                 </Typography>
               </Link>
             </Li>

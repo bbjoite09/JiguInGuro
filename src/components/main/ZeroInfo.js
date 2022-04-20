@@ -71,7 +71,7 @@ const ZeroInfo = () => {
           <br />
           만들지 않는{' '}
           <span style={{ fontFamily: 'GothicB' }}>
-            제로웨이스트(zero +waste)
+            제로웨이스트(zero + waste)
             <br />
             라이프 스타일을 실천하고자 노력하는 사람
           </span>
