@@ -5,7 +5,14 @@ import logo from '../../static/images/guro/guro_logo.webp';
 const GuroLogo = () => {
   return (
     <>
-      <img src={logo} style={{ width: '100%' }} loading="lazy" />
+      <img
+        src={logo}
+        style={{
+          width: '100%',
+          marginTop: '12%',
+          marginBottom: '-0.5%',
+        }}
+      />
       <MoveText backgroundColor="#0B8765" color="white" />
     </>
   );

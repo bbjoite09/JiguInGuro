@@ -22,11 +22,7 @@ const ZeroInfo = () => {
         </Typography>
         <img src={divider1} style={{ width: '60%' }} loading="lazy" />
       </div>
-      <img
-        src={bg}
-        style={{ width: '100%', marginBottom: '-1%' }}
-        loading="lazy"
-      />
+      <img src={bg} style={{ width: '100%', marginBottom: '-1%' }} />
     </Container>
   );
 };

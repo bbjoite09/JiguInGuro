@@ -13,10 +13,11 @@ const MoveText = props => {
         lineHeight: '3em',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
-        zIndex: 2,
       }}>
       <AnimationText style={{ color }}>
-        #제로인구로 #제로in구로 #제로인구로 #제로in구로 #제로인구로
+        #제로인구로 #제로in구로 #제로인구로 #제로in구로 #제로인구로 #제로인구로
+        #제로in구로 #제로인구로 #제로in구로 #제로인구로 #제로in구로 #제로인구로
+        #제로in구로 #제로인구로
       </AnimationText>
     </div>
   );
@@ -29,10 +30,10 @@ MoveText.defaultProps = {
 
 const move = keyframes`{
   from {
-    margin-left: 100%;
+    margin-left: 0%;
   }
   to {
-    margin-left: -150%;
+    margin-left: -105%;
   }
 }`;
 
@@ -40,7 +41,7 @@ const AnimationText = styled.p`
   margin: 0;
   font-family: Cafe24Ssurround;
   font-size: 1.4rem;
-  animation: ${move} 5s linear infinite;
+  animation: ${move} 6s linear infinite;
 `;
 
 export default MoveText;
