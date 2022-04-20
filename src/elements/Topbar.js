@@ -26,7 +26,7 @@ const Topbar = () => {
         <Button
           onClick={() => setSelect(!isSelect)}
           style={{ marginRight: '10%' }}>
-          <img src={ham} style={{ width: '140%' }} />
+          <img src={ham} style={{ width: '1.8rem', height: '1.8rem' }} />
         </Button>
       </RowContainer>
       {isSelect ? (

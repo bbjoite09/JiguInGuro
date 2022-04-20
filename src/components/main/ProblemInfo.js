@@ -90,29 +90,31 @@ const ProblemInfo = () => {
           zIndex: -1,
           clip: 'rect(0, 100%, 90%, 100%)',
         }}>
-        <Typography
-          color="#4D99CB"
-          size="3.8rem"
-          margin="20% 0 5% 0"
-          lineHeight="50px">
-          잘 버리는 것,
-          <br />그 다음 단계로
-        </Typography>
-        <img src={divider2} style={{ width: '30%', margin: '0 auto' }} />
-        <Typography
-          myType="content"
-          type="GothicM"
-          color="#4D99CB"
-          margin="5% 0 0 0">
-          우리 삶이 발전한만큼 늘어난 쓰레기들...
-          <br />
-          이제 쓰레기를
-          <span style={{ fontFamily: 'GothicEB' }}>‘잘 버리는 것’</span>에서
-          나아가,
-          <br />
-          <span style={{ fontFamily: 'GothicEB' }}>‘만들지 않는 것’</span>을
-          시도해 봐야 할 시간입니다.
-        </Typography>
+        <div style={{ marginLeft: '5%', marginRight: '5%' }}>
+          <Typography
+            color="#4D99CB"
+            size="3.8rem"
+            margin="20% 0 5% 0"
+            lineHeight="5rem">
+            잘 버리는 것,
+            <br />그 다음 단계로
+          </Typography>
+          <img src={divider2} style={{ width: '30%', margin: '0 auto' }} />
+          <Typography
+            myType="content"
+            type="GothicM"
+            color="#4D99CB"
+            margin="5% 25% 0 25%">
+            우리 삶이 발전한만큼 늘어난 쓰레기들...
+            <br />
+            이제 쓰레기를
+            <span style={{ fontFamily: 'GothicEB' }}>‘잘 버리는 것’</span>에서
+            나아가,
+            <br />
+            <span style={{ fontFamily: 'GothicEB' }}>‘만들지 않는 것’</span>을
+            시도해 봐야 할 시간입니다.
+          </Typography>
+        </div>
 
         <div
           style={{
