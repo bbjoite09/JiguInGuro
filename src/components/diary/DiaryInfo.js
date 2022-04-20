@@ -54,7 +54,11 @@ const getTitle = (num, title, color, margin) => {
 const DiaryInfo = () => {
   return (
     <>
-      <img src={logo} style={{ width: '100%', marginBottom: '-1%' }} />
+      <img
+        src={logo}
+        style={{ width: '100%', marginBottom: '-1%' }}
+        loading="lazy"
+      />
       <GreenContainer>
         <Typography
           type="GothicM"
@@ -82,6 +86,7 @@ const DiaryInfo = () => {
         <img
           src={text1}
           style={{ width: '80%', marginTop: '10%', marginBottom: '16%' }}
+          loading="lazy"
         />
       </GreenContainer>
       <>
@@ -92,6 +97,7 @@ const DiaryInfo = () => {
         <img
           src={mockup1}
           style={{ width: '80%', marginTop: '5em', marginBottom: '1em' }}
+          loading="lazy"
         />
         <Typography myType="content" type="GothicEB">
           나를 거쳐간 쓰레기
@@ -106,6 +112,7 @@ const DiaryInfo = () => {
         <img
           src={check}
           style={{ width: '80%', marginTop: '5em', marginBottom: '1em' }}
+          loading="lazy"
         />
         <Typography myType="content" type="GothicEB">
           제로인 3단계에 따른
@@ -123,6 +130,7 @@ const DiaryInfo = () => {
         <img
           src={r5}
           style={{ width: '80%', marginTop: '1em', marginBottom: '1em' }}
+          loading="lazy"
         />
         <Typography myType="content" type="GothicEB">
           제로웨이스트 실천을 위한
@@ -140,6 +148,7 @@ const DiaryInfo = () => {
         <img
           src={plan}
           style={{ width: '80%', marginTop: '5em', marginBottom: '1em' }}
+          loading="lazy"
         />
         <Typography myType="content" type="GothicEB">
           제로라이프 실천 계획 세우기
@@ -153,6 +162,7 @@ const DiaryInfo = () => {
         <img
           src={plan}
           style={{ width: '80%', marginTop: '5em', marginBottom: '1em' }}
+          loading="lazy"
         />
         <Typography myType="content" type="GothicEB">
           만다라트
@@ -169,6 +179,7 @@ const DiaryInfo = () => {
         <img
           src={mockup4}
           style={{ width: '100%', marginTop: '3em', marginBottom: '1em' }}
+          loading="lazy"
         />
         <Typography myType="content" type="GothicM">
           여유롭게 기록할 수 있는
@@ -181,6 +192,7 @@ const DiaryInfo = () => {
         <img
           src={tracker}
           style={{ width: '80%', marginTop: '5em', marginBottom: '0.5em' }}
+          loading="lazy"
         />
         <Typography myType="content" type="GothicEB">
           제로지수 트래커
@@ -194,6 +206,7 @@ const DiaryInfo = () => {
         <img
           src={month}
           style={{ width: '80%', marginTop: '5em', marginBottom: '0.5em' }}
+          loading="lazy"
         />
         <Typography myType="content" type="GothicEB">
           월말정산
@@ -210,6 +223,7 @@ const DiaryInfo = () => {
         <img
           src={year}
           style={{ width: '80%', marginTop: '2em', marginBottom: '0.5em' }}
+          loading="lazy"
         />
         <Typography myType="content" type="GothicEB">
           연말정산
@@ -222,6 +236,7 @@ const DiaryInfo = () => {
         <img
           src={highlight}
           style={{ width: '80%', marginTop: '5em', marginBottom: '0.5em' }}
+          loading="lazy"
         />
         <Typography myType="content" type="GothicEB">
           올해의 하이라이트
@@ -238,7 +253,11 @@ const DiaryInfo = () => {
       </>
       <PinkContainer>
         {getTitle(null, '스티커팩', 'white', '6em')}
-        <img src={sticker} style={{ width: '79%', marginTop: '10%' }} />
+        <img
+          src={sticker}
+          style={{ width: '79%', marginTop: '10%' }}
+          loading="lazy"
+        />
         <Typography
           type="GothicM"
           size="1.7rem"

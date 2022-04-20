@@ -15,6 +15,7 @@ const Typography = props => {
     textIndent,
     paddingLeft,
     mySpacing,
+    wordBreak,
   } = props;
 
   if (myType == 'title') {
@@ -28,7 +29,7 @@ const Typography = props => {
           margin,
           zIndex,
           lineHeight: '4.5rem',
-          wordBreak: 'keep-all',
+          wordBreak,
           letterSpacing: mySpacing ? mySpacing : '-0.2rem',
         }}>
         {children}
@@ -97,6 +98,7 @@ Typography.defaultProps = {
   margin: false,
   textIndent: null,
   letterSpacing: '-0.25rem',
+  wordBreak: 'keep-all',
 };
 
 export default Typography;

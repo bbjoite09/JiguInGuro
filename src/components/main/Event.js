@@ -36,10 +36,22 @@ const Event = () => {
       <Typography myType="content" type="GothicM">
         2022.04.22 ~ 2022.05.05
       </Typography>
-      <img src={tag1} style={{ width: '45%', margin: '5% 0 0 -35%' }} />
+      <img
+        src={tag1}
+        style={{ width: '45%', margin: '5% 0 0 -35%' }}
+        loading="lazy"
+      />
       <br />
-      <img src={tag2} style={{ width: '50%', margin: '1% 0 0 30%' }} />
-      <img src={tag3} style={{ width: '70%', margin: '1% 0 8% -10%' }} />
+      <img
+        src={tag2}
+        style={{ width: '50%', margin: '1% 0 0 30%' }}
+        loading="lazy"
+      />
+      <img
+        src={tag3}
+        style={{ width: '70%', margin: '1% 0 8% -10%' }}
+        loading="lazy"
+      />
       <Typography myType="content" type="GothicM">
         제로인 여러분의 제로웨이스트 흔적이 담긴
         <br />
@@ -55,6 +67,7 @@ const Event = () => {
         제로라이프를 응원하는 상품을 보내드립니다!
       </Typography>
       <img
+        loading="lazy"
         src={item}
         style={{ width: '80%', marginTop: '13%', marginBottom: '20%' }}
       />

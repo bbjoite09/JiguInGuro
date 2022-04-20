@@ -39,7 +39,11 @@ const DiarySummary = () => {
         <RoundButton>다이어리 다운로드</RoundButton>
       </a>
 
-      <img src={char6} style={{ width: '35%', margin: '5em 0 1em -45%' }} />
+      <img
+        src={char6}
+        style={{ width: '35%', margin: '5em 0 1em -45%' }}
+        loading="lazy"
+      />
       <Typography myType="title" textAlign="left" margin="0 0 0 10%">
         플라스틱 없고,
         <br />
@@ -68,6 +72,7 @@ const DiarySummary = () => {
             left: '18%',
             top: '-35%',
           }}
+          loading="lazy"
         />
         <img
           src={recycle2}
@@ -77,6 +82,7 @@ const DiarySummary = () => {
             left: '10%',
             bottom: '-20%',
           }}
+          loading="lazy"
         />
         <img
           src={recycle3}
@@ -86,6 +92,7 @@ const DiarySummary = () => {
             left: '40%',
             bottom: '-60%',
           }}
+          loading="lazy"
         />
         <Typography
           myType="title"
@@ -117,12 +124,14 @@ const DiarySummary = () => {
             top: '-9.6em',
             left: '13em',
           }}
+          loading="lazy"
         />
         <Typography
           myType="title"
           textAlign="left"
           margin="8em 1% 0 10%"
-          mySpacing="-0.18rem">
+          mySpacing="-0.18rem"
+          wordBreak="">
           이게
           <br />
           제로웨이스트냐구요?
@@ -172,7 +181,7 @@ const DiarySummary = () => {
           그만큼 무궁무진하답니다.
         </Typography>
       </div>
-      <img src={char8} style={{ width: '100%' }} />
+      <img src={char8} style={{ width: '100%' }} loading="lazy" />
       <>
         <Typography
           type="GothicM"

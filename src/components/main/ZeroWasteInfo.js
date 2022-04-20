@@ -20,9 +20,13 @@ const ZeroInfo = () => {
           <br />
           느껴지시나요?
         </Typography>
-        <img src={divider1} style={{ width: '60%' }} />
+        <img src={divider1} style={{ width: '60%' }} loading="lazy" />
       </div>
-      <img src={bg} style={{ width: '100%', marginBottom: '-1%' }} />
+      <img
+        src={bg}
+        style={{ width: '100%', marginBottom: '-1%' }}
+        loading="lazy"
+      />
     </Container>
   );
 };

@@ -12,10 +12,7 @@ const QnA = () => {
           height: '3.4em',
           border: '0.27em solid #0B8765',
           borderRadius: '100%',
-          color: '#0B8765',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
+          lineHeight: '3.4m',
           margin: '0 auto',
           marginTop: margin ? margin : '5em',
         }}>
@@ -45,18 +42,26 @@ const QnA = () => {
         <br />
         위와 같은 경로를 통해 어플에서 불러올 수 있습니다!
       </Typography>
-      <img src={divider} style={{ width: '80%', margin: '4em 0 0 0' }} />
+      <img
+        src={divider}
+        style={{ width: '80%', margin: '4em 0 0 0' }}
+        loading="lazy"
+      />
       {getNumber(2)}
       <Typography size="3.2rem" margin="0.5em 0 1em 0">
         어렵지 않나요?
       </Typography>
-      <img src={mockup5} style={{ width: '80%' }} />
+      <img src={mockup5} style={{ width: '80%' }} loading="lazy" />
       <Typography myType="content" type="GothicM" margin="2em 10%">
         어떻게 써야 할지 막막한 분들을 위해, 참고하며 쓸 수<br />
         있는 샘플 페이지를 같이 구성했습니다.
         <br />다 작성한 후에는 샘플페이지들만 삭제할 수 있습니다.
       </Typography>
-      <img src={divider} style={{ width: '80%', margin: '2em 0 0 0' }} />
+      <img
+        src={divider}
+        style={{ width: '80%', margin: '2em 0 0 0' }}
+        loading="lazy"
+      />
 
       {getNumber(3)}
       <Typography size="3.2rem" margin="0.5em 0 1em 0">

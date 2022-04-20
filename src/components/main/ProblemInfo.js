@@ -42,23 +42,39 @@ const ProblemInfo = () => {
           <br />
           시작되고 있어요
         </Typography>
-        <img src={divider1} style={{ width: '58%', margin: ' 5% 0 15% 10%' }} />
+        <img
+          src={divider1}
+          style={{ width: '58%', margin: ' 5% 0 15% 10%' }}
+          loading="lazy"
+        />
       </div>
 
       <MySlider {...settings} style={{ zIndex: '0', marginLeft: '-5%' }}>
         <>
           <div style={{ paddingLeft: '5%' }}>
-            <img src={card1} style={{ width: '100%', height: '100%' }} />
+            <img
+              src={card1}
+              style={{ width: '100%', height: '100%' }}
+              loading="lazy"
+            />
           </div>
         </>{' '}
         <>
           <div style={{ paddingLeft: '5%' }}>
-            <img src={card2} style={{ width: '100%', height: '100%' }} />
+            <img
+              src={card2}
+              style={{ width: '100%', height: '100%' }}
+              loading="lazy"
+            />
           </div>
         </>
         <>
           <div style={{ paddingLeft: '5%' }}>
-            <img src={card3} style={{ width: '100%', height: '100%' }} />
+            <img
+              src={card3}
+              style={{ width: '100%', height: '100%' }}
+              loading="lazy"
+            />
           </div>
         </>
       </MySlider>

@@ -28,8 +28,12 @@ const ZeroInfo = () => {
           지구가 필요한 건<br />
           바로 <span style={{ color: '#078d68' }}>우리</span>!
         </Typography>
-        <img src={divider2} style={{ width: '65%' }} />
-        <img src={callOut} style={{ width: '85%', margin: '8% 0 5% 0' }} />
+        <img src={divider2} style={{ width: '65%' }} loading="lazy" />
+        <img
+          src={callOut}
+          style={{ width: '85%', margin: '8% 0 5% 0' }}
+          loading="lazy"
+        />
         <Typography myType="content" type="GothicL" color="white">
           아직 자신은 없지만, 지구를 위하는 마음과
           <br />
@@ -49,14 +53,19 @@ const ZeroInfo = () => {
       </div>
       <div style={{ position: 'relative' }}>
         <img
+          loading="lazy"
           src={party}
           style={{ position: 'absolute', width: '85%', marginLeft: '-29%' }}
         />
-        <img src={logo} style={{ width: '29%', marginTop: '5em' }} />
+        <img
+          src={logo}
+          style={{ width: '29%', marginTop: '5em' }}
+          loading="lazy"
+        />
         <Typography myType="title" margin="5% 0 5% 0">
           제로인구란?
         </Typography>
-        <img src={divider} />
+        <img src={divider} loading="lazy" />
         <Typography type="GothicL" margin="5% 0 5% 0" lineHeight="24px">
           불필요한 쓰레기 배출을 줄이고, 처음부터 쓰레기를
           <br />
@@ -69,7 +78,11 @@ const ZeroInfo = () => {
           을 의미해요.
         </Typography>
       </div>
-      <img src={char2} style={{ width: '100%', marginTop: '14%' }} />
+      <img
+        src={char2}
+        style={{ width: '100%', marginTop: '14%' }}
+        loading="lazy"
+      />
       <div
         style={{
           backgroundColor: '#078D68',
@@ -98,7 +111,7 @@ const ZeroInfo = () => {
           <br />
           제로인구로 팀이 준비한 선물!{' '}
         </Typography>
-        <img src={diary} style={{ width: '100%' }} />
+        <img src={diary} style={{ width: '100%' }} loading="lazy" />
 
         <Link to="/diary" style={{ textDecoration: 'none' }}>
           <RoundButton backgroundColor="white" textColor="#078D68">

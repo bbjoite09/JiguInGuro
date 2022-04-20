@@ -53,6 +53,7 @@ const GuroTip = () => {
           }}
           style={{ margin: '3em 0 2em 10%' }}>
           <img
+            loading="lazy"
             src={isClick[0] ? pinkUp : pinkDown}
             style={{ marginLeft: '-3%' }}
           />
@@ -67,7 +68,7 @@ const GuroTip = () => {
         </Button>
         {!isClick[0] ? null : (
           <>
-            <img src={divider} style={{ width: '80%' }} />
+            <img src={divider} style={{ width: '80%' }} loading="lazy" />
             <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
               <Typography
                 size="1.4rem"
@@ -134,7 +135,7 @@ const GuroTip = () => {
                 청소행정과 02-860-2376
               </Typography>
             </div>
-            <img src={divider} style={{ width: '80%' }} />
+            <img src={divider} style={{ width: '80%' }} loading="lazy" />
           </>
         )}
       </div>
@@ -179,6 +180,7 @@ const GuroTip = () => {
           }}
           style={{ margin: '3em 0 2em 10%' }}>
           <img
+            loading="lazy"
             src={isClick[1] ? blueUp : blueDown}
             style={{ marginLeft: '-3%' }}
           />
@@ -193,7 +195,7 @@ const GuroTip = () => {
         </Button>
         {!isClick[1] ? null : (
           <>
-            <img src={divider} style={{ width: '80%' }} />
+            <img src={divider} style={{ width: '80%' }} loading="lazy" />
             <>
               <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
                 <Typography
@@ -273,7 +275,7 @@ const GuroTip = () => {
                 </Typography>
               </div>
             </>
-            <img src={divider} style={{ width: '80%' }} />
+            <img src={divider} style={{ width: '80%' }} loading="lazy" />
           </>
         )}
       </div>
@@ -318,6 +320,7 @@ const GuroTip = () => {
           }}
           style={{ margin: '3em 0 2em 10%' }}>
           <img
+            loading="lazy"
             src={isClick[2] ? greenUp : greenDown}
             style={{ marginLeft: '-3%' }}
           />
@@ -332,7 +335,7 @@ const GuroTip = () => {
         </Button>
         {!isClick[2] ? null : (
           <>
-            <img src={divider} style={{ width: '80%' }} />
+            <img src={divider} style={{ width: '80%' }} loading="lazy" />
             <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
               <Typography
                 size="1.4rem"
@@ -395,7 +398,7 @@ const GuroTip = () => {
                 청소행정과 02-860-2376
               </Typography>
             </div>
-            <img src={divider} style={{ width: '80%' }} />
+            <img src={divider} style={{ width: '80%' }} loading="lazy" />
           </>
         )}
       </div>
