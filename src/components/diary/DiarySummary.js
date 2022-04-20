@@ -40,7 +40,9 @@ const DiarySummary = () => {
         target="_self"
         download="제로일기.pdf"
         id="downloadA">
-        <RoundButton id="downloadB">다이어리 다운로드</RoundButton>
+        <RoundButton id="downloadB" id2="downloadD">
+          다이어리 다운로드
+        </RoundButton>
       </a>
 
       <img
