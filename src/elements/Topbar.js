@@ -25,7 +25,7 @@ const Topbar = () => {
         </Link>
         <Button
           onClick={() => setSelect(!isSelect)}
-          style={{ marginRight: '10%' }}>
+          style={{ marginRight: '10%', width: '2.5rem', height: '2.5rem' }}>
           <img src={ham} style={{ width: '1.8rem', height: '1.8rem' }} />
         </Button>
       </RowContainer>
