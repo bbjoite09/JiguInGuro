@@ -3,10 +3,11 @@ import Typography from './Typography';
 
 const RoundButton = props => {
   // eslint-disable-next-line react/prop-types
-  const { children, backgroundColor, textColor } = props;
+  const { children, backgroundColor, textColor, id } = props;
   return (
     <div style={{ width: '100%' }}>
       <button
+        id={id}
         style={{
           backgroundColor,
           width: '40%',
@@ -35,6 +36,7 @@ RoundButton.defaultProps = {
   children: null,
   backgroundColor: '#078D68',
   textColor: 'white',
+  id: null,
 };
 
 export default RoundButton;
