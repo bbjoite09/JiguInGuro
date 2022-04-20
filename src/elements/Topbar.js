@@ -11,7 +11,7 @@ const Topbar = () => {
   return (
     <Container style={{ height: isSelect ? '100%' : 'auto' }}>
       <RowContainer>
-        <Link to="/" style={{ textDecoration: 'none', width: '100%' }}>
+        <Link to="/" style={{ textDecoration: 'none', width: '80%' }}>
           <p
             style={{
               margin: '4% 0 4% 10%',
@@ -25,7 +25,7 @@ const Topbar = () => {
         </Link>
         <Button
           onClick={() => setSelect(!isSelect)}
-          style={{ marginRight: '10%', width: '2.5rem', height: '2.5rem' }}>
+          style={{ paddingRight: '10%', width: '2.5rem', height: '2.5rem' }}>
           <img src={ham} style={{ width: '1.8rem', height: '1.8rem' }} />
         </Button>
       </RowContainer>
@@ -48,7 +48,11 @@ const Topbar = () => {
                   style={{ marginRight: '10%' }}>
                   <img
                     src={exit}
-                    style={{ width: '200%', marginLeft: '100%' }}
+                    style={{
+                      width: '2.5rem',
+                      height: '2.5rem',
+                      marginLeft: '100%',
+                    }}
                   />
                 </Button>
                 <Typography
