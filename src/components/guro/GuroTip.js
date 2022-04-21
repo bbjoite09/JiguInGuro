@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Typography from '../../elements/Typography';
-import divider from '../../static/images/guro/divider.svg';
 import greenUp from '../../static/images/guro/green_up.svg';
 import greenDown from '../../static/images/guro/green_down.svg';
 import pinkDown from '../../static/images/guro/pink_down.svg';
@@ -51,7 +50,7 @@ const GuroTip = () => {
               ...isClick.slice(1),
             ]);
           }}
-          style={{ margin: '3em 0 2em 10%' }}>
+          style={{ margin: '3em 0 1.5em 10%' }}>
           <img
             loading="lazy"
             src={isClick[0] ? pinkUp : pinkDown}
@@ -68,7 +67,7 @@ const GuroTip = () => {
         </Button>
         {!isClick[0] ? null : (
           <>
-            <img src={divider} style={{ width: '80%' }} loading="lazy" />
+            <Divider />
             <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
               <Typography
                 size="1.4rem"
@@ -108,8 +107,8 @@ const GuroTip = () => {
                 margin="0"
                 paddingLeft="1em"
                 textIndent="-1em">
-                1) 종이팩의 내용물을 비우고 물로 깨끗하게 헹군 후, 펼쳐서 건조한
-                상태로 교환해주세요.
+                {'1)'} 종이팩의 내용물을 비우고 물로 깨끗하게 헹군 후, 펼쳐서
+                건조한 상태로 교환해주세요.
               </Typography>
               <Typography
                 size="1.2rem"
@@ -120,7 +119,7 @@ const GuroTip = () => {
                 margin="0"
                 paddingLeft="1em"
                 textIndent="-1em">
-                2) 교환할 수 있는 종이팩으로는 우유팩, 주스팩, 기타 음료팩이
+                {'2)'} 교환할 수 있는 종이팩으로는 우유팩, 주스팩, 기타 음료팩이
                 있어요. 멸균 우유 처럼 종이팩 안쪽이 은박지로 코팅이 되어있는
                 종이팩은 교환 할 수 없어요.
               </Typography>
@@ -135,7 +134,7 @@ const GuroTip = () => {
                 청소행정과 02-860-2376
               </Typography>
             </div>
-            <img src={divider} style={{ width: '80%' }} loading="lazy" />
+            <Divider />
           </>
         )}
       </div>
@@ -178,7 +177,7 @@ const GuroTip = () => {
               ...isClick.slice(2),
             ]);
           }}
-          style={{ margin: '3em 0 2em 10%' }}>
+          style={{ margin: '3em 0 1.5em 10%' }}>
           <img
             loading="lazy"
             src={isClick[1] ? blueUp : blueDown}
@@ -195,7 +194,7 @@ const GuroTip = () => {
         </Button>
         {!isClick[1] ? null : (
           <>
-            <img src={divider} style={{ width: '80%' }} loading="lazy" />
+            <Divider />
             <>
               <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
                 <Typography
@@ -236,7 +235,7 @@ const GuroTip = () => {
                   margin="0"
                   paddingLeft="1em"
                   textIndent="-1em">
-                  1) 오염이나 훼손되지 않은 젤 타임 아이스팩이 재활용
+                  {'1)'} 오염이나 훼손되지 않은 젤 타임 아이스팩이 재활용
                   대상이에요. 펼쳐서 건조한 상태로 교환해주세요.
                 </Typography>
                 <Typography
@@ -248,8 +247,9 @@ const GuroTip = () => {
                   margin="0"
                   paddingLeft="1em"
                   textIndent="-1em">
-                  2) 정해진 규격의 아이스팩만 전용수거함에 넣어야 해요. 있어요.
-                  (15cmx20cm,16cmx23cm)
+                  {'2)'} 정해진 규격의 아이스팩만 전용수거함에 넣어야 해요.
+                  있어요.
+                  {'(15cmx20cm,16cmx23cm)'}
                 </Typography>
                 <Typography
                   size="1.2rem"
@@ -260,7 +260,7 @@ const GuroTip = () => {
                   margin="0"
                   paddingLeft="1em"
                   textIndent="-1em">
-                  3) 배출시간은 평일 09:00 ~ 18:00 이고, 공휴일에는 운영하지
+                  {'3)'} 배출시간은 평일 09:00 ~ 18:00 이고, 공휴일에는 운영하지
                   않아요.
                 </Typography>
                 <Typography
@@ -275,7 +275,7 @@ const GuroTip = () => {
                 </Typography>
               </div>
             </>
-            <img src={divider} style={{ width: '80%' }} loading="lazy" />
+            <Divider />
           </>
         )}
       </div>
@@ -318,7 +318,7 @@ const GuroTip = () => {
               ...isClick.slice(3),
             ]);
           }}
-          style={{ margin: '3em 0 2em 10%' }}>
+          style={{ margin: '3em 0 1.5em 10%' }}>
           <img
             loading="lazy"
             src={isClick[2] ? greenUp : greenDown}
@@ -335,7 +335,7 @@ const GuroTip = () => {
         </Button>
         {!isClick[2] ? null : (
           <>
-            <img src={divider} style={{ width: '80%' }} loading="lazy" />
+            <Divider />
             <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
               <Typography
                 size="1.4rem"
@@ -368,7 +368,7 @@ const GuroTip = () => {
                 margin="0"
                 paddingLeft="1em"
                 textIndent="-1em">
-                1) 투명 페트병의 내용물을 비우고 깨끗하게 헹군 다음, 라벨을
+                {'1)'} 투명 페트병의 내용물을 비우고 깨끗하게 헹군 다음, 라벨을
                 제거해요. 그 다음 이물질이 들어가지 않게 페트병을 잘 압착한 후
                 뚜껑을 닫아서 배출해요. *뚜껑은 세척 과정에서 분리할 수 있어
                 같이 배출해도 무방해요.
@@ -382,7 +382,7 @@ const GuroTip = () => {
                 margin="0"
                 paddingLeft="1em"
                 textIndent="-1em">
-                2) 투명페트병은 무색의 투명한 먹는 샘물, 음료 페트병만
+                {'2)'} 투명페트병은 무색의 투명한 먹는 샘물, 음료 페트병만
                 분리배출해요. 일회용컵, 계란판 등은 투명페트병과 따로 분리해서
                 일반 플라스틱류로 배출해야 돼요.
               </Typography>
@@ -398,7 +398,7 @@ const GuroTip = () => {
                 청소행정과 02-860-2376
               </Typography>
             </div>
-            <img src={divider} style={{ width: '80%' }} loading="lazy" />
+            <Divider />
           </>
         )}
       </div>
@@ -427,5 +427,13 @@ const Button = styled.button`
   flex-direction: row;
   align-items: center;
   background: inherit;
+`;
+
+const Divider = styled.div`
+  background-color: white;
+  width: 80%;
+  height: 1px;
+  margin-left: 10%;
+  margin-bottom: -2%;
 `;
 export default GuroTip;
