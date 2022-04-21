@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import RoundButton from '../../elements/RoundButton';
 import Typography from '../../elements/Typography';
-import { service } from '../../services';
 import mockup1 from '../../static/images/home/mockup_2.webp';
 import logo from '../../static/images/diarySummary/logo.png';
 import char6 from '../../static/images/diarySummary/char_6.png';
@@ -12,14 +11,6 @@ import recycle2 from '../../static/images/diarySummary/recycle_2.png';
 import recycle3 from '../../static/images/diarySummary/recycle_3.png';
 
 const DiarySummary = () => {
-  const [path, setPath] = useState();
-  useEffect(() => {
-    service.download.getFile().then(res => {
-      const blob = new Blob([res.data], { type: 'application/zip' });
-      setPath(window.URL.createObjectURL(blob));
-    });
-  }, []);
-
   return (
     <>
       <img src={logo} style={{ width: '10%', marginTop: '5em' }} />
@@ -35,7 +26,11 @@ const DiarySummary = () => {
         <br />
         제로인구로 팀이 준비한 선물!
       </Typography>
-      <a href={path} target="_self" download="제로일기Set.zip" id="downloadA">
+      <a
+        href="https://firebasestorage.googleapis.com/v0/b/zeroinguro.appspot.com/o/zeroSet.zip?alt=media&token=302ec7eb-b774-4e07-a2e2-81d127667b2e"
+        target="_self"
+        download="제로일기Set.zip"
+        id="downloadA">
         <RoundButton id="downloadB" id2="downloadD">
           다이어리 다운로드
         </RoundButton>
