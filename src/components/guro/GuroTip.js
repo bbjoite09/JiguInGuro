@@ -432,7 +432,7 @@ const Button = styled.button`
 const Divider = styled.div`
   background-color: white;
   width: 80%;
-  height: 1px;
+  height: 0.5px;
   margin-left: 10%;
   margin-bottom: -2%;
 `;
