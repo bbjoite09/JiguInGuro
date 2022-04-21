@@ -9,7 +9,7 @@ const GuroLogo = () => {
         src={logo}
         style={{
           width: '100%',
-          marginTop: '12%',
+          marginTop: '11%',
           marginBottom: '-0.5%',
         }}
       />

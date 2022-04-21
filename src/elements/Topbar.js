@@ -72,7 +72,10 @@ const Topbar = () => {
               </RowContainer>
             </li>
             <Li>
-              <Link to="/" style={{ textDecoration: 'none' }}>
+              <Link
+                to="/"
+                style={{ textDecoration: 'none' }}
+                onClick={() => setSelect(!isSelect)}>
                 <Typography
                   type="GothicB"
                   textAlign="right"
@@ -84,7 +87,10 @@ const Topbar = () => {
               </Link>
             </Li>
             <Li>
-              <Link to="/diary" style={{ textDecoration: 'none' }}>
+              <Link
+                to="/diary"
+                style={{ textDecoration: 'none' }}
+                onClick={() => setSelect(!isSelect)}>
                 <Typography
                   type="GothicB"
                   textAlign="right"
@@ -96,7 +102,10 @@ const Topbar = () => {
               </Link>
             </Li>
             <Li>
-              <Link to="/guro" style={{ textDecoration: 'none' }}>
+              <Link
+                to="/guro"
+                style={{ textDecoration: 'none' }}
+                onClick={() => setSelect(!isSelect)}>
                 <Typography
                   type="GothicB"
                   textAlign="right"
