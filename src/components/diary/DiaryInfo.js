@@ -13,6 +13,7 @@ import month from '../../static/images/diaryInfo/month.webp';
 import year from '../../static/images/diaryInfo/year.webp';
 import highlight from '../../static/images/diaryInfo/highlight.webp';
 import sticker from '../../static/images/diaryInfo/sticker_1.webp';
+import manda from '../../static/images/diaryInfo/manda.webp';
 
 const getTitle = (num, title, color, margin) => {
   return (
@@ -160,7 +161,7 @@ const DiaryInfo = () => {
           <br />
         </Typography>
         <img
-          src={plan}
+          src={manda}
           style={{ width: '80%', marginTop: '5em', marginBottom: '1em' }}
           loading="lazy"
         />
