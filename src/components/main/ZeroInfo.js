@@ -97,7 +97,7 @@ const ZeroInfo = () => {
           size="4.2rem"
           lineHeight="54px"
           margin="1.5em 0 0 0">
-          매일제로
+          제로일기
           <br />
           다이어리 set
         </Typography>

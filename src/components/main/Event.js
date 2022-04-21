@@ -55,7 +55,7 @@ const Event = () => {
       <Typography myType="content" type="GothicM">
         제로인 여러분의 제로웨이스트 흔적이 담긴
         <br />
-        <span style={{ fontFamily: 'GothicB' }}>{'<매일제로>'}를 개인 sns</span>
+        <span style={{ fontFamily: 'GothicB' }}>{'<제로일기>'}를 개인 sns</span>
         (인스타그램, 블로그)에
         <br />
         <span style={{ fontFamily: 'GothicB' }}>#해시태그</span>와 함께 자랑해
