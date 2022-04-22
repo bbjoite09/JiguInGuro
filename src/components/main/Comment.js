@@ -5,7 +5,6 @@ import eroomLogo from '../../static/images/event/eroom_logo.png';
 import styled from 'styled-components';
 import down from '../../static/images/comment/down.svg';
 import up from '../../static/images/comment/up.svg';
-import divider from '../../static/images/comment/divider.svg';
 import { service } from '../../services';
 
 const Comment = () => {
@@ -273,7 +272,7 @@ const Comment = () => {
           {isSelect ? '댓글 닫기' : '댓글 전체 보기'}
         </Typography>
       </DetailButton>
-      <img src={divider} style={{ width: '80%' }} />
+      <Divider />
       {isSelect
         ? comments.map(data => (
             <>
@@ -311,7 +310,7 @@ const Comment = () => {
                 wordBreak="">
                 {data['cmnttext']}
               </Typography>
-              <img src={divider} style={{ width: '80%' }} />
+              <Divider />
             </>
           ))
         : null}
@@ -390,5 +389,13 @@ const PageButton = styled.button`
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
+`;
+
+const Divider = styled.div`
+  background-color: #078d68;
+  width: 80%;
+  height: 0.5px;
+  margin-left: 10%;
+  margin-top: 3%;
 `;
 export default Comment;
