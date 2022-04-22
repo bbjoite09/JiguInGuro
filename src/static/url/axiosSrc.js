@@ -1,8 +1,13 @@
-const src = 'https://hardcarrygr.herokuapp.com/hardcarry/';
+const baseUrl = 'https://hardcarrygr.herokuapp.com';
+export const url = {
+  src: baseUrl + '/hardcarry',
+  downloadUrl: baseUrl + '/zero_diary+sticker.zip',
+};
+
 export const axiosSrc = {
-  getComment: src + 'listCmnt',
-  postComment: src + 'addCmnt',
-  updateComment: src + 'updateCmnt',
-  deleteComment: src + 'compareCmntPw',
-  getFile: src + 'maeilZero',
+  getComment: url.src + '/listCmnt',
+  postComment: url.src + '/addCmnt',
+  updateComment: url.src + '/updateCmnt',
+  deleteComment: url.src + '/compareCmntPw',
+  getFile: url.src + '/maeilZero',
 };

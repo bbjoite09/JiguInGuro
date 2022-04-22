@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { service } from '../../services';
+import React from 'react';
 import RoundButton from '../../elements/RoundButton';
 import Typography from '../../elements/Typography';
 import mockup1 from '../../static/images/home/mockup_2.webp';
@@ -10,15 +9,9 @@ import char8 from '../../static/images/diarySummary/char_8.webp';
 import recycle1 from '../../static/images/diarySummary/recycle_1.png';
 import recycle2 from '../../static/images/diarySummary/recycle_2.png';
 import recycle3 from '../../static/images/diarySummary/recycle_3.png';
+import { url } from '../../static/url/axiosSrc';
 
 const DiarySummary = () => {
-  const [path, setPath] = useState();
-  useEffect(() => {
-    service.download.getFile().then(res => {
-      const blob = new Blob([res.data], { type: 'application/zip' });
-      setPath(window.URL.createObjectURL(blob));
-    });
-  }, []);
   return (
     <>
       <img src={logo} style={{ width: '10%', marginTop: '5em' }} />
@@ -34,7 +27,11 @@ const DiarySummary = () => {
         <br />
         제로인구로 팀이 준비한 선물!
       </Typography>
-      <a href={path} target="_self" download="제로일기Set.zip" id="downloadA">
+      <a
+        href={url.downloadUrl}
+        target="_self"
+        download="제로일기Set.zip"
+        id="downloadA">
         <RoundButton id="downloadB" id2="downloadD">
           다이어리 다운로드
         </RoundButton>

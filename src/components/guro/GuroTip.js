@@ -10,7 +10,6 @@ import blueUp from '../../static/images/guro/blue_up.svg';
 
 const GuroTip = () => {
   const [isClick, setClick] = useState([false, false, false]);
-
   return (
     <Container>
       <div
@@ -386,7 +385,6 @@ const GuroTip = () => {
                 분리배출해요. 일회용컵, 계란판 등은 투명페트병과 따로 분리해서
                 일반 플라스틱류로 배출해야 돼요.
               </Typography>
-
               <Typography
                 size="1.4rem"
                 lineHeight="24px"
