@@ -10,7 +10,19 @@ const Topbar = () => {
 
   return (
     <Container style={{ height: isSelect ? '100%' : 'auto' }}>
-      <RowContainer>
+      {isSelect ? (
+        <div
+          style={{
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(0,0,0, 0.5)',
+            position: 'absolute',
+            zIndex: 10,
+          }}
+          onClick={() => setSelect(!isSelect)}
+        />
+      ) : null}
+      <RowContainer style={{ overflow: 'hidden' }}>
         <Link to="/" style={{ textDecoration: 'none', width: '80%' }}>
           <p
             style={{
@@ -128,15 +140,13 @@ const Container = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: fixed;
+  height: 100%;
   width: 100%;
   top: 0;
   z-index: 4;
 `;
-const RowContainer = styled.div`
+const RowContainer = styled.nav`
   width: 100%;
   text-align: left;
   display: flex;
@@ -166,7 +176,7 @@ const move = keyframes`{
     }
 }`;
 
-const Menu = styled.div`
+const Menu = styled.aside`
   position: absolute;
   height: 100vh;
   width: 70%;

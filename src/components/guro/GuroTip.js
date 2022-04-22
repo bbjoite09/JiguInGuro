@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Typography from '../../elements/Typography';
 import greenUp from '../../static/images/guro/green_up.svg';
 import greenDown from '../../static/images/guro/green_down.svg';
@@ -65,7 +65,7 @@ const GuroTip = () => {
           </Typography>
         </Button>
         {!isClick[0] ? null : (
-          <>
+          <Detail>
             <Divider />
             <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
               <Typography
@@ -134,7 +134,7 @@ const GuroTip = () => {
               </Typography>
             </div>
             <Divider />
-          </>
+          </Detail>
         )}
       </div>
 
@@ -192,7 +192,7 @@ const GuroTip = () => {
           </Typography>
         </Button>
         {!isClick[1] ? null : (
-          <>
+          <Detail>
             <Divider />
             <>
               <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
@@ -275,7 +275,7 @@ const GuroTip = () => {
               </div>
             </>
             <Divider />
-          </>
+          </Detail>
         )}
       </div>
       <div
@@ -333,7 +333,7 @@ const GuroTip = () => {
           </Typography>
         </Button>
         {!isClick[2] ? null : (
-          <>
+          <Detail>
             <Divider />
             <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
               <Typography
@@ -397,7 +397,7 @@ const GuroTip = () => {
               </Typography>
             </div>
             <Divider />
-          </>
+          </Detail>
         )}
       </div>
     </Container>
@@ -425,6 +425,22 @@ const Button = styled.button`
   flex-direction: row;
   align-items: center;
   background: inherit;
+`;
+
+const opacity = keyframes`{
+  from {
+    opacity: 0.3;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    }
+}`;
+
+const Detail = styled.section`
+  position: relative;
+  animation: ${opacity} 1s linear;
 `;
 
 const Divider = styled.div`
