@@ -307,7 +307,8 @@ const Comment = () => {
                 size="1.4rem"
                 lineHeight="2.4rem"
                 textAlign="left"
-                margin="0 0 3% 10%">
+                margin="0 10% 3% 10%"
+                wordBreak="">
                 {data['cmnttext']}
               </Typography>
               <img src={divider} style={{ width: '80%' }} />
