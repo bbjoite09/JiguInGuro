@@ -81,7 +81,7 @@ const Typography = props => {
           lineHeight,
           textIndent,
           paddingLeft,
-          wordBreak: 'keep-all',
+          wordBreak,
           letterSpacing: type.slice(0, 6) == 'Gothic' ? '-0.05rem' : '-0.2rem',
         }}>
         {children}
