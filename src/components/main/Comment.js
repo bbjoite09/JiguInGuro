@@ -3,84 +3,26 @@ import Typography from '../../elements/Typography';
 import logo from '../../static/images/diarySummary/logo.png';
 import eroomLogo from '../../static/images/event/eroom_logo.png';
 import styled from 'styled-components';
-import down from '../../static/images/comment/down.svg';
-import up from '../../static/images/comment/up.svg';
 import { service } from '../../services';
 
 const Comment = () => {
-  const [isSelect, setSelect] = useState(true);
   const [comments, setComment] = useState([]);
-  const [offset, setOffset] = useState([1, 2, 3, 4, 5]);
-  const [nowPage, setPage] = useState(1);
   const [id, setId] = useState();
+  const [page, setPage] = useState(1);
   const [isModal, setModal] = useState(false);
   const pw = useRef();
   const delPw = useRef();
   const cmntText = useRef();
-
+  let block = false;
   useEffect(() => {
     // 처음 시작시 호출
-    getComment(nowPage);
-  }, [nowPage, isSelect]);
+    getComment(page);
+  }, [block]);
 
   const getComment = pageNum => {
     service.comment.getComment(pageNum, 5).then(res => {
-      const tempList = res;
-      setComment([...tempList]);
+      setComment([...comments, ...res]);
     });
-  };
-
-  const getPaging = () => {
-    return (
-      <>
-        <RowContainer style={{ margin: '5em auto', justifyContent: 'center' }}>
-          <PageButton
-            onClick={() => {
-              if (offset[0] != 1) {
-                const tempList = offset.map(data => data - 5);
-                setOffset([...tempList]);
-              }
-            }}>
-            <Typography
-              myType="content"
-              type="GothicB"
-              textAlign="left"
-              margin="3% 0 3% 10%">
-              {'<'}
-            </Typography>
-          </PageButton>
-          {offset.map(data => (
-            <>
-              <PageButton
-                onClick={() => {
-                  setPage(data);
-                }}>
-                <Typography
-                  myType="content"
-                  type="GothicB"
-                  textAlign="left"
-                  margin="3% 0 3% 10%">
-                  {data}
-                </Typography>
-              </PageButton>
-            </>
-          ))}
-          <PageButton
-            onClick={() => {
-              const tempList = offset.map(data => data + 5);
-              setOffset([...tempList]);
-            }}>
-            <Typography
-              myType="content"
-              type="GothicB"
-              textAlign="left"
-              margin="3% 0 3% 10%">
-              {'>'}
-            </Typography>
-          </PageButton>
-        </RowContainer>
-      </>
-    );
   };
 
   const getModal = () => {
@@ -251,8 +193,6 @@ const Comment = () => {
             alert('등록되었습니다.');
             cmntText.current.value = '';
             pw.current.value = '';
-
-            // setSelect(!isSelect);
           } else if (cmntText.current.value == '') {
             alert('내용을 입력해주세요.');
           } else {
@@ -263,58 +203,70 @@ const Comment = () => {
           등록
         </Typography>
       </Button>
+      {comments.map((data, idx, arr) => (
+        <>
+          <RowContainer
+            style={{
+              margin: '0',
+              marginLeft: '10%',
+              width: '80%',
+              justifyContent: 'space-between',
+            }}>
+            <Typography
+              myType="content"
+              type="GothicB"
+              textAlign="left"
+              margin="3% 0 3% 0">
+              {data['cmntid']}
+            </Typography>
+            <PageButton
+              style={{ margin: '0 0 0 0' }}
+              onClick={() => {
+                setId(data['cmntid']);
+                setModal(true);
+              }}>
+              <Typography type="GothicB" textAlign="right">
+                삭제
+              </Typography>
+            </PageButton>
+          </RowContainer>
+          <Typography
+            type="GothicL"
+            size="1.4rem"
+            lineHeight="2.4rem"
+            textAlign="left"
+            margin="0 10% 3% 10%"
+            wordBreak="">
+            {data['cmnttext']}
+          </Typography>
+          {!(idx == arr.length - 1) ? (
+            <hr
+              style={{
+                borderTop: '0.6px solid #0B8765',
+                width: '80%',
+                marginTop: '5%',
+              }}
+            />
+          ) : (
+            <hr
+              style={{
+                borderTop: '2px solid #0B8765',
+                width: '80%',
+                marginTop: '5%',
+              }}
+            />
+          )}
+        </>
+      ))}
       <DetailButton
         onClick={() => {
-          setSelect(!isSelect);
+          getComment(page + 1);
+          setPage(page + 1);
         }}>
-        <img src={isSelect ? up : down} />
-        <Typography type="GothicB" size="1.4rem" margin="0 0 0 10%">
-          {isSelect ? '댓글 닫기' : '댓글 전체 보기'}
+        <Typography type="GothicB" size="1.4rem">
+          ... 댓글 더보기
         </Typography>
       </DetailButton>
-      <Divider />
-      {isSelect
-        ? comments.map(data => (
-            <>
-              <RowContainer
-                style={{
-                  margin: '0',
-                  marginLeft: '10%',
-                  width: '80%',
-                  justifyContent: 'space-between',
-                }}>
-                <Typography
-                  myType="content"
-                  type="GothicB"
-                  textAlign="left"
-                  margin="3% 0 3% 0">
-                  {data['cmntid']}
-                </Typography>
-                <PageButton
-                  style={{ margin: '0 0 0 0' }}
-                  onClick={() => {
-                    setId(data['cmntid']);
-                    setModal(true);
-                  }}>
-                  <Typography type="GothicB" textAlign="right">
-                    삭제
-                  </Typography>
-                </PageButton>
-              </RowContainer>
-              <Typography
-                type="GothicL"
-                size="1.4rem"
-                lineHeight="2.4rem"
-                textAlign="left"
-                margin="0 10% 3% 10%"
-                wordBreak="">
-                {data['cmnttext']}
-              </Typography>
-              <Divider />
-            </>
-          ))
-        : null}
-      {isSelect ? getPaging() : null}
       {isModal ? getModal() : null}
       <Footer>
         <img src={eroomLogo} style={{ height: '50%' }} />
@@ -377,11 +329,10 @@ const DetailButton = styled.button`
   border: none;
   cursor: pointer;
   vertical-align: middle;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   width: 50%;
+  display: flex;
   margin-left: 10%;
+  padding-left: 0;
 `;
 
 const PageButton = styled.button`
@@ -391,11 +342,4 @@ const PageButton = styled.button`
   cursor: pointer;
 `;
 
-const Divider = styled.div`
-  background-color: #078d68;
-  width: 80%;
-  height: 0.5px;
-  margin-left: 10%;
-  margin-top: 3%;
-`;
 export default Comment;
