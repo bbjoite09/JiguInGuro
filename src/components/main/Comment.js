@@ -159,50 +159,52 @@ const Comment = () => {
         <br />
         있으시다면 댓글로 남겨주세요!
       </Typography>
-      <RowContainer>
-        <PwTitle>
-          <Typography type="GothicB" size="1.3rem" color="white" margin="0">
-            비밀번호
-          </Typography>
-        </PwTitle>
-        <input
-          type="password"
-          inputMode="numeric"
-          style={{
-            width: '50%',
-            height: '2em',
-            outlineColor: '#E6E6E6',
-            border: '2px solid #E6E6E6',
-          }}
-          ref={pw}
+      <div style={{ marginLeft: '10%', marginRight: '10%' }}>
+        <RowContainer style={{ marginLeft: 0 }}>
+          <PwTitle>
+            <Typography type="GothicB" size="1.3rem" color="white" margin="0">
+              비밀번호
+            </Typography>
+          </PwTitle>
+          <input
+            type="password"
+            inputMode="numeric"
+            style={{
+              lineHeight: '3.25em',
+              width: '100%',
+              height: '2em',
+              outlineColor: '#E6E6E6',
+              border: '2px solid #E6E6E6',
+            }}
+            ref={pw}
+          />
+        </RowContainer>
+        <Textarea
+          placeholder="제로일기로 제로웨이스트 라이프 도전~!!"
+          ref={cmntText}
         />
-      </RowContainer>
-      <Textarea
-        placeholder="제로일기로 제로웨이스트 라이프 도전~!!"
-        ref={cmntText}
-        // onFocus={() => setSelect(false)}
-      />
-      <Button
-        onClick={() => {
-          if (cmntText.current.value && pw.current.value) {
-            service.comment
-              .postComment(cmntText.current.value, pw.current.value)
-              .then(() => {
-                getComment(1);
-              });
-            alert('등록되었습니다.');
-            cmntText.current.value = '';
-            pw.current.value = '';
-          } else if (cmntText.current.value == '') {
-            alert('내용을 입력해주세요.');
-          } else {
-            alert('비밀번호를 입력해주세요.');
-          }
-        }}>
-        <Typography type="GothicB" size="1.8rem" color="white" margin="0">
-          등록
-        </Typography>
-      </Button>
+        <Button
+          onClick={() => {
+            if (cmntText.current.value && pw.current.value) {
+              service.comment
+                .postComment(cmntText.current.value, pw.current.value)
+                .then(() => {
+                  getComment(1);
+                });
+              alert('등록되었습니다.');
+              cmntText.current.value = '';
+              pw.current.value = '';
+            } else if (cmntText.current.value == '') {
+              alert('내용을 입력해주세요.');
+            } else {
+              alert('비밀번호를 입력해주세요.');
+            }
+          }}>
+          <Typography type="GothicB" size="1.8rem" color="white" margin="0">
+            등록
+          </Typography>
+        </Button>
+      </div>
       {comments.map((data, idx, arr) => (
         <>
           <RowContainer
@@ -295,7 +297,7 @@ const RowContainer = styled.div`
 
 const PwTitle = styled.div`
   background-color: #078d68;
-  width: 6.6em;
+  width: 25%;
   height: 3.25em;
   line-height: 3.25em;
   z-index: 3;
@@ -304,20 +306,25 @@ const PwTitle = styled.div`
 const Textarea = styled.textarea`
   border: 2px solid #e6e6e6;
   outline-color: #e6e6e6;
-  width: 69%;
+  width: 89%;
   height: 5em;
   padding: 5% 5%;
   font-family: GothicM;
   margin-top: -0.6%;
-  margin-left: 0.5%
   z-index: 10;
+
+  ::placeholder {
+    font-family: GothicM;
+    color: #bbbbbb;
+    font-size: 1.4rem;
+  }
 `;
 
 const Button = styled.button`
   background-color: #078d68;
   border: none;
   cursor: pointer;
-  width: 80%;
+  width: 100%;
   height: 4em;
   margin-bottom: 3em;
   margin-top: -0.7%;

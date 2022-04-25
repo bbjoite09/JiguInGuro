@@ -10,7 +10,8 @@ const GuroLogo = () => {
         style={{
           width: '100%',
           marginTop: '11%',
-          marginBottom: '-0.5%',
+          verticalAlign: 'middle',
+          marginBottom: '-1px',
         }}
       />
       <MoveText backgroundColor="#0B8765" color="white" />
