@@ -8,7 +8,7 @@ import divider2 from '../../static/images/zeroWasteInfo/green_divider.svg';
 import callOut from '../../static/images/zeroWasteInfo/callOut.webp';
 import RoundButton from '../../elements/RoundButton';
 import arrow from '../../static/images/zeroInfo/arrow.png';
-import party from '../../static/images/zeroInfo/party_2.png';
+import party from '../../static/images/zeroInfo/party_2.webp';
 import { Link } from 'react-router-dom';
 import diary from '../../static/images/home/mockup_2.webp';
 
