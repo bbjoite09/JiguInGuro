@@ -159,7 +159,11 @@ const Comment = () => {
         <br />
         있으시다면 댓글로 남겨주세요!
       </Typography>
-      <div style={{ marginLeft: '10%', marginRight: '10%' }}>
+      <div
+        style={{
+          marginLeft: '10%',
+          marginRight: '10%',
+        }}>
         <RowContainer style={{ marginLeft: 0 }}>
           <PwTitle>
             <Typography type="GothicB" size="1.3rem" color="white" margin="0">
@@ -179,10 +183,12 @@ const Comment = () => {
             ref={pw}
           />
         </RowContainer>
-        <Textarea
-          placeholder="제로일기로 제로웨이스트 라이프 도전~!!"
-          ref={cmntText}
-        />
+        <div style={{ width: '90%' }}>
+          <Textarea
+            placeholder="제로일기로 제로웨이스트 라이프 도전~!!"
+            ref={cmntText}
+          />
+        </div>
         <Button
           onClick={() => {
             if (cmntText.current.value && pw.current.value) {
@@ -306,12 +312,14 @@ const PwTitle = styled.div`
 const Textarea = styled.textarea`
   border: 2px solid #e6e6e6;
   outline-color: #e6e6e6;
-  width: 89%;
   height: 5em;
   padding: 5% 5%;
   font-family: GothicM;
+  margin: 0 auto;
   margin-top: -0.6%;
   z-index: 10;
+  resize: none;
+  width: 100%;
 
   ::placeholder {
     font-family: GothicM;
