@@ -430,7 +430,7 @@ const Button = styled.button`
 const opacity = keyframes`{
   from {
     opacity: 0.3;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
   to {
     opacity: 1;
@@ -440,7 +440,7 @@ const opacity = keyframes`{
 
 const Detail = styled.section`
   position: relative;
-  animation: ${opacity} 1s linear;
+  animation: ${opacity} 0.7s linear;
 `;
 
 const Divider = styled.div`
