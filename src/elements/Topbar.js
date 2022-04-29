@@ -7,6 +7,18 @@ import { Link } from 'react-router-dom';
 
 const Topbar = () => {
   const [isSelect, setSelect] = useState(false);
+  const [isShow, setShow] = useState(false);
+
+  const handleShow = () => {
+    setShow(!isShow);
+    if (isShow) {
+      setTimeout(() => {
+        setSelect(!isSelect);
+      }, 300);
+    } else {
+      setSelect(!isSelect);
+    }
+  };
 
   return (
     <Container style={{ height: isSelect ? '100%' : 'auto' }}>
@@ -19,7 +31,7 @@ const Topbar = () => {
             position: 'absolute',
             zIndex: 10,
           }}
-          onClick={() => setSelect(!isSelect)}
+          onClick={() => handleShow()}
         />
       ) : null}
       <RowContainer style={{ overflow: 'hidden' }}>
@@ -36,13 +48,16 @@ const Topbar = () => {
           </p>
         </Link>
         <Button
-          onClick={() => setSelect(!isSelect)}
+          onClick={() => {
+            handleShow();
+          }}
           style={{ paddingRight: '10%', width: '2.5rem', height: '2.5rem' }}>
           <img src={ham} style={{ width: '1.8rem', height: '1.8rem' }} />
         </Button>
       </RowContainer>
-      {isSelect ? (
-        <Menu>
+
+      {!isSelect ? null : (
+        <Menu isSelect={isShow}>
           <Ul>
             <li
               style={{
@@ -56,7 +71,7 @@ const Topbar = () => {
                   backdropFilter: 'blur(0px)',
                 }}>
                 <Button
-                  onClick={() => setSelect(!isSelect)}
+                  onClick={() => handleShow()}
                   style={{
                     width: '2.5rem',
                     height: '2.5rem',
@@ -73,21 +88,26 @@ const Topbar = () => {
                     }}
                   />
                 </Button>
-                <Typography
-                  type="GothicH"
-                  textAlign="right"
-                  margin="3% 10%"
-                  size="2rem"
-                  letterSpacing="-0.05rem">
-                  바로가기
-                </Typography>
+                <Link
+                  to="/"
+                  style={{ textDecoration: 'none', width: '80%' }}
+                  onClick={() => handleShow()}>
+                  <Typography
+                    type="GothicH"
+                    textAlign="right"
+                    margin="3% 10%"
+                    size="2rem"
+                    letterSpacing="-0.05rem">
+                    바로가기
+                  </Typography>
+                </Link>
               </RowContainer>
             </li>
             <Li>
               <Link
                 to="/"
                 style={{ textDecoration: 'none' }}
-                onClick={() => setSelect(!isSelect)}>
+                onClick={() => handleShow()}>
                 <Typography
                   type="GothicB"
                   textAlign="right"
@@ -102,7 +122,7 @@ const Topbar = () => {
               <Link
                 to="/diary"
                 style={{ textDecoration: 'none' }}
-                onClick={() => setSelect(!isSelect)}>
+                onClick={() => handleShow()}>
                 <Typography
                   type="GothicB"
                   textAlign="right"
@@ -117,7 +137,7 @@ const Topbar = () => {
               <Link
                 to="/guro"
                 style={{ textDecoration: 'none' }}
-                onClick={() => setSelect(!isSelect)}>
+                onClick={() => handleShow()}>
                 <Typography
                   type="GothicB"
                   textAlign="right"
@@ -130,10 +150,11 @@ const Topbar = () => {
             </Li>
           </Ul>
         </Menu>
-      ) : null}
+      )}
     </Container>
   );
 };
+
 const Container = styled.div`
   max-width: 500px;
   margin: 0 auto;
@@ -141,8 +162,8 @@ const Container = styled.div`
   background-attachment: fixed;
   overflow: hidden;
   position: fixed;
-  height: 100%;
   width: 100%;
+  height: 100%;
   top: 0;
   z-index: 4;
 `;
@@ -156,6 +177,7 @@ const RowContainer = styled.nav`
   background: inherit;
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
+  z-index: 4;
 `;
 const Button = styled.button`
   background-color: #00ff0000;
@@ -167,13 +189,22 @@ const Button = styled.button`
   height: 25px;
 `;
 
-const move = keyframes`{
+const moveOpen = keyframes`{
   to {
     left: 30%;
+    zIndex: 5
   }
   from {
       left:100%;
     }
+}`;
+const moveClose = keyframes`{
+  to {
+    left: 100%;
+  }
+  from {
+    left: 30%;
+  }
 }`;
 
 const Menu = styled.aside`
@@ -185,9 +216,11 @@ const Menu = styled.aside`
   border: 1.5px solid #078d68;
   background-color: white;
   z-index: 100;
-  animation: ${move} 0.3s linear;
+  animation: ${props => (props.isSelect ? moveOpen : moveClose)};
+  animation-duration: 0.5s;
+  timing-function: ${props => (props.isSelect ? 'linear' : 'linear')};
+  animation-fill-mode: ${props => (props.isSelect ? '' : 'forwards')};
 `;
-
 const Ul = styled.ul`
   margin-block-start: 0px;
   margin-block-end: 0px;
