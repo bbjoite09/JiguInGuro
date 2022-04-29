@@ -71,7 +71,7 @@ const Comment = () => {
 
           <RowContainer style={{ width: '80%', marginTop: '15%' }}>
             <PwTitle>
-              <Typography type="GothicB" size="1.3rem" color="white" margin="0">
+              <Typography type="GothicB" size="1.4rem" color="white" margin="0">
                 비밀번호
               </Typography>
             </PwTitle>
@@ -80,7 +80,7 @@ const Comment = () => {
               inputMode="numeric"
               style={{
                 width: '68%',
-                height: '2em',
+                height: '3.7rem',
                 outlineColor: '#E6E6E6',
                 border: '2px solid #E6E6E6',
               }}
@@ -138,7 +138,7 @@ const Comment = () => {
   };
 
   return (
-    <div style={{ position: 'relative' }}>
+    <section style={{ position: 'relative' }}>
       <img src={logo} style={{ width: '10%', marginTop: '7em' }} />
       <Typography myType="title" margin="0.5em 0 1em 0">
         다짐해요
@@ -176,7 +176,7 @@ const Comment = () => {
             style={{
               lineHeight: '3.25em',
               width: '100%',
-              height: '2em',
+              height: '3.6rem',
               outlineColor: '#E6E6E6',
               border: '2px solid #E6E6E6',
             }}
@@ -271,7 +271,7 @@ const Comment = () => {
           getComment(page + 1);
           setPage(page + 1);
         }}>
-        <Typography type="GothicB" size="1.4rem">
+        <Typography type="GothicB" size="1.4rem" margin="1.5% 0 0 0">
           ... 댓글 더보기
         </Typography>
       </DetailButton>
@@ -279,7 +279,7 @@ const Comment = () => {
       <Footer>
         <img src={eroomLogo} style={{ height: '50%' }} />
       </Footer>
-    </div>
+    </section>
   );
 };
 
@@ -304,8 +304,8 @@ const RowContainer = styled.div`
 const PwTitle = styled.div`
   background-color: #078d68;
   width: 25%;
-  height: 3.25em;
-  line-height: 3.25em;
+  height: 4.19em;
+  line-height: 4.19em;
   z-index: 3;
 `;
 
