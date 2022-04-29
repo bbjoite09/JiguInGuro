@@ -144,32 +144,25 @@ const Container = styled.div`
 const MySlider = styled(Slider)`
   .slick-dots li {
     margin: 0 auto;
+    margin-right: 2px;
+    margin-top: 10px;
   }
 
   .slick-dots li button:before {
-    line-height: 40px;
+    line-height: 60px;
     position: absolute;
     top: 0;
-    left: 10px;
+    left: 20px;
     color: white;
     content: '•';
     margin: 0 auto;
+    font-size: 12px;
+    opacity: 1;
+    text-align: center;
   }
   .slick-dots li.slick-active button:before {
     color: #eadb50;
   }
 `;
-
-// const Card = styled.div`
-//   background-color: white;
-//   border-radius: 20px;
-//   width: 100%;
-//   height: 55vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   z-index: 1;
-//   position: relative;
-// `;
 
 export default ProblemInfo;
