@@ -152,7 +152,7 @@ const MySlider = styled(Slider)`
     line-height: 60px;
     position: absolute;
     top: 0;
-    left: 20px;
+    left: 12.5px;
     color: white;
     content: '•';
     margin: 0 auto;
