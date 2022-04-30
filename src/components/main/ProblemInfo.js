@@ -144,7 +144,7 @@ const Container = styled.div`
 const MySlider = styled(Slider)`
   .slick-dots li {
     margin: 0 auto;
-    margin-right: 2px;
+    margin-right: 1.5px;
     margin-top: 10px;
   }
 
@@ -156,7 +156,7 @@ const MySlider = styled(Slider)`
     color: white;
     content: '•';
     margin: 0 auto;
-    font-size: 12px;
+    font-size: 8px;
     opacity: 1;
     text-align: center;
   }

@@ -139,7 +139,7 @@ const Comment = () => {
 
   return (
     <section style={{ position: 'relative' }}>
-      <img src={logo} style={{ width: '10%', marginTop: '7em' }} />
+      <img src={logo} style={{ width: '10%', marginTop: '3.0em' }} />
       <Typography myType="title" margin="0.5em 0 1em 0">
         다짐해요
         <br />
