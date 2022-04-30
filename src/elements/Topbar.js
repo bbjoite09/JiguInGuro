@@ -9,6 +9,19 @@ const Topbar = () => {
   const [isSelect, setSelect] = useState(false);
   const [isShow, setShow] = useState(false);
 
+  const link = document.location.href;
+  const location = link.split('/').pop();
+
+  const handleMenuClick = () => {
+    if (location === 'diary') {
+      return 1;
+    } else if (location === 'guro') {
+      return 2;
+    } else {
+      return 0;
+    }
+  };
+
   const handleShow = () => {
     setShow(!isShow);
     if (isShow) {
@@ -18,6 +31,7 @@ const Topbar = () => {
     } else {
       setSelect(!isSelect);
     }
+    handleMenuClick();
   };
 
   return (
@@ -34,24 +48,32 @@ const Topbar = () => {
           onClick={() => handleShow()}
         />
       ) : null}
-      <RowContainer style={{ overflow: 'hidden' }}>
-        <Link to="/" style={{ textDecoration: 'none', width: '80%' }}>
-          <p
+      <RowContainer
+        style={{
+          overflow: 'hidden',
+          padding: '3% 10%',
+          width: '80%',
+          justifyContent: 'space-between',
+        }}>
+        <Link
+          to="/"
+          style={{ textDecoration: 'none' }}
+          onClick={() => handleShow(0)}>
+          <text
             style={{
-              margin: '4% 0 4% 10%',
               fontSize: '1.8rem',
               fontFamily: 'Cafe24Ssurround',
               color: '#078D68',
               latterSpacing: '-1.6rem',
             }}>
             제로인구로
-          </p>
+          </text>
         </Link>
         <Button
           onClick={() => {
             handleShow();
           }}
-          style={{ paddingRight: '10%', width: '2.5rem', height: '2.5rem' }}>
+          style={{ width: '2.5rem', height: '2.5rem' }}>
           <img src={ham} style={{ width: '1.8rem', height: '1.8rem' }} />
         </Button>
       </RowContainer>
@@ -95,7 +117,7 @@ const Topbar = () => {
                   <Typography
                     type="GothicH"
                     textAlign="right"
-                    margin="3% 10%"
+                    margin="4% 10%"
                     size="2rem"
                     letterSpacing="-0.05rem">
                     바로가기
@@ -103,7 +125,10 @@ const Topbar = () => {
                 </Link>
               </RowContainer>
             </li>
-            <Li>
+            <Li
+              style={{
+                backgroundColor: handleMenuClick() == 0 ? '#52b185' : 'white',
+              }}>
               <Link
                 to="/"
                 style={{ textDecoration: 'none' }}
@@ -111,14 +136,18 @@ const Topbar = () => {
                 <Typography
                   type="GothicB"
                   textAlign="right"
-                  margin="4% 10%"
+                  margin="0 10%"
                   size="2rem"
+                  color={handleMenuClick() == 0 ? 'white' : '#078D68'}
                   letterSpacing="-0.05rem">
                   제로인구로 소개
                 </Typography>
               </Link>
             </Li>
-            <Li>
+            <Li
+              style={{
+                backgroundColor: handleMenuClick() == 1 ? '#52b185' : 'white',
+              }}>
               <Link
                 to="/diary"
                 style={{ textDecoration: 'none' }}
@@ -126,14 +155,18 @@ const Topbar = () => {
                 <Typography
                   type="GothicB"
                   textAlign="right"
-                  margin="4% 10%"
+                  margin="0 10%"
                   size="2rem"
+                  color={handleMenuClick() == 1 ? 'white' : '#078D68'}
                   letterSpacing="-0.05rem">
                   제로일기 다운로드
                 </Typography>
               </Link>
             </Li>
-            <Li>
+            <Li
+              style={{
+                backgroundColor: handleMenuClick() == 2 ? '#52b185' : 'white',
+              }}>
               <Link
                 to="/guro"
                 style={{ textDecoration: 'none' }}
@@ -141,8 +174,9 @@ const Topbar = () => {
                 <Typography
                   type="GothicB"
                   textAlign="right"
-                  margin="4% 10%"
+                  margin="0 10%"
                   size="2rem"
+                  color={handleMenuClick() == 2 ? 'white' : '#078D68'}
                   letterSpacing="-0.05rem">
                   구로인 환경 정보통
                 </Typography>
@@ -187,6 +221,7 @@ const Button = styled.button`
   vertical-align: middle;
   width: 25px;
   height: 25px;
+  padding-right: 0;
 `;
 
 const moveOpen = keyframes`{
@@ -213,7 +248,7 @@ const Menu = styled.aside`
   width: 70%;
   right: 0;
   top: 0;
-  border: 1.5px solid #078d68;
+  border: 3px solid #078d68;
   background-color: white;
   z-index: 100;
   animation: ${props => (props.isSelect ? moveOpen : moveClose)};
@@ -234,7 +269,8 @@ const Li = styled.li`
   width: 100%;
   list-style: none;
   border-bottom: 1px solid #078d68;
-  background-color: white;
+  padding-top: 4%;
+  padding-bottom: 4%;
 `;
 
 export default Topbar;
