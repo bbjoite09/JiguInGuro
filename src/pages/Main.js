@@ -13,7 +13,7 @@ const Main = () => {
     <div
       className="App"
       style={{
-        '-webkit-bleedingedgethingy': 1,
+        WebkitBleedingedgethingy: 1,
         bleedingedgethingy: 1,
         backgroundColor: 'gray',
       }}>
