@@ -212,7 +212,7 @@ const Comment = () => {
         </Button>
       </div>
       {comments.map((data, idx, arr) => (
-        <>
+        <div key={data['row_number']}>
           <RowContainer
             style={{
               margin: '0',
@@ -264,7 +264,7 @@ const Comment = () => {
               }}
             />
           )}
-        </>
+        </div>
       ))}
       <DetailButton
         onClick={() => {
