@@ -3,7 +3,6 @@ import styled, { keyframes } from 'styled-components';
 import Typography from '../../elements/Typography';
 import logo from '../../static/images/zeroInfo/logo.svg';
 import divider from '../../static/images/zeroInfo/green_divider.svg';
-import char2 from '../../static/images/zeroInfo/char_2.webp';
 import divider2 from '../../static/images/zeroWasteInfo/green_divider.svg';
 import callOut from '../../static/images/zeroWasteInfo/callOut.webp';
 import RoundButton from '../../elements/RoundButton';
@@ -22,7 +21,6 @@ const ZeroInfo = () => {
           height: '100%',
           paddingTop: '8em',
           paddingBottom: '5em',
-          marginBottom: '5em',
         }}>
         <Typography myType="title" margin="0 0 5% 0" color="white">
           지구가 필요한 건<br />
@@ -51,38 +49,39 @@ const ZeroInfo = () => {
           제안합니다.
         </Typography>
       </div>
-      <div style={{ position: 'relative' }}>
-        <img
-          loading="lazy"
-          src={party}
-          style={{ position: 'absolute', width: '85%', marginLeft: '-29%' }}
-        />
-        <img
-          src={logo}
-          style={{ width: '29%', marginTop: '5em' }}
-          loading="lazy"
-        />
-        <Typography myType="title" margin="5% 0 5% 0">
-          제로인구란?
-        </Typography>
-        <img src={divider} loading="lazy" />
-        <Typography type="GothicL" margin="5% 0 5% 0" lineHeight="24px">
-          불필요한 쓰레기 배출을 줄이고, 처음부터 쓰레기를
-          <br />
-          만들지 않는{' '}
-          <span style={{ fontFamily: 'GothicB' }}>
-            제로웨이스트(zero + waste)
+      <div style={{ position: 'relative', height: '100%' }}>
+        <img loading="lazy" src={party} style={{ width: '100%' }} />
+        <div
+          style={{
+            position: 'absolute',
+            top: 70,
+            left: '50%',
+            transform: 'translate(-50%, 0)',
+            width: '100%',
+          }}>
+          <img
+            src={logo}
+            style={{ width: '29%', marginTop: '5em' }}
+            loading="lazy"
+          />
+          <Typography myType="title" margin="5% 0 5% 0">
+            제로인구란?
+          </Typography>
+          <img src={divider} loading="lazy" />
+          <Typography type="GothicL" margin="5% 0 5% 0" lineHeight="24px">
+            불필요한 쓰레기 배출을 줄이고, 처음부터 쓰레기를
             <br />
-            라이프 스타일을 실천하고자 노력하는 사람
-          </span>
-          을 의미해요.
-        </Typography>
+            만들지 않는{' '}
+            <span style={{ fontFamily: 'GothicB' }}>
+              제로웨이스트(zero + waste)
+              <br />
+              라이프 스타일을 실천하고자 노력하는 사람
+            </span>
+            을 의미해요.
+          </Typography>
+        </div>
       </div>
-      <img
-        src={char2}
-        style={{ width: '100%', marginTop: '14%' }}
-        loading="lazy"
-      />
+
       <div
         style={{
           backgroundColor: '#078D68',
