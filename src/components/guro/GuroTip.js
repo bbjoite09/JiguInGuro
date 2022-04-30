@@ -9,7 +9,28 @@ import blueDown from '../../static/images/guro/blue_down.svg';
 import blueUp from '../../static/images/guro/blue_up.svg';
 
 const GuroTip = () => {
-  const [isClick, setClick] = useState([false, false, false]);
+  const [isSelect, setSelect] = useState([false, false, false]);
+  const [isShow, setShow] = useState([false, false, false]);
+
+  const handleShow = num => {
+    setShow([...isShow.slice(0, num), !isShow[num], ...isShow.slice(num + 1)]);
+    if (isShow[num]) {
+      setTimeout(() => {
+        setSelect([
+          ...isSelect.slice(0, num),
+          !isSelect[num],
+          ...isSelect.slice(num + 1),
+        ]);
+      }, 250);
+    } else {
+      setSelect([
+        ...isSelect.slice(0, num),
+        !isSelect[num],
+        ...isSelect.slice(num + 1),
+      ]);
+    }
+  };
+
   return (
     <Container>
       <div
@@ -42,17 +63,11 @@ const GuroTip = () => {
           만들어진답니다.
         </Typography>
         <Button
-          onClick={() => {
-            setClick([
-              ...isClick.slice(0, 0),
-              !isClick[0],
-              ...isClick.slice(1),
-            ]);
-          }}
+          onClick={() => handleShow(0)}
           style={{ margin: '3em 0 1.5em 10%' }}>
           <img
             loading="lazy"
-            src={isClick[0] ? pinkUp : pinkDown}
+            src={isSelect[0] ? pinkUp : pinkDown}
             style={{ marginLeft: '-3%' }}
           />
           <Typography
@@ -64,8 +79,8 @@ const GuroTip = () => {
             자세히 알아보기
           </Typography>
         </Button>
-        {!isClick[0] ? null : (
-          <Detail>
+        {!isSelect[0] ? null : (
+          <Detail isSelect={isShow[0]}>
             <Divider />
             <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
               <Typography
@@ -169,17 +184,11 @@ const GuroTip = () => {
           작업을 거쳐 지역 소상공인에게 무료로 제공 해드리고 있답니다.
         </Typography>
         <Button
-          onClick={() => {
-            setClick([
-              ...isClick.slice(0, 1),
-              !isClick[1],
-              ...isClick.slice(2),
-            ]);
-          }}
+          onClick={() => handleShow(1)}
           style={{ margin: '3em 0 1.5em 10%' }}>
           <img
             loading="lazy"
-            src={isClick[1] ? blueUp : blueDown}
+            src={isSelect[1] ? blueUp : blueDown}
             style={{ marginLeft: '-3%' }}
           />
           <Typography
@@ -191,8 +200,8 @@ const GuroTip = () => {
             자세히 알아보기
           </Typography>
         </Button>
-        {!isClick[1] ? null : (
-          <Detail>
+        {!isSelect[1] ? null : (
+          <Detail isSelect={isShow[1]}>
             <Divider />
             <>
               <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
@@ -310,17 +319,11 @@ const GuroTip = () => {
           고품질 폐페트병의 해외 수입량을 최소화 시킬 수 있어요
         </Typography>
         <Button
-          onClick={() => {
-            setClick([
-              ...isClick.slice(0, 2),
-              !isClick[2],
-              ...isClick.slice(3),
-            ]);
-          }}
+          onClick={() => handleShow(2)}
           style={{ margin: '3em 0 1.5em 10%' }}>
           <img
             loading="lazy"
-            src={isClick[2] ? greenUp : greenDown}
+            src={isSelect[2] ? greenUp : greenDown}
             style={{ marginLeft: '-3%' }}
           />
           <Typography
@@ -332,8 +335,8 @@ const GuroTip = () => {
             자세히 알아보기
           </Typography>
         </Button>
-        {!isClick[2] ? null : (
-          <Detail>
+        {!isSelect[2] ? null : (
+          <Detail isSelect={isShow[2]}>
             <Divider />
             <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
               <Typography
@@ -427,7 +430,7 @@ const Button = styled.button`
   background: inherit;
 `;
 
-const opacity = keyframes`{
+const down = keyframes`{
   from {
     opacity: 0.3;
     transform: translateY(-5px);
@@ -437,10 +440,23 @@ const opacity = keyframes`{
     transform: none;
     }
 }`;
+const up = keyframes`{
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(5px);
+    }
+}`;
 
 const Detail = styled.section`
   position: relative;
-  animation: ${opacity} 0.7s linear;
+  animation: ${props => (props.isSelect ? down : up)};
+  animation-duration: 0.7s;
+  timing-function: linear;
+  animation-fill-mode: forwards;
 `;
 
 const Divider = styled.div`
