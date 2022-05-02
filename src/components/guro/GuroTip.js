@@ -101,7 +101,7 @@ const GuroTip = () => {
                 textAlign="left"
                 margin="1em 0">
                 <span style={{ fontFamily: 'GothicEB' }}>교환방법:</span> 종이팩
-                1.5kg을 종량재 봉투(10ℓ) 1매와 교환 가능
+                1.5kg을 종량제 봉투(10ℓ) 1매와 교환 가능
               </Typography>
               <Typography
                 size="1.4rem"

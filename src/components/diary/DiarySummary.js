@@ -107,7 +107,7 @@ const DiarySummary = () => {
           size="1.7rem"
           lineHeight="2.5rem"
           margin="5% 10% 0 0">
-          그런데 유행하는 텀블러를 사지 않는
+          유행하는 텀블러를 사지 않는 건
           <br />
           어떤가요? 배달음식을 시킬 때<br />
           플라스틱 식기를 거절하는 것은요?
@@ -146,7 +146,7 @@ const DiarySummary = () => {
           <br />
           발생하는 온실가스를 줄이고, 플라스틱 식기로 인한
           <br />
-          대기오염과 해양오염을 방지한 걸요.
+          대기오염과 해양오염을 방지한걸요.
         </Typography>
       </div>
       <div
@@ -163,7 +163,7 @@ const DiarySummary = () => {
           size="1.7rem"
           lineHeight="2.8rem"
           color="white">
-          우리의 생각보다도
+          우리의 생각보다
           <br />
           사소한 선택으로 만들어지는
           <br />

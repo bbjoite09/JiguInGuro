@@ -31,6 +31,7 @@ const ZeroInfo = () => {
           src={callOut}
           style={{ width: '85%', margin: '8% 0 5% 0' }}
           loading="lazy"
+          alt="제로웨이스트"
         />
         <Typography myType="content" type="GothicL" color="white">
           아직 자신은 없지만, 지구를 위하는 마음과
@@ -50,7 +51,12 @@ const ZeroInfo = () => {
         </Typography>
       </div>
       <div style={{ position: 'relative', height: '100%' }}>
-        <img loading="lazy" src={party} style={{ width: '100%' }} />
+        <img
+          loading="lazy"
+          src={party}
+          style={{ width: '100%' }}
+          alt="제로웨이스트_캐릭터"
+        />
         <div
           style={{
             position: 'absolute',
@@ -110,7 +116,12 @@ const ZeroInfo = () => {
           <br />
           제로인구로 팀이 준비한 선물!{' '}
         </Typography>
-        <img src={diary} style={{ width: '100%' }} loading="lazy" />
+        <img
+          src={diary}
+          style={{ width: '100%' }}
+          loading="lazy"
+          alt="zero diary"
+        />
 
         <Link to="/diary" style={{ textDecoration: 'none' }}>
           <RoundButton backgroundColor="white" textColor="#078D68">
