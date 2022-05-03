@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Typography from '../../elements/Typography';
 import logo from '../../static/images/diarySummary/logo.png';
 import eroomLogo from '../../static/images/event/eroom_logo.png';
@@ -13,15 +13,15 @@ const Comment = () => {
   const pw = useRef();
   const delPw = useRef();
   const cmntText = useRef();
-  let block = false;
+
   useEffect(() => {
     // 처음 시작시 호출
     getComment(page);
-  }, [block]);
+  }, []);
 
   const getComment = pageNum => {
     service.comment.getComment(pageNum, 5).then(res => {
-      setComment([...comments, ...res]);
+      pageNum == 1 ? setComment([...res]) : setComment([...comments, ...res]);
     });
   };
 
@@ -108,6 +108,8 @@ const Comment = () => {
                     ) {
                       alert('비밀번호가 잘못되었습니다.');
                     } else {
+                      setComment([]);
+
                       getComment(1);
                       setModal(false);
                     }
@@ -195,6 +197,8 @@ const Comment = () => {
               service.comment
                 .postComment(cmntText.current.value, pw.current.value)
                 .then(() => {
+                  setComment([]);
+                  console.log(comments);
                   getComment(1);
                 });
               alert('등록되었습니다.');
