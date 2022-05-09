@@ -108,7 +108,7 @@ const ProblemInfo = () => {
             우리 삶이 발전한만큼 늘어난 쓰레기들...
             <br />
             이제 쓰레기를
-            <span style={{ fontFamily: 'GothicEB' }}>‘잘 버리는 것’</span>에서
+            <span style={{ fontFamily: 'GothicEB' }}> ‘잘 버리는 것’</span>에서
             나아가,
             <br />
             <span style={{ fontFamily: 'GothicEB' }}>‘만들지 않는 것’</span>을

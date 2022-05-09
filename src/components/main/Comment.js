@@ -104,12 +104,12 @@ const Comment = () => {
                   .deleteComment(id, delPw.current.value)
                   .then(res => {
                     if (
-                      res == "not matched data... check 'cmntid and cmntpw'"
+                      res == "not matched data... check 'cmntid and cmntpw'" ||
+                      res == '!= pw'
                     ) {
                       alert('비밀번호가 잘못되었습니다.');
                     } else {
                       setComment([]);
-
                       getComment(1);
                       setModal(false);
                     }
