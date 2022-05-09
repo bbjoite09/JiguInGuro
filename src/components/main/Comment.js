@@ -34,9 +34,22 @@ const Comment = () => {
           left: 0,
           bottom: 0,
           right: 0,
-          background: 'rgba(0, 0, 0, 0.8)',
           zIndex: 5,
+          width: 'auto',
+          height: 'auto',
         }}>
+        <div
+          style={{
+            position: 'fixed',
+            width: '100%',
+            height: '100%',
+            top: 0,
+            left: 0,
+            background: 'rgba(0, 0, 0, 0.8)',
+            zIndex: 5,
+          }}
+          onClick={() => setModal(false)}
+        />
         <div
           style={{
             width: window.innerWidth <= '500' ? '80%' : '400px',
@@ -104,12 +117,12 @@ const Comment = () => {
                   .deleteComment(id, delPw.current.value)
                   .then(res => {
                     if (
-                      res == "not matched data... check 'cmntid and cmntpw'"
+                      res == "not matched data... check 'cmntid and cmntpw'" ||
+                      res == '!= pw'
                     ) {
                       alert('비밀번호가 잘못되었습니다.');
                     } else {
                       setComment([]);
-
                       getComment(1);
                       setModal(false);
                     }
