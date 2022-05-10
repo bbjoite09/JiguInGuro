@@ -242,7 +242,7 @@ const Comment = () => {
               type="GothicB"
               textAlign="left"
               margin="3% 0 3% 0">
-              {data['cmntid']}
+              제로인{data['cmntid']}
             </Typography>
             <PageButton
               style={{ margin: '0 0 0 0' }}

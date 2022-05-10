@@ -74,7 +74,7 @@ const Topbar = () => {
             handleShow();
           }}
           style={{ width: '2.5rem', height: '2.5rem' }}>
-          <img src={ham} style={{ width: '1.8rem', height: '1.8rem' }} />
+          <img src={ham} style={{ width: '100%' }} />
         </Button>
       </RowContainer>
 
@@ -219,8 +219,6 @@ const Button = styled.button`
   border: none;
   cursor: pointer;
   vertical-align: middle;
-  width: 25px;
-  height: 25px;
   padding-right: 0;
 `;
 
